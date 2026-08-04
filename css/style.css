@@ -1181,6 +1181,14 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
   margin-inline: auto;
 }
 
+/* reversed mark closing the block — alt is empty because the header and
+   footer already announce the firm name to a screen reader */
+.cta__logo {
+  width: clamp(124px, 17vw, 158px);
+  height: auto;
+  margin: 0 auto clamp(.4rem, 1.4vw, .9rem);
+}
+
 .cta__tel {
   display: block;
   font-family: var(--f-serif);
