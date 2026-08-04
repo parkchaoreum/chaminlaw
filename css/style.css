@@ -511,19 +511,26 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
 .hero__eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: .8rem;
-  font-size: .8rem;
-  font-weight: 600;
-  letter-spacing: .12em;
+  max-width: 100%;
+  gap: clamp(.6rem, 2vw, 1.1rem);
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: .03em;   /* bigger type needs less tracking, not more */
   color: var(--gold);
 }
 .hero__eyebrow::before,
 .hero__eyebrow::after {
   content: '';
-  width: clamp(20px, 5vw, 46px);
+  flex: 0 0 auto;
+  width: clamp(18px, 4vw, 48px);
   height: 1px;
   background: currentColor;
   opacity: .55;
+}
+/* at this size the flanking rules push the line off a phone screen */
+@media (max-width: 480px) {
+  .hero__eyebrow::before,
+  .hero__eyebrow::after { display: none; }
 }
 
 /* --- the signature: the firm's name is the two partners' names ---------- */
@@ -1216,6 +1223,18 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
   font-feature-settings: 'lnum' 1, 'tnum' 1;
 }
 .cta__tel:hover { color: var(--gold-hi); }
+
+/* Cormorant draws its hyphen on a slant — a Garamond convention that reads
+   as a tilted dash in a phone number. Borrow Pretendard's flat one, lighter
+   and slightly smaller so it sits with the serif digits instead of on top
+   of them. The character itself is still a plain U+002D, so copying the
+   number still yields 063-452-9075. */
+.tel-sep {
+  font-family: var(--f-sans);
+  font-weight: 300;
+  font-size: .9em;
+  vertical-align: .04em;
+}
 
 /* --------------------------------------------------------------- contact */
 .info {
