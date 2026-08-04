@@ -1502,6 +1502,7 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
   bottom: clamp(1rem, 3vw, 2rem);
   z-index: 90;
   display: grid;
+  justify-items: end;
   gap: .6rem;
   opacity: 0;
   visibility: hidden;
@@ -1522,11 +1523,26 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
 }
 .quick__btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 0, 0, .34); }
 .quick__btn svg { width: 1.05em; height: 1.05em; fill: currentColor; }
-.quick__btn--tel { background: var(--gold); color: #14161A; }
+.quick__btn--tel   { background: var(--gold); color: #14161A; }
 .quick__btn--kakao { background: #FAE100; color: #191600; }
+.quick__btn--insta {
+  background: linear-gradient(135deg, #F9CE34 0%, #EE2A7B 52%, #6228D7 100%);
+  color: #fff;
+}
+.quick__btn--blog  { background: #03C75A; color: #fff; }
+
+/* Four labelled pills stacked on a phone would cover most of the screen, so
+   below this width they collapse to icon-only circles. */
 @media (max-width: 560px) {
-  .quick { left: clamp(1rem, 3vw, 2rem); grid-auto-flow: column; }
-  .quick__btn { justify-content: center; }
+  .quick { gap: .5rem; }
+  .quick__label { display: none; }
+  .quick__btn {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    justify-content: center;
+  }
+  .quick__btn svg { width: 19px; height: 19px; }
 }
 
 /* ================================================================ motion */
