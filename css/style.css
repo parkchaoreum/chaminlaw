@@ -359,11 +359,11 @@ ul, ol { padding: 0; list-style: none; }
 
 .hdr__logo { flex: 0 0 auto; display: block; }
 .hdr__logo img {
-  height: 34px;
+  height: 44px;
   width: auto;
   transition: height .35s var(--ease);
 }
-@media (max-width: 860px) { .hdr__logo img { height: 26px; } }
+@media (max-width: 860px) { .hdr__logo img { height: 32px; } }
 
 .hdr__nav { margin-left: auto; }
 .hdr__list { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2.1rem); }
@@ -1491,7 +1491,11 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
   font-size: .84rem;
   color: var(--on-ink-3);
 }
-.ftr__legal { max-width: 62ch; line-height: 1.75; }
+.ftr__legal { max-width: 56ch; line-height: 1.75; }
+/* required disclosure under the bar association's advertising rules —
+   kept at body colour rather than the muted grey around it */
+.ftr__resp { white-space: nowrap; }
+.ftr__resp b { color: var(--on-ink); font-weight: 700; }
 .ftr__copy { margin-left: auto; font-variant-numeric: tabular-nums; }
 @media (max-width: 860px) { .ftr__copy { margin-left: 0; } }
 
