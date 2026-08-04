@@ -850,6 +850,19 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
   opacity: .8;
 }
 .cv__list { display: grid; gap: .7rem; }
+
+/* A long list (7+ committee posts) squeezed into one narrow grid cell wraps
+   every line and leaves the neighbouring cell empty. Let it span the row and
+   flow in two columns instead. */
+.cv__group--wide { grid-column: 1 / -1; }
+@media (min-width: 620px) {
+  .cv__list--2col {
+    display: block;
+    columns: 2;
+    column-gap: clamp(1.75rem, 3.5vw, 3rem);
+  }
+  .cv__list--2col li { break-inside: avoid; margin-bottom: .7rem; }
+}
 .cv__list li {
   position: relative;
   padding-left: 1.05rem;
