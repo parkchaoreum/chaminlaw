@@ -500,14 +500,14 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
 
 .hero__inner { text-align: center; }
 
+/* Hangul label: .2em is Latin tracking and sprawls at this string length */
 .hero__eyebrow {
   display: inline-flex;
   align-items: center;
   gap: .8rem;
-  font-size: .78rem;
+  font-size: .8rem;
   font-weight: 600;
-  letter-spacing: .2em;
-  text-transform: uppercase;
+  letter-spacing: .12em;
   color: var(--gold);
 }
 .hero__eyebrow::before,
