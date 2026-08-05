@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# 네이버 크롤러. * 로도 허용되지만 네이버 서치어드바이저가 명시를 권장합니다.
+User-agent: Yeti
+Allow: /
+
 Sitemap: https://www.chaminlaw.com/sitemap.xml
