@@ -721,11 +721,18 @@ body.nav-open .hdr__burger span::after  { transform: translateY(-7px) rotate(-45
   gap: clamp(2.5rem, 6vw, 5rem);
   align-items: start;
 }
+/* The photo leads in both attorney blocks. On a phone the columns stack in
+   source order, so this swap has to apply at every width — inside the desktop
+   query only, one attorney's photo drops below the whole CV. */
+.split--media-first > :first-child { order: 2; }
+.split--media-first > :last-child  { order: 1; }
+
 @media (min-width: 900px) {
   .split { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
-  .split--media-first > :first-child { order: 2; }
-  .split--media-first > :last-child { order: 1; }
   .split--sticky > :first-child { position: sticky; top: calc(var(--header-h) + 3rem); }
+  /* pin the photo column, whichever source child happens to hold it */
+  .split--sticky.split--media-first > :first-child { position: static; top: auto; }
+  .split--sticky.split--media-first > :last-child  { position: sticky; top: calc(var(--header-h) + 3rem); }
 }
 
 .prose p + p { margin-top: 1.15rem; }
