@@ -106,6 +106,38 @@
     });
   });
 
+  /* ------------------------------------------- 성공사례 분야 거르기 */
+  var filters = document.querySelectorAll('[data-filter]');
+  if (filters.length) {
+    var cases = document.querySelectorAll('.case');
+    var empty = document.querySelector('.cases-empty');
+
+    Array.prototype.forEach.call(filters, function (btn) {
+      btn.addEventListener('click', function () {
+        var pick = btn.getAttribute('data-filter');
+        var shown = 0;
+
+        Array.prototype.forEach.call(filters, function (b) {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        Array.prototype.forEach.call(cases, function (c) {
+          var hit = pick === 'all' || c.getAttribute('data-cat') === pick;
+          c.hidden = !hit;
+          if (hit) shown++;
+        });
+
+        // the empty state doubles as "no cases in this category yet"
+        if (empty) empty.hidden = cases.length > 0 && shown > 0;
+      });
+    });
+
+    // nothing published yet — the filter row would only lead to blank screens
+    if (!cases.length) {
+      var row = filters[0].closest('.filters');
+      if (row) row.hidden = true;
+    }
+  }
+
   /* -------------------------------------------------- copy address */
   Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (btn) {
     var label = btn.querySelector('[data-copy-label]');
