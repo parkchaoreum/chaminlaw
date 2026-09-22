@@ -1111,6 +1111,23 @@ body.nav-open { overflow: hidden; }
 }
 .case__fig:hover img { transform: scale(1.035); }
 
+/* 공개할 문서가 없는 사례. 자리를 비워 두면 이미지 로딩 실패처럼 읽히므로,
+   문서 스캔과 같은 흰 바탕에 표제만 올려 나란히 서게 한다. */
+.case__fig--none {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, rgba(198, 166, 103, .10), rgba(198, 166, 103, 0) 62%), #fff;
+}
+.case__fig--none span {
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--gold);
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  color: var(--gold-lo);
+}
+
 .case__body {
   display: flex;
   flex-direction: column;
