@@ -1089,12 +1089,34 @@ body.nav-open { overflow: hidden; }
 .case {
   display: flex;
   flex-direction: column;
-  padding: clamp(1.5rem, 2.8vw, 1.9rem);
   background: var(--paper);
   border: 1px solid var(--paper-line);
   border-top: 2px solid var(--gold);
 }
 .case[hidden] { display: none; }
+
+/* the decision document itself — cropped to the stamp, opens full on click */
+.case__fig {
+  display: block;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid var(--paper-line);
+}
+.case__fig img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 50% 30%;
+  transition: transform .6s var(--ease);
+}
+.case__fig:hover img { transform: scale(1.035); }
+
+.case__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: clamp(1.4rem, 2.6vw, 1.85rem);
+}
 
 .case__top {
   display: flex;
