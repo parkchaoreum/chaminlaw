@@ -1825,3 +1825,53 @@ body.nav-open { overflow: hidden; }
   .hdr, .quick, .skip-link, .cta__field, .hero__field, .hero__glow { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* =========================================================================
+   법률 칼럼 (blog/) — 목록 카드와 본문 서식
+   ========================================================================= */
+.posts { display: grid; gap: clamp(1rem, 2vw, 1.35rem); }
+@media (min-width: 760px) { .posts { grid-template-columns: 1fr 1fr; } }
+.post {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .25s var(--ease), transform .25s var(--ease);
+}
+.post:hover { border-color: var(--gold); transform: translateY(-2px); }
+.post__meta { display: flex; gap: .75rem; align-items: center; font-size: .82rem; color: var(--muted); margin-bottom: .6rem; }
+.post__tag { color: var(--gold-lo); font-weight: 700; letter-spacing: .02em; }
+.post__h { font-size: 1.2rem; font-weight: 800; line-height: 1.35; letter-spacing: -.02em; color: var(--ink); margin: 0 0 .5rem; }
+.post__d { font-size: .95rem; line-height: 1.65; color: var(--slate-2); margin: 0; }
+.posts-empty { padding: 3rem 1rem; text-align: center; color: var(--muted); }
+
+.article { max-width: 760px; margin: 0 auto; }
+.article__meta { display: flex; flex-wrap: wrap; gap: .5rem 1rem; font-size: .85rem; color: var(--muted); margin-bottom: 2rem; }
+.article__meta .post__tag { color: var(--gold-lo); }
+.article__lead { font-size: 1.1rem; line-height: 1.75; color: var(--slate); border-left: 3px solid var(--gold); padding-left: 1rem; margin: 0 0 2.25rem; }
+.article h2 { font-size: 1.45rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.3; margin: 2.5rem 0 .9rem; color: var(--ink); }
+.article h3 { font-size: 1.12rem; font-weight: 700; margin: 1.8rem 0 .6rem; color: var(--ink); }
+.article p { font-size: 1rem; line-height: 1.8; margin: 0 0 1.1rem; color: #2A2E34; }
+.article ul, .article ol { padding-left: 1.3rem; margin: 0 0 1.2rem; line-height: 1.75; }
+.article li { margin-bottom: .35rem; }
+.article blockquote { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--paper-2); border-left: 3px solid var(--gold); color: var(--slate); }
+.article table { width: 100%; border-collapse: collapse; margin: 1.25rem 0 1.5rem; font-size: .93rem; }
+.article th, .article td { border: 1px solid var(--paper-line); padding: .55rem .7rem; text-align: left; vertical-align: top; }
+.article th { background: var(--paper-2); font-weight: 700; }
+.article img { max-width: 100%; height: auto; display: block; margin: 1.25rem auto; }
+.article .faq { margin-top: 1rem; }
+
+.office-box {
+  margin-top: 3rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: var(--ink);
+  color: var(--on-ink);
+  border-radius: var(--radius);
+}
+.office-box__h { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 .6rem; }
+.office-box p { margin: 0 0 .4rem; line-height: 1.65; color: var(--on-ink); font-size: .95rem; }
+.office-box a { color: var(--gold-hi); }
+.office-box__note { font-size: .8rem; color: var(--on-ink-2); margin-top: .8rem; }
