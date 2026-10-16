@@ -1151,7 +1151,7 @@ body.nav-open { overflow: hidden; }
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 50% 50%;
   transition: transform .6s var(--ease);
 }
 .case__fig:hover img { transform: scale(1.035); }
