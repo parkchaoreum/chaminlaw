@@ -600,16 +600,34 @@ body.nav-open { overflow: hidden; }
   .nm__result { color: var(--gold); }
 }
 
-.hero__wordmark {
-  margin-top: clamp(1.25rem, 3vw, 2rem);
-  font-size: clamp(1.7rem, 4.2vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -.01em;
-  color: #fff;
+/* hero: horizontal logo lockup (mark + wordmark), built in HTML so 차민 can be gold */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(.9rem, 2.4vw, 1.6rem);
+  text-align: left;
+  margin-top: .25rem;
 }
-.hero__wordmark-key {
+.lockup__mark {
+  display: block;
+  width: clamp(72px, 11vw, 124px);
+  height: auto;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.45));
+}
+.lockup__text { display: flex; flex-direction: column; line-height: 1.05; }
+.lockup__ko {
+  display: block;
+  font-size: clamp(1.9rem, 5.2vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: #fff;
+  white-space: nowrap;
+}
+.lockup__key {
   font-style: normal;
   font-weight: 800;
+  font-size: 1.12em;
   background-image: linear-gradient(168deg,
               var(--gold-hi) 4%, var(--gold) 34%,
               var(--gold-lo) 56%, var(--gold) 74%, var(--gold-hi) 96%);
@@ -618,32 +636,20 @@ body.nav-open { overflow: hidden; }
   color: transparent;
 }
 @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
-  .hero__wordmark-key { color: var(--gold); }
+  .lockup__key { color: var(--gold); }
 }
-
-/* hero: the logo mark in place of the big gold wordmark */
-.nm__result--logo {
+.lockup__en {
   display: block;
-  width: clamp(150px, 26vw, 260px);
-  height: auto;
-  margin: 0 auto;
-  background: none;
-  color: inherit;
-  padding: 0;
-  letter-spacing: 0;
-  filter: drop-shadow(0 18px 40px rgba(0,0,0,.45));
+  margin-top: .45em;
+  font-family: var(--f-sans);
+  font-size: clamp(.78rem, 1.7vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: var(--on-ink-2);
 }
-.hero__wordmark small {
-  display: block;
-  margin-top: .5rem;
-  font-family: var(--f-serif);
-  font-size: .95rem;
-  font-weight: 500;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--on-ink-3);
+@media (max-width: 420px) {
+  .lockup__ko { font-size: 1.7rem; }
 }
-
 .hero__note {
   margin: clamp(1.5rem, 3.5vw, 2.25rem) auto 0;
   max-width: 34ch;
@@ -1793,8 +1799,7 @@ body.nav-open { overflow: hidden; }
 .js .hero__eyebrow,
 .js .nm__eq,
 .js .nm__stem,
-.js .nm__result,
-.js .hero__wordmark,
+.js .hero__title,
 .js .hero__note,
 .js .hero .btn-row,
 .js .hero__meta { opacity: 0; }
@@ -1804,8 +1809,7 @@ body.nav-open { overflow: hidden; }
 .js .hero.is-live .nm__key       { animation: nm-key 1.1s var(--ease) 1.15s both; }
 .js .hero.is-live .nm__plain     { animation: nm-dim 1.1s var(--ease) 1.15s both; }
 .js .hero.is-live .nm__stem      { animation: nm-stem .8s var(--ease) 1.55s both; }
-.js .hero.is-live .nm__result    { animation: nm-result 1.25s var(--ease) 1.85s both; }
-.js .hero.is-live .hero__wordmark{ animation: nm-fade .9s var(--ease) 2.5s both; }
+.js .hero.is-live .hero__title   { animation: nm-result 1.25s var(--ease) 1.85s both; }
 .js .hero.is-live .hero__note    { animation: nm-fade .9s var(--ease) 2.7s both; }
 .js .hero.is-live .btn-row       { animation: nm-fade .9s var(--ease) 2.9s both; }
 .js .hero.is-live .hero__meta    { animation: nm-fade .9s var(--ease) 3.1s both; }
@@ -1841,8 +1845,8 @@ body.nav-open { overflow: hidden; }
     animation-iteration-count: 1 !important;
     transition-duration: .001ms !important;
   }
-  .js .hero__eyebrow, .js .nm__eq, .js .nm__stem, .js .nm__result,
-  .js .hero__wordmark, .js .hero__note, .js .hero .btn-row, .js .hero__meta { opacity: 1; }
+  .js .hero__eyebrow, .js .nm__eq, .js .nm__stem, .js .hero__title,
+  .js .hero__note, .js .hero .btn-row, .js .hero__meta { opacity: 1; }
   .reveal-ready .reveal { opacity: 1; transform: none; }
 }
 
