@@ -44,11 +44,18 @@
 {
   "@context": "https://schema.org",
   "@type": "LegalService",
+  "@id": "https://www.chaminlaw.com/#organization",
   "name": "법률사무소 차민",
   "alternateName": "Law office CHAMIN",
+  "description": "전북 군산시 미장동에 있는 법률사무소. 형사·민사·가사(이혼·상속)·행정·학교폭력 사건을 두 명의 대표변호사가 첫 상담부터 재판까지 직접 수행합니다.",
   "url": "https://www.chaminlaw.com/",
   "logo": "https://www.chaminlaw.com/images/logo-horizontal.png",
   "image": "https://www.chaminlaw.com/images/brand-card.jpg",
+  "sameAs": [
+    "https://blog.naver.com/chaminlaw",
+    "https://www.instagram.com/lawoffice_chamin",
+    "http://pf.kakao.com/_xhEenX"
+  ],
   "telephone": "+82-63-452-9075",
   "faxNumber": "+82-63-452-9076",
   "email": "mingyu@chaminlaw.com",
@@ -60,7 +67,28 @@
     "postalCode": "54094",
     "addressCountry": "KR"
   },
-  "areaServed": ["군산시", "익산시", "전북특별자치도"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.9647686,
+    "longitude": 126.7318531
+  },
+  "hasMap": "https://map.naver.com/p/search/%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B5%B0%EC%82%B0%EC%8B%9C%20%EB%AF%B8%EC%9E%A5%EC%95%887%EA%B8%B8%206",
+  "areaServed": [
+    { "@type": "City", "name": "군산시" },
+    { "@type": "City", "name": "익산시" },
+    { "@type": "City", "name": "김제시" },
+    { "@type": "AdministrativeArea", "name": "부안군" },
+    { "@type": "City", "name": "보령시" },
+    { "@type": "AdministrativeArea", "name": "서천군" },
+    { "@type": "AdministrativeArea", "name": "전북특별자치도" }
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+82-63-452-9075",
+    "contactType": "customer service",
+    "areaServed": "KR",
+    "availableLanguage": ["Korean"]
+  }],
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -73,7 +101,12 @@
     { "@type": "Person", "name": "이민규", "jobTitle": "대표변호사", "email": "mingyu@chaminlaw.com",
       "telephone": "+82-10-2883-9962", "image": "https://www.chaminlaw.com/images/attorney-lee.jpg" }
   ],
-  "knowsAbout": ["형사", "이혼", "상간", "상속", "가사", "민사", "부동산", "기업자문", "학교폭력"]
+  "knowsAbout": [
+    "형사", "경찰 조사 동행", "구속영장 심사", "음주운전", "교통사고",
+    "민사", "손해배상", "대여금", "임대차", "명예훼손", "부동산",
+    "이혼", "상간", "양육권", "재산분할", "상속", "가사",
+    "행정처분 불복", "행정심판", "학교폭력", "학폭위", "기업자문"
+  ]
 }
 </script>
 </head>
