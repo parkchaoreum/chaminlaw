@@ -618,7 +618,7 @@ body.nav-open { overflow: hidden; }
   right: 100%;
   top: 50%;
   transform: translateY(-50%);
-  margin-right: clamp(.9rem, 2.4vw, 1.6rem);
+  margin-right: clamp(.35rem, .9vw, .6rem);
   width: clamp(72px, 11vw, 124px);
   height: auto;
   filter: drop-shadow(0 12px 28px rgba(0,0,0,.45));
