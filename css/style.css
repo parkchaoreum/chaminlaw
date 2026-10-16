@@ -601,12 +601,15 @@ body.nav-open { overflow: hidden; }
 }
 
 /* hero: horizontal logo lockup (mark + wordmark), built in HTML so 차민 can be gold */
+.hero__title { display: block; width: 100%; text-align: center; padding: 0; letter-spacing: 0; }
 .lockup {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: clamp(.9rem, 2.4vw, 1.6rem);
+  width: fit-content;
+  margin: .25rem auto 0;
   text-align: left;
-  margin-top: .25rem;
 }
 .lockup__mark {
   display: block;
