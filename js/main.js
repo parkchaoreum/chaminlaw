@@ -185,3 +185,40 @@
     el.textContent = String(new Date().getFullYear());
   });
 })();
+
+/* ===================================================================
+   상담 전환 추적 (Google Analytics)
+   전화·카카오톡·지도·칼럼 등 주요 링크 클릭을 이벤트로 보낸다.
+   gtag 가 없으면(차단·오프라인) 아무 일도 하지 않는다.
+   =================================================================== */
+(function () {
+  if (typeof window.gtag !== 'function') return;
+
+  function send(name, link) {
+    try {
+      window.gtag('event', name, {
+        from_page: document.title,
+        link_text: (link.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 50)
+      });
+    } catch (e) { /* 집계 실패가 링크 동작을 막지 않도록 */ }
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (!t || !t.closest) return;
+    var a = t.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+
+    if (href.indexOf('tel:') === 0) send('tel_click', a);
+    else if (href.indexOf('pf.kakao.com') > -1) send('kakao_click', a);
+    else if (href.indexOf('map.naver.com') > -1 || href.indexOf('naver.me') > -1 ||
+             href.indexOf('map.kakao.com') > -1 || href.indexOf('place.map.kakao.com') > -1 ||
+             href.indexOf('maps.google.com') > -1) send('map_click', a);
+    else if (href.indexOf('mailto:') === 0) send('email_click', a);
+    else if (/booking\.html(\?|#|$)/.test(href)) send('booking_page_click', a);
+    else if (/(^|\/)blog\/|^\d{8}-/.test(href)) send('column_click', a);
+    else if (href.indexOf('blog.naver.com') > -1) send('naverblog_click', a);
+    else if (href.indexOf('instagram.com') > -1) send('instagram_click', a);
+  }, true);
+})();
