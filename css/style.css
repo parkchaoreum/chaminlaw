@@ -1875,3 +1875,6 @@ body.nav-open { overflow: hidden; }
 .office-box p { margin: 0 0 .4rem; line-height: 1.65; color: var(--on-ink); font-size: .95rem; }
 .office-box a { color: var(--gold-hi); }
 .office-box__note { font-size: .8rem; color: var(--on-ink-2); margin-top: .8rem; }
+.article__profiles { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; }
+.article__profiles img { margin: 0; border: 1px solid var(--paper-line); }
+@media (max-width: 520px) { .article__profiles { grid-template-columns: 1fr; } }
