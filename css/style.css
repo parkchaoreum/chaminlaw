@@ -602,23 +602,33 @@ body.nav-open { overflow: hidden; }
 
 /* hero: horizontal logo lockup (mark + wordmark), built in HTML so 차민 can be gold */
 .hero__title { display: block; width: 100%; text-align: center; padding: 0; letter-spacing: 0; }
+/* The wordmark text is centred on the page, then nudged right so the page's
+   centre line falls between 사 and 무; the mark hangs off the text's left edge. */
 .lockup {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  position: relative;
   align-items: center;
-  gap: clamp(.9rem, 2.4vw, 1.6rem);
-  width: fit-content;
-  margin: .25rem auto 0;
+  margin: .25rem 0 0;
   text-align: left;
+  transform: translateX(9.8%);
 }
 .lockup__mark {
   display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: clamp(.9rem, 2.4vw, 1.6rem);
   width: clamp(72px, 11vw, 124px);
   height: auto;
-  flex: 0 0 auto;
   filter: drop-shadow(0 12px 28px rgba(0,0,0,.45));
 }
-.lockup__text { display: flex; flex-direction: column; line-height: 1.05; }
+.lockup__text { display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1.05; }
+@media (max-width: 520px) {
+  /* phones: the hanging mark would leave the viewport, so stack it above the text */
+  .lockup { display: inline-flex; flex-direction: column; transform: none; }
+  .lockup__mark { position: static; transform: none; margin: 0 0 .9rem; width: 84px; }
+}
 .lockup__ko {
   display: block;
   font-size: clamp(1.9rem, 5.2vw, 3.6rem);
