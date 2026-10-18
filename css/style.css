@@ -1956,3 +1956,25 @@ body.nav-open { overflow: hidden; }
 .pfilter__n { font-weight: 500; font-size: .82em; opacity: .7; margin-left: .15rem; }
 .post[hidden] { display: none; }
 @media (max-width: 520px) { .pfilter { display: grid; grid-template-columns: repeat(5, 1fr); gap: .35rem; } .pfilter__b { padding: .5rem .2rem; font-size: .88rem; white-space: nowrap; } .pfilter__n { margin-left: .05rem; } }
+
+/* 법률 칼럼 검색 */
+.psearch { position: relative; margin: 0 0 .9rem; }
+.psearch__i { position: absolute; left: 1.05rem; top: 50%; width: 20px; height: 20px; transform: translateY(-50%); fill: none; stroke: var(--gold-lo); stroke-width: 2; stroke-linecap: round; pointer-events: none; }
+.psearch__in {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; color: var(--ink);
+  padding: .95rem 3rem .95rem 3rem; min-height: 54px;
+  background: #fff; border: 1px solid var(--paper-line); border-radius: 999px;
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+  -webkit-appearance: none; appearance: none;
+}
+.psearch__in::placeholder { color: var(--muted); }
+.psearch__in::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+.psearch__in:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(198,166,103,.22); }
+.psearch__x { position: absolute; right: .55rem; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border: 0; border-radius: 50%; background: transparent; color: var(--muted); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.psearch__x:hover { color: var(--ink); background: var(--paper-2); }
+.psearch__x[hidden] { display: none; }
+.psearch__st { margin: 0 0 .9rem; font-size: .9rem; color: var(--slate-2); min-height: 0; }
+.psearch__st:empty { display: none; }
+.post__hit { margin: .7rem 0 0; padding-top: .7rem; border-top: 1px dashed var(--paper-line); font-size: .88rem; line-height: 1.6; color: var(--muted); }
+.post mark, .post__hit mark { background: rgba(198,166,103,.32); color: var(--ink); padding: 0 .1em; border-radius: 2px; }
+@media (max-width: 520px) { .psearch__in { font-size: 16px; padding-left: 2.75rem; } .psearch__i { left: .9rem; } }

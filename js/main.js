@@ -223,13 +223,23 @@
   }, true);
 })();
 
-/* 법률 칼럼 분야 필터: 카드의 분야 태그 첫 단어로 형사·민사·행정·가사를 나눈다 */
+/* 법률 칼럼 분야 필터 + 검색
+   - 분야: 카드 분야 태그의 첫 단어로 형사·민사·행정·가사를 나눈다
+   - 검색: blog/search-index.json(본문 전체)을 처음 검색할 때 불러온다. 못 불러오면 카드 글자만으로 찾는다 */
 (function () {
   var nav = document.querySelector('[data-post-filter]');
   var list = document.querySelector('[data-posts]');
   if (!nav || !list) return;
+  var form = document.querySelector('[data-post-search]');
+  var input = form && form.querySelector('input');
+  var clear = form && form.querySelector('.psearch__x');
+  var status = document.querySelector('[data-post-status]');
   var map = { '형사': '형사', '민사': '민사', '행정': '행정', '학교폭력': '행정', '노동': '행정', '이혼': '가사', '가사': '가사' };
+  var norm = function (t) { return (t || '').toLowerCase().replace(/\s+/g, ' '); };
+  var esc = function (t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+
   var cards = [].slice.call(list.querySelectorAll('.post'));
+  var order = cards.slice();
   var counts = { all: cards.length };
   cards.forEach(function (c) {
     var t = c.querySelector('.post__tag');
@@ -237,28 +247,117 @@
     var cat = map[k] || '';
     c.setAttribute('data-cat', cat);
     counts[cat] = (counts[cat] || 0) + 1;
+    c._title = norm((c.querySelector('.post__h') || {}).textContent);
+    c._card = norm(c.textContent);
+    c._body = '';
+    c._raw = '';
   });
+  var empty = document.createElement('p');
+  empty.className = 'posts-empty'; empty.hidden = true;
+  list.parentNode.insertBefore(empty, list.nextSibling);
+
   var btns = [].slice.call(nav.querySelectorAll('[data-cat]'));
-  btns.forEach(function (b) {
-    var n = b.querySelector('.pfilter__n');
-    if (n) n.textContent = counts[b.getAttribute('data-cat')] || 0;
-  });
-  function apply(cat, track) {
-    if (!counts[cat] && cat !== 'all') cat = 'all';
-    btns.forEach(function (b) {
-      var on = b.getAttribute('data-cat') === cat;
-      b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  var state = { cat: 'all', q: '' };
+
+  function snippet(raw, terms) {
+    var low = raw.toLowerCase(), at = -1, len = 0;
+    terms.forEach(function (t) { var i = low.indexOf(t); if (i > -1 && (at < 0 || i < at)) { at = i; len = t.length; } });
+    if (at < 0) return '';
+    var a = Math.max(0, at - 38), b = Math.min(raw.length, at + len + 62);
+    var part = esc(raw.slice(a, b));
+    terms.forEach(function (t) {
+      var re = new RegExp('(' + esc(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      part = part.replace(re, '<mark>$1</mark>');
     });
-    cards.forEach(function (c) { c.hidden = !(cat === 'all' || c.getAttribute('data-cat') === cat); });
-    list.classList.add('is-in');
-    if (track && window.gtag) window.gtag('event', 'column_filter', { category: cat });
+    return (a > 0 ? '… ' : '') + part + (b < raw.length ? ' …' : '');
   }
+
+  function render(track) {
+    var terms = norm(state.q).trim().split(' ').filter(Boolean);
+    var shown = 0, catCounts = { all: 0 };
+    var scored = [];
+    order.forEach(function (c) {
+      var score = 0;
+      if (terms.length) {
+        var hay = c._card + ' ' + c._body;
+        var ok = terms.every(function (t) { return hay.indexOf(t) > -1; });
+        if (ok) terms.forEach(function (t) { score += (c._title.indexOf(t) > -1 ? 10 : 0) + (c._card.indexOf(t) > -1 ? 3 : 0) + 1; });
+        else score = -1;
+      }
+      if (score >= 0) { catCounts.all++; catCounts[c.getAttribute('data-cat')] = (catCounts[c.getAttribute('data-cat')] || 0) + 1; }
+      var vis = score >= 0 && (state.cat === 'all' || c.getAttribute('data-cat') === state.cat);
+      c.hidden = !vis;
+      var hit = c.querySelector('.post__hit');
+      if (vis && terms.length && c._raw && !terms.every(function (t) { return c._card.indexOf(t) > -1; })) {
+        if (!hit) { hit = document.createElement('p'); hit.className = 'post__hit'; c.appendChild(hit); }
+        hit.innerHTML = snippet(c._raw, terms);
+      } else if (hit) { hit.parentNode.removeChild(hit); }
+      if (vis) { shown++; scored.push([score, c]); }
+    });
+    // 검색어가 있으면 제목에 걸린 글을 위로, 없으면 원래 날짜순
+    var seq = terms.length ? scored.slice().sort(function (x, y) { return y[0] - x[0] || order.indexOf(x[1]) - order.indexOf(y[1]); }).map(function (x) { return x[1]; }) : order;
+    seq.forEach(function (c) { list.appendChild(c); });
+
+    btns.forEach(function (b) {
+      var k = b.getAttribute('data-cat'), on = k === state.cat;
+      b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      var n = b.querySelector('.pfilter__n'); if (n) n.textContent = (terms.length ? catCounts : counts)[k] || 0;
+    });
+    if (status) status.textContent = terms.length ? '‘' + state.q.trim() + '’ 검색 결과 ' + shown + '건' : '';
+    empty.hidden = shown > 0;
+    empty.textContent = terms.length ? '검색 결과가 없습니다. 다른 낱말로 찾아보시거나 063-452-9075로 문의해 주세요.' : '이 분야의 칼럼이 아직 없습니다.';
+    if (clear) clear.hidden = !state.q;
+    list.classList.add('is-in');
+    if (track && window.gtag && terms.length) window.gtag('event', 'column_search', { search_term: state.q.trim(), results: shown });
+  }
+
+  function syncUrl() {
+    try {
+      var u = location.pathname;
+      if (state.q.trim()) u += '?q=' + encodeURIComponent(state.q.trim());
+      if (state.cat !== 'all') u += '#' + encodeURIComponent(state.cat);
+      history.replaceState(null, '', u);
+    } catch (err) {}
+  }
+
+  var loading = null;
+  function loadIndex() {
+    if (loading || !window.fetch) return loading;
+    loading = fetch('search-index.json').then(function (r) { return r.json(); }).then(function (rows) {
+      var byUrl = {};
+      rows.forEach(function (r) { byUrl[r.u] = r; });
+      cards.forEach(function (c) {
+        var r = byUrl[c.getAttribute('href')];
+        if (r) { c._raw = r.x; c._body = norm(r.x); }
+      });
+      render(false);
+    }).catch(function () {});
+    return loading;
+  }
+
   nav.addEventListener('click', function (e) {
     var b = e.target.closest('[data-cat]'); if (!b) return;
-    var cat = b.getAttribute('data-cat');
-    apply(cat, true);
-    try { history.replaceState(null, '', cat === 'all' ? location.pathname : '#' + encodeURIComponent(cat)); } catch (err) {}
+    state.cat = b.getAttribute('data-cat');
+    render(false); syncUrl();
+    if (window.gtag) window.gtag('event', 'column_filter', { category: state.cat });
   });
+  if (input) {
+    var timer, gaTimer;
+    input.addEventListener('focus', loadIndex);
+    input.addEventListener('input', function () {
+      loadIndex();
+      state.q = input.value;
+      clearTimeout(timer); clearTimeout(gaTimer);
+      timer = setTimeout(function () { render(false); syncUrl(); }, 120);
+      gaTimer = setTimeout(function () { render(true); }, 1500);
+    });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); input.blur(); } });
+    clear.addEventListener('click', function () { input.value = ''; state.q = ''; render(false); syncUrl(); input.focus(); });
+  }
+
   var h = ''; try { h = decodeURIComponent(location.hash.slice(1)); } catch (err) {}
-  apply(h || 'all', false);
+  if (h && counts[h]) state.cat = h;
+  var q = ''; try { q = new URLSearchParams(location.search).get('q') || ''; } catch (err) {}
+  if (q && input) { input.value = q; state.q = q; loadIndex(); }
+  render(false);
 })();
