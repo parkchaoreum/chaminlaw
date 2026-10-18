@@ -10,7 +10,8 @@ for f in sorted((ROOT / 'blog').glob('*.html')):
     m = re.search(r'<article class="article[^"]*">(.*?)<aside class="office-box"', s, re.S)
     if not m:
         continue
-    body = re.sub(r'<(script|style)\b.*?</\1>', ' ', m.group(1), flags=re.S)
+    body = re.sub(r'<!-- RELATED:START -->.*?<!-- RELATED:END -->', ' ', m.group(1), flags=re.S)
+    body = re.sub(r'<(script|style)\b.*?</\1>', ' ', body, flags=re.S)
     body = re.sub(r'<span class="faq__q-mark"[^>]*>.*?</span>', ' ', body, flags=re.S)
     text = html.unescape(re.sub(r'<[^>]+>', ' ', body))
     text = re.sub(r'\s+', ' ', text).strip()

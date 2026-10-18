@@ -1994,3 +1994,30 @@ body.nav-open { overflow: hidden; }
 .pager__b[disabled] { opacity: .35; cursor: default; }
 .pager__prev, .pager__next { font-size: 1.25rem; line-height: 1; }
 @media (max-width: 400px) { .pager { gap: .3rem; } .pager__b { min-width: 40px; height: 40px; } }
+
+/* 칼럼 하단 '함께 읽으면 좋은 칼럼' */
+.related { margin: 3rem 0 2rem; padding-top: 2rem; border-top: 1px solid var(--paper-line); }
+.related h2 { margin-top: 0; }
+.related__list { display: grid; gap: .9rem; }
+@media (min-width: 760px) { .related__list { grid-template-columns: repeat(3, 1fr); } }
+.related .post { padding: 1.1rem 1.15rem; }
+.related .post__h { font-size: 1rem; margin-bottom: .4rem; }
+.related .post__d { font-size: .86rem; line-height: 1.55; }
+.article__author { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.article__author:hover { color: var(--gold-lo); }
+
+/* 변호사 소개: 변호사별 칼럼 */
+.attcols__grid { display: grid; gap: 1.5rem; margin-top: 2rem; }
+@media (min-width: 860px) { .attcols__grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+.attcols__col { background: #fff; border: 1px solid var(--paper-line); border-radius: var(--radius); padding: clamp(1.25rem, 2.5vw, 1.75rem); }
+.attcols__h { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 1.15rem; font-weight: 800; margin: 0 0 .9rem; padding-bottom: .8rem; border-bottom: 1px solid var(--paper-line); }
+.attcols__h a { color: var(--ink); text-decoration: none; }
+.attcols__h span { font-size: .85rem; font-weight: 600; color: var(--gold-lo); }
+.attcols__list { list-style: none; margin: 0; padding: 0; }
+.attcols__list li { border-bottom: 1px dashed var(--paper-line); }
+.attcols__list li:last-child { border-bottom: 0; }
+.attcols__list a { display: block; padding: .7rem 0; color: var(--slate); text-decoration: none; font-size: .95rem; line-height: 1.5; }
+.attcols__list a:hover { color: var(--gold-lo); }
+.attcols__more { margin-top: .4rem; }
+.attcols__more summary { cursor: pointer; padding: .6rem 0; font-weight: 700; font-size: .92rem; color: var(--gold-lo); }
+.attcols__all { margin-top: 1.5rem; }
