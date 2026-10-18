@@ -2041,3 +2041,8 @@ body.nav-open { overflow: hidden; }
 .parea__chips { display: flex; flex-wrap: wrap; gap: .5rem; }
 .parea__chip { padding: .55rem 1rem; min-height: 40px; display: inline-flex; align-items: center; background: #fff; border: 1px solid var(--paper-line); border-radius: 999px; color: var(--slate); text-decoration: none; font-weight: 700; font-size: .9rem; }
 .parea__chip:hover { border-color: var(--gold); }
+
+/* 칼럼 본문 썸네일: 가운데, 너무 크지 않게 */
+.article__cover { max-width: 440px; margin: 1.5rem auto 2rem; }
+.article__cover img { width: 100%; margin: 0 auto; border-radius: var(--radius); }
+@media (max-width: 520px) { .article__cover { max-width: 82%; } }
