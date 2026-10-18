@@ -22,7 +22,7 @@
 ## 주요 페이지
 - [변호사 소개](https://www.chaminlaw.com/attorneys.html)
 - [업무분야](https://www.chaminlaw.com/practice.html): 형사(경찰 조사 동행, 구속영장 심사, 성범죄, 음주운전, 교통사고), 민사(손해배상, 대여금, 임대차·보증금, 명예훼손, 부동산), 가사(이혼, 상간, 양육권, 재산분할, 상속, 후견), 행정(행정처분 불복, 행정심판, 공무원 징계, 학교폭력)
-- 분야별 안내: [일반형사 · 군형사](https://www.chaminlaw.com/practice-criminal.html) / [성범죄](https://www.chaminlaw.com/practice-sexual.html) / [음주운전 · 교통](https://www.chaminlaw.com/practice-dui.html) / [이혼 · 상간](https://www.chaminlaw.com/practice-divorce.html) / [상속 · 가사](https://www.chaminlaw.com/practice-family.html) / [민사 · 부동산](https://www.chaminlaw.com/practice-civil.html) / [학교폭력](https://www.chaminlaw.com/practice-school.html) / [공무원 징계](https://www.chaminlaw.com/practice-discipline.html)
+- 분야별 안내: [일반형사 · 군형사](https://www.chaminlaw.com/practice-criminal.html) / [성범죄](https://www.chaminlaw.com/practice-sexual.html) / [음주운전 · 교통](https://www.chaminlaw.com/practice-dui.html) / [이혼 · 상간](https://www.chaminlaw.com/practice-divorce.html) / [상속 · 가사](https://www.chaminlaw.com/practice-family.html) / [민사 · 부동산](https://www.chaminlaw.com/practice-civil.html) / [학교폭력](https://www.chaminlaw.com/practice-school.html) / [노동 · 징계](https://www.chaminlaw.com/practice-discipline.html)
 - [성공사례](https://www.chaminlaw.com/results.html)
 - [상담 안내](https://www.chaminlaw.com/booking.html)
 - [오시는 길](https://www.chaminlaw.com/location.html)

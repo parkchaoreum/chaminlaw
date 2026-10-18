@@ -173,7 +173,7 @@ def add_links(m):
     blk = re.search(r'<h2 class="pblock__h">([^<]*)</h2>', body).group(1)
     targets = {'형사 · 군형사': [('practice-criminal', '일반형사·군형사'), ('practice-sexual', '성범죄'), ('practice-dui', '음주운전·교통')],
                '이혼 · 상간': [('practice-divorce', '이혼·상간 자세히')], '상속 · 가사': [('practice-family', '상속·가사 자세히')],
-               '민사 · 부동산': [('practice-civil', '민사·부동산 자세히')], '학교폭력': [('practice-school', '학교폭력 자세히')]}.get(blk.strip(), [])
+               '민사 · 부동산': [('practice-civil', '민사·부동산 자세히')], '학교폭력': [('practice-school', '학교폭력 자세히')], '노동 · 징계': [('practice-discipline', '노동·징계 자세히')]}.get(blk.strip(), [])
     body = re.sub(r'\n            <p class="pblock__links">.*?</p>', '', body, flags=re.S)
     if targets:
         links = ' '.join(f'<a class="ilink" href="{s}.html">{t} →</a>' for s, t in targets)
