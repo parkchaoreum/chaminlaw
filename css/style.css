@@ -1938,3 +1938,6 @@ body.nav-open { overflow: hidden; }
 .nf-link:hover { border-color: var(--gold); transform: translateY(-2px); }
 .nf-link b { display: block; font-size: 1.02rem; font-weight: 800; color: var(--ink); margin-bottom: .25rem; }
 .nf-link span { font-size: .88rem; color: var(--slate-2); }
+.article ol { list-style: decimal; }
+.article ul { list-style: disc; }
+.article li::marker { color: var(--gold-lo); }
