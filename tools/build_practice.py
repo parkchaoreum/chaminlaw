@@ -152,7 +152,8 @@ for ar in AREAS:
     built.append((slug, ar['name'], ar['kw'], len(my_cases), len(my_cols)))
 
 # 업무분야 허브: 분야별 안내 타일
-tiles = '\n'.join(f'          <a class="parea-tile" href="{ar["slug"]}.html"><span class="parea-tile__n">{i+1:02d}</span><span class="parea-tile__h">{esc(ar["name"])}</span><span class="parea-tile__go" aria-hidden="true">→</span></a>' for i, ar in enumerate(AREAS))
+tile_list = [(f'{ar["slug"]}.html', ar['name']) for ar in AREAS] + [('#corporate', '기업 자문')]
+tiles = '\n'.join(f'          <a class="parea-tile" href="{h}"><span class="parea-tile__n">{i+1:02d}</span><span class="parea-tile__h">{esc(n)}</span><span class="parea-tile__go" aria-hidden="true">→</span></a>' for i, (h, n) in enumerate(tile_list))
 hub = f'''      <!-- PAREA:START -->
       <nav class="parea-tiles" aria-label="분야별 안내">
 {tiles}
@@ -171,9 +172,8 @@ for bid in re.findall(r'<article class="pblock reveal" id="([a-z]+)">', prac):
 def add_links(m):
     bid, body = m.group(1), m.group(2)
     blk = re.search(r'<h2 class="pblock__h">([^<]*)</h2>', body).group(1)
-    targets = {'형사 · 군형사': [('practice-criminal', '일반형사·군형사'), ('practice-sexual', '성범죄'), ('practice-dui', '음주운전·교통')],
-               '이혼 · 상간': [('practice-divorce', '이혼·상간 자세히')], '상속 · 가사': [('practice-family', '상속·가사 자세히')],
-               '민사 · 부동산': [('practice-civil', '민사·부동산 자세히')], '학교폭력': [('practice-school', '학교폭력 자세히')], '노동 · 징계': [('practice-discipline', '노동·징계 자세히')]}.get(blk.strip(), [])
+    names = {a['name']: a['slug'] for a in AREAS}
+    targets = [(names[blk.strip()], blk.strip().replace(' · ', '·') + ' 자세히')] if blk.strip() in names else []
     body = re.sub(r'\n            <p class="pblock__links">.*?</p>', '', body, flags=re.S)
     if targets:
         links = ' '.join(f'<a class="ilink" href="{s}.html">{t} →</a>' for s, t in targets)

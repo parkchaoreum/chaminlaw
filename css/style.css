@@ -2024,7 +2024,7 @@ body.nav-open { overflow: hidden; }
 
 /* 업무분야: 분야별 안내 타일 + 분야 페이지 */
 .parea-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin: 0 0 clamp(2.5rem, 5vw, 4rem); }
-@media (min-width: 860px) { .parea-tiles { grid-template-columns: repeat(4, 1fr); gap: .8rem; } }
+@media (min-width: 860px) { .parea-tiles { grid-template-columns: repeat(3, 1fr); gap: .8rem; } }
 .parea-tile { display: flex; align-items: center; gap: .7rem; padding: 1rem 1.1rem; min-height: 64px; background: #fff; border: 1px solid var(--paper-line); border-radius: var(--radius); color: var(--ink); text-decoration: none; transition: border-color .2s var(--ease), transform .2s var(--ease); }
 .parea-tile:hover { border-color: var(--gold); transform: translateY(-2px); }
 .parea-tile__n { font-family: var(--f-serif); color: var(--gold-lo); font-size: 1rem; }
