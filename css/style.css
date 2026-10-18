@@ -1978,3 +1978,18 @@ body.nav-open { overflow: hidden; }
 .post__hit { margin: .7rem 0 0; padding-top: .7rem; border-top: 1px dashed var(--paper-line); font-size: .88rem; line-height: 1.6; color: var(--muted); }
 .post mark, .post__hit mark { background: rgba(198,166,103,.32); color: var(--ink); padding: 0 .1em; border-radius: 2px; }
 @media (max-width: 520px) { .psearch__in { font-size: 16px; padding-left: 2.75rem; } .psearch__i { left: .9rem; } }
+
+/* 법률 칼럼 페이지 번호 */
+.pager { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; margin: clamp(2rem, 4vw, 2.75rem) 0 0; }
+.pager[hidden] { display: none; }
+.pager__b {
+  font: inherit; font-size: .95rem; font-weight: 700; min-width: 44px; height: 44px; padding: 0 .6rem; cursor: pointer;
+  background: #fff; color: var(--slate); border: 1px solid var(--paper-line); border-radius: 999px;
+  transition: border-color .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
+}
+.pager__b:hover:not([disabled]) { border-color: var(--gold); }
+.pager__b:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.pager__b[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: var(--gold-hi); }
+.pager__b[disabled] { opacity: .35; cursor: default; }
+.pager__prev, .pager__next { font-size: 1.25rem; line-height: 1; }
+@media (max-width: 400px) { .pager { gap: .3rem; } .pager__b { min-width: 40px; height: 40px; } }

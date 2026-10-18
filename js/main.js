@@ -257,7 +257,11 @@
   list.parentNode.insertBefore(empty, list.nextSibling);
 
   var btns = [].slice.call(nav.querySelectorAll('[data-cat]'));
-  var state = { cat: 'all', q: '' };
+  var state = { cat: 'all', q: '', page: 1 };
+  var PER = 10;
+  var pager = document.createElement('nav');
+  pager.className = 'pager'; pager.setAttribute('aria-label', '칼럼 페이지');
+  list.parentNode.insertBefore(pager, list.nextSibling);
 
   function snippet(raw, terms) {
     var low = raw.toLowerCase(), at = -1, len = 0;
@@ -298,6 +302,26 @@
     var seq = terms.length ? scored.slice().sort(function (x, y) { return y[0] - x[0] || order.indexOf(x[1]) - order.indexOf(y[1]); }).map(function (x) { return x[1]; }) : order;
     seq.forEach(function (c) { list.appendChild(c); });
 
+    // 페이지 나누기: 보이는 글을 10개씩
+    var vis = seq.filter(function (c) { return !c.hidden; });
+    var pages = Math.max(1, Math.ceil(vis.length / PER));
+    if (state.page > pages) state.page = pages;
+    if (state.page < 1) state.page = 1;
+    vis.forEach(function (c, i) { if (Math.floor(i / PER) + 1 !== state.page) c.hidden = true; });
+    var ph = '';
+    if (pages > 1) {
+      var mk = function (n, label, cls, dis) {
+        return '<button type="button" class="pager__b' + (cls ? ' ' + cls : '') + '" data-page="' + n + '"' +
+          (dis ? ' disabled' : '') + (n === state.page && !cls ? ' aria-current="page"' : '') +
+          (label !== String(n) ? ' aria-label="' + (cls === 'pager__prev' ? '이전 페이지' : '다음 페이지') + '"' : ' aria-label="' + n + '페이지"') + '>' + label + '</button>';
+      };
+      ph += mk(state.page - 1, '‹', 'pager__prev', state.page === 1);
+      for (var n = 1; n <= pages; n++) ph += mk(n, String(n), '', false);
+      ph += mk(state.page + 1, '›', 'pager__next', state.page === pages);
+    }
+    pager.innerHTML = ph;
+    pager.hidden = pages <= 1;
+
     btns.forEach(function (b) {
       var k = b.getAttribute('data-cat'), on = k === state.cat;
       b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -315,6 +339,7 @@
     try {
       var u = location.pathname;
       if (state.q.trim()) u += '?q=' + encodeURIComponent(state.q.trim());
+      if (state.page > 1) u += (u.indexOf('?') > -1 ? '&' : '?') + 'page=' + state.page;
       if (state.cat !== 'all') u += '#' + encodeURIComponent(state.cat);
       history.replaceState(null, '', u);
     } catch (err) {}
@@ -337,7 +362,7 @@
 
   nav.addEventListener('click', function (e) {
     var b = e.target.closest('[data-cat]'); if (!b) return;
-    state.cat = b.getAttribute('data-cat');
+    state.cat = b.getAttribute('data-cat'); state.page = 1;
     render(false); syncUrl();
     if (window.gtag) window.gtag('event', 'column_filter', { category: state.cat });
   });
@@ -346,16 +371,25 @@
     input.addEventListener('focus', loadIndex);
     input.addEventListener('input', function () {
       loadIndex();
-      state.q = input.value;
+      state.q = input.value; state.page = 1;
       clearTimeout(timer); clearTimeout(gaTimer);
       timer = setTimeout(function () { render(false); syncUrl(); }, 120);
       gaTimer = setTimeout(function () { render(true); }, 1500);
     });
     input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); input.blur(); } });
-    clear.addEventListener('click', function () { input.value = ''; state.q = ''; render(false); syncUrl(); input.focus(); });
+    clear.addEventListener('click', function () { input.value = ''; state.q = ''; state.page = 1; render(false); syncUrl(); input.focus(); });
   }
 
+  pager.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-page]'); if (!b || b.disabled) return;
+    state.page = parseInt(b.getAttribute('data-page'), 10) || 1;
+    render(false); syncUrl();
+    var top = (form || nav).getBoundingClientRect().top + window.pageYOffset - 110;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  });
+
   var h = ''; try { h = decodeURIComponent(location.hash.slice(1)); } catch (err) {}
+  try { state.page = parseInt(new URLSearchParams(location.search).get('page'), 10) || 1; } catch (err) {}
   if (h && counts[h]) state.cat = h;
   var q = ''; try { q = new URLSearchParams(location.search).get('q') || ''; } catch (err) {}
   if (q && input) { input.value = q; state.q = q; loadIndex(); }
