@@ -82,3 +82,4 @@ print('built', spec['slug'], date_k, '| cards:', len(cards))
 # ---- 검색 색인 ----
 import subprocess
 subprocess.run([sys.executable, str(ROOT / 'tools/build_search_index.py')], check=True)
+subprocess.run([sys.executable, str(ROOT / 'tools/build_rss.py')], check=True)
