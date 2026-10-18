@@ -85,3 +85,4 @@ subprocess.run([sys.executable, str(ROOT / 'tools/build_search_index.py')], chec
 subprocess.run([sys.executable, str(ROOT / 'tools/build_rss.py')], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/build_llms.py")], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/build_crosslinks.py")], check=True)
+subprocess.run([sys.executable, str(ROOT / "tools/build_practice.py")], check=True)

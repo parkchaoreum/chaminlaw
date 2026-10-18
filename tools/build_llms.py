@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """AI 검색·챗봇용 요약 파일 /llms.txt 를 만든다(사무소 정보 + 칼럼 목록). build_post.py 가 자동 호출."""
-import re, html, pathlib
+import re, html, pathlib, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from practice_data import AREAS
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://www.chaminlaw.com/'
 idx = (ROOT / 'blog/index.html').read_text(encoding='utf-8')
@@ -13,6 +15,7 @@ for href, tag, title, desc in re.findall(
     if k:
         groups[k].append(f'- [{html.unescape(title)}]({SITE}blog/{href}): {html.unescape(desc)}')
 
+areas_line = ' / '.join(f'[{x["name"]}]({SITE}{x["slug"]}.html)' for x in AREAS)
 body = f'''# 법률사무소 차민 (Law office CHAMIN)
 
 > 전북특별자치도 군산시에 있는 법률사무소입니다. 대표변호사 박차오름·이민규 2인이 형사, 민사, 가사(이혼·상간·상속·후견), 행정(징계·학교폭력) 사건을 상담부터 재판까지 직접 수행합니다. 사무소는 군산 한 곳이며, 지역에 관계없이 전국 사건을 맡고 있습니다.
@@ -37,6 +40,7 @@ body = f'''# 법률사무소 차민 (Law office CHAMIN)
 ## 주요 페이지
 - [변호사 소개]({SITE}attorneys.html)
 - [업무분야]({SITE}practice.html): 형사(경찰 조사 동행, 구속영장 심사, 성범죄, 음주운전, 교통사고), 민사(손해배상, 대여금, 임대차·보증금, 명예훼손, 부동산), 가사(이혼, 상간, 양육권, 재산분할, 상속, 후견), 행정(행정처분 불복, 행정심판, 공무원 징계, 학교폭력)
+- 분야별 안내: {areas_line}
 - [성공사례]({SITE}results.html)
 - [상담 안내]({SITE}booking.html)
 - [오시는 길]({SITE}location.html)
