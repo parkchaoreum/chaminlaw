@@ -6,3 +6,6 @@ User-agent: Yeti
 Allow: /
 
 Sitemap: https://www.chaminlaw.com/sitemap.xml
+
+# 다음 웹마스터도구 소유 확인
+#DaumWebMasterTool:4c22cf8a268e17551234d550e7dfe2370df577632231db3e98687c530d50e3bd:vYXLWHUThEpl8+ynMNCRJQ==
