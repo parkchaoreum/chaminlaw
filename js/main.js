@@ -222,3 +222,43 @@
     else if (href.indexOf('instagram.com') > -1) send('instagram_click', a);
   }, true);
 })();
+
+/* 법률 칼럼 분야 필터: 카드의 분야 태그 첫 단어로 형사·민사·행정·가사를 나눈다 */
+(function () {
+  var nav = document.querySelector('[data-post-filter]');
+  var list = document.querySelector('[data-posts]');
+  if (!nav || !list) return;
+  var map = { '형사': '형사', '민사': '민사', '행정': '행정', '학교폭력': '행정', '노동': '행정', '이혼': '가사', '가사': '가사' };
+  var cards = [].slice.call(list.querySelectorAll('.post'));
+  var counts = { all: cards.length };
+  cards.forEach(function (c) {
+    var t = c.querySelector('.post__tag');
+    var k = t ? t.textContent.trim().split(/[\s·]+/)[0] : '';
+    var cat = map[k] || '';
+    c.setAttribute('data-cat', cat);
+    counts[cat] = (counts[cat] || 0) + 1;
+  });
+  var btns = [].slice.call(nav.querySelectorAll('[data-cat]'));
+  btns.forEach(function (b) {
+    var n = b.querySelector('.pfilter__n');
+    if (n) n.textContent = counts[b.getAttribute('data-cat')] || 0;
+  });
+  function apply(cat, track) {
+    if (!counts[cat] && cat !== 'all') cat = 'all';
+    btns.forEach(function (b) {
+      var on = b.getAttribute('data-cat') === cat;
+      b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    cards.forEach(function (c) { c.hidden = !(cat === 'all' || c.getAttribute('data-cat') === cat); });
+    list.classList.add('is-in');
+    if (track && window.gtag) window.gtag('event', 'column_filter', { category: cat });
+  }
+  nav.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cat]'); if (!b) return;
+    var cat = b.getAttribute('data-cat');
+    apply(cat, true);
+    try { history.replaceState(null, '', cat === 'all' ? location.pathname : '#' + encodeURIComponent(cat)); } catch (err) {}
+  });
+  var h = ''; try { h = decodeURIComponent(location.hash.slice(1)); } catch (err) {}
+  apply(h || 'all', false);
+})();

@@ -1941,3 +1941,18 @@ body.nav-open { overflow: hidden; }
 .article ol { list-style: decimal; }
 .article ul { list-style: disc; }
 .article li::marker { color: var(--gold-lo); }
+
+/* 법률 칼럼 분야 필터 */
+.pfilter { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 clamp(1.25rem, 2.5vw, 1.75rem); }
+.pfilter__b {
+  font: inherit; font-size: .95rem; font-weight: 700; letter-spacing: -.01em;
+  padding: .6rem 1.15rem; min-height: 44px; cursor: pointer;
+  background: #fff; color: var(--slate); border: 1px solid var(--paper-line); border-radius: 999px;
+  transition: border-color .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
+}
+.pfilter__b:hover { border-color: var(--gold); }
+.pfilter__b:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.pfilter__b.is-on { background: var(--ink); border-color: var(--ink); color: var(--gold-hi); }
+.pfilter__n { font-weight: 500; font-size: .82em; opacity: .7; margin-left: .15rem; }
+.post[hidden] { display: none; }
+@media (max-width: 520px) { .pfilter { display: grid; grid-template-columns: repeat(5, 1fr); gap: .35rem; } .pfilter__b { padding: .5rem .2rem; font-size: .88rem; white-space: nowrap; } .pfilter__n { margin-left: .05rem; } }
