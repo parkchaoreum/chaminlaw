@@ -7,7 +7,7 @@ for f in sorted((ROOT / 'blog').glob('*.html')):
     if f.name in ('index.html',) or f.name.startswith('_'):
         continue
     s = f.read_text(encoding='utf-8')
-    m = re.search(r'<article class="article[^"]*">(.*?)<aside class="office-box"', s, re.S)
+    m = re.search(r'<article class="article[^"]*">(.*?)</article>', s, re.S)
     if not m:
         continue
     body = re.sub(r'<!-- RELATED:START -->.*?<!-- RELATED:END -->', ' ', m.group(1), flags=re.S)

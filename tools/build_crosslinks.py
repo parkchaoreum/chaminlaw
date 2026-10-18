@@ -56,7 +56,7 @@ for p in posts:
     if '<!-- RELATED:START -->' in s:
         s = re.sub(r'        <!-- RELATED:START -->.*?<!-- RELATED:END -->\n\n', block, s, flags=re.S)
     else:
-        s = s.replace('        <aside class="office-box"', block + '        <aside class="office-box"', 1)
+        s = s.replace('      </article>', block + '      </article>', 1)
     f.write_text(s, encoding='utf-8')
 
 # 변호사 소개 페이지
