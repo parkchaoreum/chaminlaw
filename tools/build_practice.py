@@ -32,7 +32,7 @@ cards = re.findall(r'(        <a class="post" href="([^"]+)">.*?post__tag">([^<]
 def col_areas(href, tag):
     t = tag.strip(); out = set()
     if '성범죄' in t or 'seonghuirong' in href: out.add('practice-sexual')
-    if '음주운전' in t or 'unjeonja' in href: out.add('practice-dui')
+    if '음주운전' in t or '교통' in t or 'unjeonja' in href: out.add('practice-dui')
     if t.startswith('형사') and not out: out.add('practice-criminal')
     if t.startswith('이혼'): out.add('practice-divorce')
     if t.startswith('가사'): out.add('practice-family')
