@@ -84,5 +84,7 @@ import subprocess
 subprocess.run([sys.executable, str(ROOT / 'tools/build_search_index.py')], check=True)
 subprocess.run([sys.executable, str(ROOT / 'tools/build_rss.py')], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/build_llms.py")], check=True)
+subprocess.run([sys.executable, str(ROOT / "tools/make_cover.py")], check=True)
+subprocess.run([sys.executable, str(ROOT / "tools/apply_covers.py")], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/build_crosslinks.py")], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/build_practice.py")], check=True)
