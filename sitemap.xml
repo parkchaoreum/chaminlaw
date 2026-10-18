@@ -49,14 +49,20 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.chaminlaw.com/blog/20260731-iksan-hakgyopokryeok-jeolcha.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <loc>https://www.chaminlaw.com/blog/gimje-sanggan-sosong.html</loc>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.chaminlaw.com/blog/20260730-jeonju-naeyongjeungmyeong.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.chaminlaw.com/blog/jeonju-naeyongjeungmyeong.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-hakgyopokryeok-jeolcha.html</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
