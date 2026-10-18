@@ -38,7 +38,7 @@ def col_areas(href, tag):
     if t.startswith('가사'): out.add('practice-family')
     if t.startswith('민사') or t == '형사 · 민사': out.add('practice-civil')
     if t.startswith('학교폭력'): out.add('practice-school')
-    if '징계' in t: out.add('practice-discipline')
+    if '징계' in t or t.startswith('노동'): out.add('practice-discipline')
     return out
 
 esc = lambda s: html.escape(s, quote=True)
