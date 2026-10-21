@@ -68,5 +68,6 @@
 "gunsan-minsa-jojeong": ["민사소송", "민사조정", "종류와 효력"],
 "gunsan-eumju-unjeon-gyeongchal-josa": ["음주운전", "경찰조사 질문", "면허 처분까지"],
 "gunsan-yuryubun-banhwan": ["상속분쟁", "유류분 반환청구", "계산과 기한"],
-"buan-jeonsesagi-daeeung": ["부동산분쟁", "전세사기", "세 갈래 대응"]
+"buan-jeonsesagi-daeeung": ["부동산분쟁", "전세사기", "세 갈래 대응"],
+"jeonju-eumju-unjeon-chulseok-josa": ["음주운전", "경찰 출석 연락", "조사 순서·면허 처분"]
 }
