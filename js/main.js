@@ -71,7 +71,7 @@
         entry.target.classList.add('is-in');
         io.unobserve(entry.target);
       });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0 });
     Array.prototype.forEach.call(reveals, function (el) { io.observe(el); });
   }
 

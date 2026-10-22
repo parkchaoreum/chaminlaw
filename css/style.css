@@ -2046,3 +2046,6 @@ body.nav-open { overflow: hidden; }
 .article__cover { max-width: 440px; margin: 1.5rem auto 2rem; }
 .article__cover img { width: 100%; margin: 0 auto; border-radius: var(--radius); }
 @media (max-width: 520px) { .article__cover { max-width: 82%; } }
+
+/* column pages: start the article closer to the title so the page never looks empty */
+.sec:has(> .wrap > .article) { padding-top: clamp(1.75rem, 3.5vw, 2.75rem); }
