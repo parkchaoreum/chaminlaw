@@ -1,4 +1,13 @@
 {
+"gunsan-gangan-goso-sinbingseong": ["성범죄", "강간 고소", "진술의 신빙성"],
+"gunsan-seongbeomjoe-gusok-yeongjang": ["성범죄", "성범죄 구속영장", "영장실질심사"],
+"gunsan-seongbeomjoe-jiphaeng-yuye-yanghyeong": ["성범죄", "성범죄 집행유예", "양형 자료"],
+"gunsan-seongbeomjoe-hangsosim-daeeung": ["성범죄", "성범죄 항소심", "사정 변경"],
+"iksan-seongbeomjoe-mugo-gosogi": ["성범죄", "성범죄 무혐의 후 무고", "신중한 판단"],
+"gunsan-sinsang-jeongbo-deungnok": ["성범죄", "신상정보 등록", "벌금형도 10년"],
+"gunsan-acheongbeop-openchat-misungnyeonja": ["성범죄", "아청법 오픈채팅", "제작·성매수"],
+"gunsan-seongmaemae-josa-daeeung": ["성범죄", "성매매 조사", "행적 확인"],
+"gunsan-tongmaeeum-seongnip-yogeon": ["성범죄", "통매음 성립 요건", "링크 전송"],
 "gunsan-gangje-chuhaeng-uigyeonseo": ["성범죄", "강제추행 의견서", "진술 신빙성"],
 "gunsan-jun-gangan-josa-jinsul": ["성범죄", "준강간 조사", "하면 안 되는 진술"],
 "gunsan-stalking-pihaeja-bohomyeongryeong": ["범죄피해자", "스토킹 피해자보호명령", "2027년 시행"],
