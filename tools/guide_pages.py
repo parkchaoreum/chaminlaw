@@ -82,7 +82,7 @@ G('yaksik-myeongryeong', '형사', '약식명령·정식재판청구', '벌금 �
    ('청구 여부 판단', '기록을 검토해 다툴 부분과 양형 자료를 정리합니다.'),
    ('정식재판 청구', '약식명령을 한 법원에 서면으로 청구합니다.'),
    ('공판 진행', '전주지방법원 군산지원 공판에서 무죄 또는 감경을 주장합니다.')],
-  ['gunsan-eumju-unjeon-gyeongchal-josa', 'gunsan-moyokjoe', 'gunsan-eommu-banghae-beolgeum-wijaryo'],
+  ['gunsan-yaksik-myeongryeong-jeongsik-jaepan', 'gunsan-eumju-unjeon-gyeongchal-josa', 'gunsan-moyokjoe', 'gunsan-eommu-banghae-beolgeum-wijaryo'],
   [('정식재판을 청구하면 벌금이 더 올라갈 수 있나요?', '법은 피고인만 정식재판을 청구한 사건에서 약식명령보다 무거운 종류의 형을 선고하지 못하도록 정하고 있지만, 같은 벌금형 안에서 금액이 달라질 가능성은 사건별로 검토해야 합니다.'),
    ('7일이 지나면 방법이 없나요?', '약식명령은 확정되며, 책임질 수 없는 사유로 기간을 지키지 못한 경우 등 예외적인 경우에만 회복 절차를 검토할 수 있습니다.'),
    ('정식재판은 어디서 하나요?', '군산에서 고지된 약식명령이라면 대개 전주지방법원 군산지원에서 공판이 열립니다.')]),

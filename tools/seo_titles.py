@@ -39,6 +39,7 @@ M = {
  'jeonju-giso-yuye-geomsa-panjeon': (['기소유예', '기소유예전문'], '경찰출신'),
  'gunsan-muhyeomui-mujoe-daeeung': (['무혐의', '무죄'], '형사전문'),
  'iksan-giso-hu-mujoe-jeollyak': (['무죄', '무죄전문'], '경찰출신'),
+ 'gunsan-yaksik-myeongryeong-jeongsik-jaepan': (['약식명령', '정식재판청구'], '형사전문'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], '경찰출신'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),
