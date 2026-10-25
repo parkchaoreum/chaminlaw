@@ -184,7 +184,7 @@ KEYMAP = {
    ('상속재산분할변호사', Q('sangsok-jaesan-bunhal')), ('유류분변호사', Q('yuryubun')),
    ('상속포기변호사', Q('sangsok-pogi')), ('한정승인변호사', Q('sangsok-pogi')),
    ('유언장변호사', Q('yueon')), ('유언효력변호사', Q('yueon')), ('성년후견변호사', Q('seongnyeon-hugyeon'))],
- '민사·부동산': [('민사변호사', P('civil')), ('민사전문변호사', P('civil')), ('부동산변호사', P('civil')),
+ '민사·부동산': [('민사변호사', P('civil')), ('민사전문변호사', P('civil')), ('부동산변호사', P('civil')), ('부동산전문변호사', P('civil')),
    ('전세보증금변호사', Q('jeonse-bojeunggeum')), ('전세사기변호사', Q('jeonse-sagi')),
    ('대여금변호사', Q('daeyeogeum')), ('손해배상변호사', Q('sonhae-baesang')),
    ('공사대금변호사', Q('gongsa-daegeum')), ('명도소송변호사', Q('myeongdo')),
