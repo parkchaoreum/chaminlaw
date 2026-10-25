@@ -25,6 +25,7 @@ M = {
  'gunsan-gongyumul-bunhal': (['공유물분할'], '부동산전문'),
  'gunsan-gosoin-josa-daeeung': (['고소대리'], 'CRIM'),
  'gunsan-gunhyeongsa-yeongnae-pokhaeng': (['군형사', '군인폭행'], None),
+ 'gunsan-gusok-yeongjang-silji-simsa': (['구속영장', '영장실질심사'], 'CRIM'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], 'CRIM'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),

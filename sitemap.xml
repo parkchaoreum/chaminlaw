@@ -974,4 +974,10 @@
     <loc>https://www.chaminlaw.com/guide-gunsan-stalking.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-gusok-yeongjang-silji-simsa.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
