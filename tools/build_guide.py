@@ -5,7 +5,7 @@
 import re, json, html, pathlib, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
-from guide_data import GUIDES, CITIES, LABELS, tag_group, GROUP_ORDER
+from guide_data import GUIDES, CITIES, LABELS, tag_group, GROUP_ORDER, KEYMAP
 SITE = 'https://www.chaminlaw.com/'
 esc = lambda s: html.escape(s, quote=True)
 
@@ -147,18 +147,26 @@ h = head_for(hub_title, hub_desc, SITE + 'guide.html')
 blocks = []
 for code, name, court, police in CITIES:
     groups2 = {}
-    for g in GUIDES:
-        if g.get('city', 'gunsan') == code:
-            groups2.setdefault(g['group'], []).append((g['slug'] + '.html', g['kw'], True))
+    used = set()
+    if code == 'gunsan':
+        for grp, items in KEYMAP.items():
+            for kw, tgt in items:
+                if not tgt: continue
+                groups2.setdefault(grp, []).append((tgt, f'{name} {kw}', not tgt.startswith('blog/')))
+                if tgt.startswith('blog/'): used.add(tgt[5:-5])
+    else:
+        for g in GUIDES:
+            if g.get('city', 'gunsan') == code:
+                groups2.setdefault(g['group'], []).append((g['slug'] + '.html', g['kw'], True))
     for slug, tag in tags.items():
-        if city_of(slug) != code: continue
+        if city_of(slug) != code or slug in used: continue
         label = LABELS.get(slug) or ' '.join(cover.get(slug, ['', slug])[1:2])
         groups2.setdefault(tag_group(tag), []).append((f'blog/{slug}.html', f'{name} {label}', False))
     n = sum(len(v) for v in groups2.values())
     inner = []
-    for grp in GROUP_ORDER:
+    for grp in (list(KEYMAP) + [x for x in GROUP_ORDER if x not in KEYMAP]):
         if grp not in groups2: continue
-        chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in sorted(groups2[grp], key=lambda x: (not x[2], x[1])))
+        chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in (groups2[grp] if code == 'gunsan' else sorted(groups2[grp], key=lambda x: (not x[2], x[1]))))
         inner.append(f'        <h3 class="ghub__h">{esc(name)} {esc(grp)}</h3>\n        <div class="ghub__chips">\n{chips}\n        </div>')
     if not inner:
         inner.append(f'        <p class="ghub__empty">{esc(name)} 지역 안내 글은 준비 중입니다. {esc(name)} 사건도 상담하실 수 있습니다.</p>')

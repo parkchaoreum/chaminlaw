@@ -81,3 +81,44 @@ def tag_group(tag):
     if t.startswith('학교폭력'): return '학교폭력'
     return '노동·징계'
 GROUP_ORDER = ['형사','성범죄','음주운전·교통','소년사건','이혼·상간','상속·가사','민사·부동산','학교폭력','노동·징계']
+
+# 군산 키워드 지도 — (화면에 보일 키워드, 연결 대상). 대상이 None 이면 '작성 예정'(사이트에는 표시하지 않음).
+# 대상: 'practice-xxx.html' | 'guide-xxx.html' | 'blog/xxx.html'
+P = lambda s: f'practice-{s}.html'
+B = lambda s: f'blog/{s}.html'
+KEYMAP = {
+ '형사': [('형사변호사', P('criminal')), ('형사전문변호사', P('criminal')),
+   ('경찰조사변호사', B('gunsan-gyeongchal-josa-dongseok')), ('고소대리변호사', B('gunsan-gosoin-josa-daeeung')),
+   ('불송치이의신청변호사', B('gunsan-bulsongchi-iuisincheong')), ('구속영장변호사', None), ('영장실질심사변호사', None),
+   ('구속적부심·보석변호사', None), ('약식명령 정식재판청구변호사', None), ('집행유예변호사', None), ('항소심변호사', None),
+   ('형사합의·공탁변호사', None), ('폭행·상해변호사', None), ('사기변호사', None), ('보이스피싱변호사', B('gunsan-voice-phishing-sugeochaek')),
+   ('횡령변호사', B('gunsan-eommusang-hoengnyeong')), ('명예훼손변호사', B('gunsan-myeongye-hweson')), ('모욕죄변호사', B('gunsan-moyokjoe')),
+   ('업무방해변호사', B('gunsan-eommu-banghae-beolgeum-wijaryo')), ('사문서위조변호사', B('gunsan-samunseo-wijo')), ('절도변호사', B('gunsan-jeoldojoe-cheobeol')),
+   ('무고변호사', None), ('마약변호사', None), ('거짓말탐지기 검사', B('gunsan-geojitmal-tamjigi-geomsa')),
+   ('군형사변호사', B('gunsan-gunhyeongsa-yeongnae-pokhaeng')), ('소년사건변호사', B('gunsan-sonyeon-jaepan-simni'))],
+ '성범죄': [('성범죄변호사', P('sexual')), ('성범죄전문변호사', P('sexual')), ('강제추행변호사', 'guide-gunsan-gangje-chuhaeng.html'),
+   ('준강제추행변호사', B('gunsan-jun-gangje-chuhaeng')), ('강간·준강간(성폭행)변호사', None),
+   ('카메라등이용촬영(카촬)변호사', B('gunsan-kamera-deung-iyong-chwaryeong')), ('통신매체이용음란(통매음)변호사', B('gunsan-sonyeon-tongmaeeum')),
+   ('성범죄피해자변호사', B('gunsan-seongbeomjoe-pihaeja')), ('성범죄무혐의변호사', B('gunsan-seongbeomjoe-muhyeomui')),
+   ('성범죄 전건송치', B('gunsan-seongbeomjoe-jeongeon-songchi')), ('신상정보등록변호사', None), ('아청법변호사', None),
+   ('성매매변호사', None), ('직장 내 성희롱변호사', B('gunsan-jikjangnae-seonghuirong-daeeung'))],
+ '음주운전·교통': [('음주운전변호사', P('dui')), ('음주운전전문변호사', P('dui')), ('음주운전 경찰조사', B('gunsan-eumju-unjeon-gyeongchal-josa')),
+   ('음주운전 재범변호사', None), ('면허취소 구제(행정심판)변호사', None), ('교통사고변호사', B('gunsan-gyotong-sago-byeonhosa-sigi')),
+   ('교통사고전문변호사', B('gunsan-gyotong-sago-byeonhosa-sigi')), ('위험운전치상·교특치상변호사', B('gunsan-wiheom-unjeon-chisang-gyoteuk')),
+   ('뺑소니(도주치상)변호사', None), ('운전자폭행변호사', B('gunsan-unjeonja-pokhaeng')), ('무면허운전변호사', None)],
+ '이혼·상간': [('이혼변호사', P('divorce')), ('이혼전문변호사', P('divorce')), ('이혼소송 준비', B('gunsan-ihon-gyeolsim-hu-junbi')),
+   ('협의이혼변호사', None), ('재산분할변호사', None), ('양육권·양육비변호사', None), ('상간소송변호사', B('gunsan-sanggan-wijaryo-aeksu')),
+   ('상간녀·상간남 위자료', B('gunsan-sanggan-wijaryo-aeksu')), ('사실혼해소변호사', None)],
+ '상속·가사': [('상속변호사', P('family')), ('상속전문변호사', P('family')), ('상속재산분할변호사', B('gunsan-sangsok-jaesan-bunhal-simpan')),
+   ('유류분변호사', B('gunsan-yuryubun-banhwan')), ('상속포기·한정승인변호사', B('gunsan-sangsok-gaesi-hal-il')),
+   ('성년후견변호사', B('gunsan-seongnyeon-hugyeon')), ('유언장 효력', None)],
+ '민사·부동산': [('민사변호사', P('civil')), ('민사전문변호사', P('civil')), ('전세보증금변호사', B('gunsan-imdaecha-bojeunggeum-hoesu')),
+   ('전세사기변호사', None), ('대여금소송변호사', None), ('손해배상변호사', B('20261016-gunsan-sonhaebaesang')), ('공사대금변호사', None),
+   ('명도소송변호사', None), ('공유물분할변호사', B('gunsan-gongyumul-bunhal')), ('강제집행정지', B('gunsan-gangje-jiphaeng-jeongji-gongtak')),
+   ('민사조정', B('gunsan-minsa-jojeong')), ('부동산변호사', P('civil'))],
+ '학교폭력': [('학교폭력변호사', P('school')), ('학교폭력전문변호사', P('school')), ('학폭위변호사', B('gunsan-hakpokwi-yesang-jilmun')),
+   ('학폭 행정심판변호사', B('gunsan-hakpok-haengjeongsimpan-chamga')), ('학폭 가해학생변호사', None), ('학폭 피해학생변호사', None)],
+ '노동·징계': [('노동변호사', P('discipline')), ('징계변호사', P('discipline')), ('부당해고변호사', B('gunsan-budang-haego-guje')),
+   ('임금체불변호사', B('gunsan-imgeum-toejikgeum-cheburi')), ('직장 내 괴롭힘변호사', B('gunsan-jikjang-goerophim-sayongja-jochi')),
+   ('공무원징계변호사', None), ('공무원 감사 조사', B('gunsan-gongmuwon-gamsa-josa')), ('군인징계변호사', None), ('교원징계변호사', None)],
+}
