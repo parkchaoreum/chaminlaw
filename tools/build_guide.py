@@ -183,7 +183,7 @@ def city_of(slug):
         if s2.startswith(code + '-'): return code
     return None
 hub_title = '지역별 안내 — 군산·익산·전주·김제·부안·서천·논산·보령·남원·정읍 | 법률사무소 차민'
-hub_desc = '군산, 익산, 전주, 부안, 김제, 서천, 논산, 보령, 남원, 정읍 지역의 형사·성범죄·음주운전·이혼·상속·민사·학교폭력·노동 사건 안내와 관할 법원·경찰서, 관련 칼럼을 모았습니다.'
+hub_desc = '군산, 익산, 전주, 부안, 김제, 서천, 논산, 보령, 남원, 정읍 지역의 형사·성범죄·음주운전·이혼·상속·민사·학교폭력·노동 사건 안내와 관할 법원·공소청·경찰서, 관련 칼럼을 모았습니다.'
 h = head_for(hub_title, hub_desc, SITE + 'guide.html')
 blocks = []
 for code, name, court, police, pros in CITIES:
@@ -222,7 +222,7 @@ for code, name, court, police, pros in CITIES:
 main = phero([('홈', 'index.html'), ('지역별 안내', None)], 'Regional Guide', '지역별 안내') + f'''
   <section class="sec sec--paper sec--list">
     <div class="wrap">
-      <p class="sec-lead">법률사무소 차민은 군산에 있지만, 지역과 관계없이 사건을 맡습니다. 지역별로 관할 법원·경찰서와 관련 안내를 모았습니다.</p>
+      <p class="sec-lead">법률사무소 차민은 군산에 있지만, 지역과 관계없이 사건을 맡습니다. 지역별로 관할 법원·공소청·경찰서와 관련 안내를 모았습니다.</p>
 {chr(10).join(blocks)}
     </div>
   </section>
