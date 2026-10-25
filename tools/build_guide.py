@@ -245,7 +245,7 @@ for code, name, court, police, pros in CITIES:
     for grp in (list(KEYMAP) + [x for x in GROUP_ORDER if x not in KEYMAP]):
         if grp not in groups2: continue
         chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in (groups2[grp] if code == 'gunsan' else sorted(groups2[grp], key=lambda x: (not x[2], x[1]))))
-        glabel = f'{name}형사·군형사' if grp == '형사' else f'{name} {grp}'
+        glabel = f'{name} 형사·군형사' if grp == '형사' else f'{name} {grp}'
         inner.append(f'        <details class="ghub__grp">\n        <summary><h3 class="ghub__h">{esc(glabel)}</h3><span class="ghub__count">{len(groups2[grp])}</span></summary>\n        <div class="ghub__chips">\n{chips}\n        </div>\n        </details>')
     if not inner:
         inner.append(f'        <p class="ghub__empty">{esc(name)} 지역 안내 글은 준비 중입니다. {esc(name)} 사건도 상담하실 수 있습니다.</p>')

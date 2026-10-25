@@ -93,7 +93,7 @@ B = lambda s: f'blog/{s}.html'
 Q = lambda s: f'guide-gunsan-{s}.html'
 KEYMAP = {
  '형사': [('형사변호사', P('criminal')), ('형사전문변호사', P('criminal')),
-   ('경찰조사변호사', Q('gyeongchal-josa')), ('피의자변호사', Q('gyeongchal-josa')),
+   ('경찰출신변호사', P('criminal')), ('경찰조사변호사', Q('gyeongchal-josa')), ('피의자변호사', Q('gyeongchal-josa')),
    ('공소청조사변호사', Q('gongsocheong-josa')), ('검찰조사변호사', Q('gongsocheong-josa')),
    ('구속영장변호사', Q('gusok-yeongjang')), ('영장실질심사변호사', Q('gusok-yeongjang')),
    ('구속적부심변호사', Q('gusok-jeokbusim-boseok')), ('보석변호사', Q('gusok-jeokbusim-boseok')),
