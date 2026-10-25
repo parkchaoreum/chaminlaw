@@ -27,7 +27,7 @@ GUIDES = [
 ]
 from guide_pages import PAGES
 GUIDES += PAGES
-for _m in ('a', 'b', 'c', 'd'):
+for _m in ('a', 'b', 'c', 'd', 'e', 'f'):
     GUIDES += __import__('guide_pages_' + _m).PAGES
 
 # 지역별 안내 — 도시 순서와 관할
