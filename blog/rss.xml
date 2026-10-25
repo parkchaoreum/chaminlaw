@@ -6,7 +6,7 @@
     <atom:link href="https://www.chaminlaw.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>전북 군산 법률사무소 차민의 형사·민사·가사·행정 법률 칼럼</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 25 Oct 2026 16:49:01 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 16:51:09 +0900</lastBuildDate>
     <item>
       <title>익산에서 상해로 조사받는다면 — 진단서가 있어도 상해가 아닐 수 있는 경우</title>
       <link>https://www.chaminlaw.com/blog/iksan-sanghae-pokhaeng-gubun.html</link>
@@ -534,6 +534,14 @@
       <description>인스타그램 계정이 예고 없이 정지·비활성화되었을 때 시도할 수 있는 순서. 재검토 요청, 유료 인증의 한계, 내용증명에 담을 내용과 증거, 복구 가능성을 정리했습니다.</description>
       <category>민사</category>
       <pubDate>Fri, 24 Jul 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 구속된 채 재판을 받는다면 — 보석의 원칙과 예외, 청구서에 담을 것, 구속취소·구속집행정지</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-boseok-cheongu-seokbang.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-boseok-cheongu-seokbang.html</guid>
+      <description>군산에서 구속된 채 기소되었다면. 구속 후 석방 절차 다섯 가지 비교, 필요적 보석의 원칙과 여섯 가지 예외, 임의적 보석, 보석 청구서에 담을 내용, 보석 조건과 위반 시 불이익, 구속취소와 구속집행정지를 정리했습니다.</description>
+      <category>형사</category>
+      <pubDate>Thu, 23 Jul 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
       <title>논산에서 이혼소송을 시작한다면 — 절차별 소요기간 한눈에 보기</title>

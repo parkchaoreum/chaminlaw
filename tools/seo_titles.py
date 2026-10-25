@@ -43,6 +43,7 @@ M = {
  'iksan-jeongsik-jaepan-cheonggu-hyeongjong': (['정식재판청구', '약식명령'], '경찰출신'),
  'gunsan-hangsosim-geomsa-hangso-daebi': (['형사항소심', '항소심'], '형사전문'),
  'gunsan-gusok-jeokbusim-cheongu': (['구속적부심', '구속'], '경찰출신'),
+ 'gunsan-boseok-cheongu-seokbang': (['보석', '구속'], '형사전문'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], '경찰출신'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),
