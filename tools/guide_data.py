@@ -20,7 +20,7 @@ GUIDES = [
          ('경위와 자료 정리','그날의 시간 순서, 동석자, 메시지와 위치 기록을 정리하고 인정할 부분과 다툴 부분을 나눕니다.'),
          ('경찰 조사','조사에 변호인이 동석할 수 있고, 조서는 서명 전에 끝까지 확인합니다.'),
          ('처분 · 재판','송치 후 공소청 검사가 혐의없음, 기소유예, 약식기소, 정식기소 중 처분을 정하고, 기소되면 전주지방법원 군산지원에서 재판이 진행됩니다.')],
-  cols=['iksan-gangje-chuhaeng-muhyeomui-gijun','gunsan-jun-gangje-chuhaeng','gunsan-seongbeomjoe-muhyeomui','gunsan-seongbeomjoe-jeongeon-songchi','gunsan-seongbeomjoe-neujeun-goso','gunsan-seongbeomjoe-pihaeja'],
+  cols=['gunsan-gangje-chuhaeng-uigyeonseo','iksan-gangje-chuhaeng-muhyeomui-gijun','gunsan-jun-gangje-chuhaeng','gunsan-seongbeomjoe-muhyeomui','gunsan-seongbeomjoe-jeongeon-songchi','gunsan-seongbeomjoe-neujeun-goso','gunsan-seongbeomjoe-pihaeja'],
   faq=[('합의하면 강제추행 사건은 끝나나요?','강제추행은 피해자가 처벌을 원하지 않아도 처벌할 수 있는 범죄입니다. 합의와 처벌불원 의사는 처분과 양형에서 중요하게 고려되지만, 그것만으로 사건이 종결되지는 않습니다.'),
        ('CCTV가 없으면 혐의가 인정되지 않나요?','그렇지 않습니다. 진술의 구체성과 일관성, 메시지, 동석자 진술 같은 정황을 종합해 판단하므로 CCTV가 없어도 혐의가 인정될 수 있고, 반대로 CCTV가 있어도 그것만으로 결론이 나지는 않습니다.'),
        ('경찰이 혐의가 없다고 보면 사건이 바로 끝나나요?','2026. 10. 2.부터 성폭력범죄는 경찰의 판단과 관계없이 공소청으로 송치되므로, 최종 처분은 공소청 검사가 정합니다.')]),
@@ -46,6 +46,7 @@ CITIES = [
 ]
 # 칼럼 → 키워드 이름(도시 이름 없이). 칼럼을 새로 만들면 여기에 한 줄 추가한다(없으면 표지 문구로 대신함).
 LABELS = {
+ 'gunsan-gangje-chuhaeng-uigyeonseo':'강제추행 의견서',
  'gunsan-jun-gangan-josa-jinsul':'준강간 조사',
  'gunsan-stalking-pihaeja-bohomyeongryeong':'스토킹 피해자보호명령',
  'gunsan-baesang-myeongryeong-sincheong':'배상명령',

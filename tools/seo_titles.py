@@ -65,6 +65,7 @@ M = {
  'gunsan-jikjang-goerophim-sayongja-jochi': (['직장내괴롭힘'], '노동전문'),
  'gunsan-jikjangnae-seonghuirong-daeeung': (['직장내성희롱'], '노동전문'),
  'gunsan-jun-gangje-chuhaeng': (['준강제추행'], '성범죄전문'),
+ 'gunsan-gangje-chuhaeng-uigyeonseo': (['강제추행', '성범죄'], '성범죄전문'),
  'gunsan-jun-gangan-josa-jinsul': (['준강간', '성폭행'], '성범죄전문'),
  'gunsan-jutaek-imdaecha-gaengsin': (['임대차갱신'], '부동산전문'),
  'gunsan-kamera-deung-iyong-chwaryeong': (['카촬'], '성범죄전문'),
