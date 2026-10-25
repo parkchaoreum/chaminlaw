@@ -2100,3 +2100,9 @@ body.nav-open { overflow: hidden; }
 .sec-title + .cases,
 .sec-title + .steps { margin-top: clamp(1.75rem, 3.5vw, 2.5rem); }
 @media (min-width: 760px) { .sec-title + .cases { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); } }
+
+/* 칼럼 끝 작성자 소개·관련 검색어 */
+.article__kw { margin-top: clamp(2rem, 4vw, 2.75rem); padding: 1.1rem 1.25rem; border-left: 3px solid var(--gold, #b8935a); background: rgba(184,147,90,.07); font-size: .92rem; line-height: 1.8; color: var(--slate-2); }
+.article__kw p { margin: 0; }
+.article__kw-tags { margin-top: .5rem !important; font-size: .84rem; color: var(--muted); }
+.article__kw-tags span { font-weight: 700; margin-right: .35rem; color: var(--slate); }

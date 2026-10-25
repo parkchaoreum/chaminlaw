@@ -32,6 +32,7 @@ M = {
  'gunsan-stalking-piuija-daeeung': (['스토킹', '스토킹전문'], '경찰출신'),
  'gunsan-hyeopbak-seongnip-goso': (['협박', '협박전문'], '경찰출신'),
  'jeonju-mugo-seongnip-gijun': (['무고', '무고전문'], '형사전문'),
+ 'gimje-hyeongsa-hapui-sigi': (['형사합의', '형사합의전문'], '경찰출신'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], '경찰출신'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),
@@ -86,26 +87,27 @@ M = {
  'nonsan-ihon-sosong-gigan': (['이혼소송'], '이혼전문'),
  'seocheon-gunhyeongbeop-hyeongbeop': (['군형사'], None),
 }
-SUF = ' | 법률사무소 차민'
-def date(s): 
-    m = re.search(r'"datePublished":\s*"(\d{4}-\d\d-\d\d)', s); return m.group(1) if m else ''
-files = []
-for slug in M:
-    p = ROOT / 'blog' / f'{slug}.html'; files.append((date(p.read_text(encoding='utf-8')), slug, p))
-crim_i = 0
-for d, slug, p in sorted(files):
-    s = p.read_text(encoding='utf-8')
-    code = re.sub(r'^\d{8}-', '', slug).split('-')[0]; city = CITY[code]
-    kws, field = M[slug]
-    if field == 'CRIM':
-        field = '형사전문' if crim_i % 2 == 0 else '경찰출신'; crim_i += 1
-    words = [city + k + '변호사' for k in kws] + ([city + field + '변호사'] if field else [])
-    t = re.search(r'<title>(.*?)</title>', s).group(1)
-    body = t.split(SUF)[0]
-    if ' | ' in body and body.split(' | ')[0].endswith('변호사'):   # 이미 붙어 있으면 원문만 남긴다
-        body = body.split(' | ', 1)[1]
-    body = re.sub(r'^' + city + r'\s+', '', body); body = re.sub(r'\s+—\s+' + city + '$', '', body)
-    new = '·'.join(words) + ' | ' + body + SUF
-    s = s.replace(f'<title>{t}</title>', f'<title>{new}</title>', 1)
-    p.write_text(s, encoding='utf-8')
-    print(new)
+if __name__ == '__main__':
+    SUF = ' | 법률사무소 차민'
+    def date(s): 
+        m = re.search(r'"datePublished":\s*"(\d{4}-\d\d-\d\d)', s); return m.group(1) if m else ''
+    files = []
+    for slug in M:
+        p = ROOT / 'blog' / f'{slug}.html'; files.append((date(p.read_text(encoding='utf-8')), slug, p))
+    crim_i = 0
+    for d, slug, p in sorted(files):
+        s = p.read_text(encoding='utf-8')
+        code = re.sub(r'^\d{8}-', '', slug).split('-')[0]; city = CITY[code]
+        kws, field = M[slug]
+        if field == 'CRIM':
+            field = '형사전문' if crim_i % 2 == 0 else '경찰출신'; crim_i += 1
+        words = [city + k + '변호사' for k in kws] + ([city + field + '변호사'] if field else [])
+        t = re.search(r'<title>(.*?)</title>', s).group(1)
+        body = t.split(SUF)[0]
+        if ' | ' in body and body.split(' | ')[0].endswith('변호사'):   # 이미 붙어 있으면 원문만 남긴다
+            body = body.split(' | ', 1)[1]
+        body = re.sub(r'^' + city + r'\s+', '', body); body = re.sub(r'\s+—\s+' + city + '$', '', body)
+        new = '·'.join(words) + ' | ' + body + SUF
+        s = s.replace(f'<title>{t}</title>', f'<title>{new}</title>', 1)
+        p.write_text(s, encoding='utf-8')
+        print(new)
