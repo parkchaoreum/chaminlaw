@@ -283,7 +283,7 @@ G('sagi', '형사', '사기', '차용 사기와 민사 문제의 경계, 처벌�
    ('자료 확보', '계좌 내역, 메시지, 계약서, 변제 내역을 모읍니다.'),
    ('조사 대응', '고의가 없었다는 점을 객관적 자료로 설명합니다.'),
    ('합의 · 처분', '피해 회복 방안을 검토하고 처분에 대응합니다.')],
-  ['gunsan-voice-phishing-sugeochaek', 'gunsan-daepo-tongjang-myeongija-sonhaebaesang', 'iksan-daeyeogeum-banhwan'],
+  ['gunsan-sagi-goso-gosojang', 'gunsan-voice-phishing-sugeochaek', 'iksan-daeyeogeum-banhwan'],
   [('돈을 못 갚으면 사기죄가 되나요?', '빌릴 당시 갚을 의사와 능력이 있었다면 나중에 갚지 못했다는 사실만으로는 사기가 되지 않습니다.'),
    ('피해자인데 형사고소와 민사소송 중 무엇을 해야 하나요?', '상대의 재산 상태와 증거에 따라 다르며, 함께 진행하는 경우도 많습니다.'),
    ('합의하면 처벌을 피할 수 있나요?', '사기는 합의해도 처벌될 수 있는 범죄이지만, 피해 회복은 처분과 형량에 크게 반영됩니다.')]),
