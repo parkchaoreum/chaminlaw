@@ -46,6 +46,7 @@ CITIES = [
 ]
 # 칼럼 → 키워드 이름(도시 이름 없이). 칼럼을 새로 만들면 여기에 한 줄 추가한다(없으면 표지 문구로 대신함).
 LABELS = {
+ 'gunsan-forensic-iui-jechul-beomwi':'휴대전화 포렌식',
  'gunsan-apsu-susaek-daeeung':'압수수색 대응',
  'gunsan-gongsocheong-sasilgwangye-hwagin':'공소청 사실관계 확인',
  'gunsan-boseok-cheongu-seokbang':'보석',
@@ -108,7 +109,7 @@ KEYMAP = {
    ('공소청조사변호사', Q('gongsocheong-josa')), ('검찰조사변호사', Q('gongsocheong-josa')),
    ('구속영장변호사', Q('gusok-yeongjang')), ('영장실질심사변호사', Q('gusok-yeongjang')),
    ('구속적부심변호사', Q('gusok-jeokbusim-boseok')), ('보석변호사', Q('gusok-jeokbusim-boseok')),
-   ('압수수색변호사', Q('apsu-susaek')),
+   ('압수수색변호사', Q('apsu-susaek')), ('포렌식변호사', Q('forensic')),
    ('무혐의변호사', Q('muhyeomui')), ('무죄변호사', Q('mujoe')), ('기소유예변호사', Q('giso-yuye')), ('집행유예변호사', Q('jiphaeng-yuye')), ('선고유예변호사', Q('jiphaeng-yuye')),
    ('약식명령변호사', Q('yaksik-myeongryeong')), ('정식재판청구변호사', Q('yaksik-myeongryeong')),
    ('형사항소심변호사', Q('hangsosim')), ('형사합의변호사', Q('hapui-gongtak')), ('형사공탁변호사', Q('hapui-gongtak')),

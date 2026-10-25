@@ -1120,4 +1120,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-forensic-iui-jechul-beomwi.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-gunsan-forensic.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
 </urlset>

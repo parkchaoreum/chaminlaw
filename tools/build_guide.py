@@ -2,7 +2,7 @@
 """키워드별 안내 페이지(guide-*.html)와 허브(guide.html)를 만든다.
 내용은 tools/guide_data.py. 레이아웃(머리말·바닥글·상담 CTA)은 practice.html 에서 가져온다.
 페이지마다 고유한 설명·쟁점·절차·FAQ를 쓰고, 관련 칼럼으로 연결한다(키워드만 바꾼 복제 페이지 금지)."""
-import re, json, html, pathlib, sys
+import re, json, html, pathlib, sys, os
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
 from guide_data import GUIDES, CITIES, LABELS, tag_group, GROUP_ORDER, KEYMAP, CASEMAP
@@ -98,6 +98,15 @@ def h1_for(g):
     return f'{city}{kws[0]}변호사'
 
 crim_n = 0
+# 형사 안내 페이지 제목 끝 문구(형사전문/경찰출신)는 한 번 정하면 고정한다(대표 지시 2026-10-25). 새 페이지만 개수가 적은 쪽으로 배정해 이 파일에 추가한다.
+SUFFIX_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'guide_suffix.json')
+SUFFIX = json.load(open(SUFFIX_FILE, encoding='utf-8')) if os.path.exists(SUFFIX_FILE) else {}
+def crim_word(slug):
+    if slug not in SUFFIX:
+        vals = list(SUFFIX.values())
+        SUFFIX[slug] = '경찰출신' if vals.count('형사전문') > vals.count('경찰출신') else '형사전문'
+        json.dump(SUFFIX, open(SUFFIX_FILE, 'w', encoding='utf-8'), ensure_ascii=False, indent=0, sort_keys=True)
+    return SUFFIX[slug]
 def seo_title(g):
     global crim_n
     city = g.get('city', 'gunsan')
@@ -106,7 +115,7 @@ def seo_title(g):
         words = [cname + k + '변호사' for k in key_words(g)[1]]
         f = FIELD[g['group']]
         if f == 'CRIM':
-            f = '형사전문' if crim_n % 2 == 0 else '경찰출신'; crim_n += 1
+            f = crim_word(g['slug'])
         if '음주' in g['kw']: f = '음주운전전문'
         pw = pro_word(cname, key_words(g)[1][0])
         if pw: words.insert(1, pw)
@@ -117,7 +126,7 @@ def seo_title(g):
     words = ['군산' + re.sub(r'\s+', '', k) + ('' if k.endswith('변호사') else '변호사') for k in kws][:3]
     f = FIELD[g['group']]
     if f == 'CRIM':
-        f = '형사전문' if crim_n % 2 == 0 else '경찰출신'; crim_n += 1
+        f = crim_word(g['slug'])
     if g['group'] == '음주운전·교통' and any('음주' in k or '면허' in k for k in kws): f = '음주운전전문'
     pw = pro_word('군산', key_words(g)[1][0])
     if pw: words.insert(1, pw)
