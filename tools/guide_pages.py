@@ -122,7 +122,7 @@ G('giso-yuye', '형사', '기소유예', '혐의가 인정되는 사건에서 �
    ('양형 자료', '합의서, 반성문, 탄원서, 재범 방지 노력을 정리합니다.'),
    ('의견서 제출', '송치 후 공소청 검사에게 기소유예가 적절한 이유를 의견서로 냅니다.'),
    ('처분 확인', '처분 결과를 확인하고 필요한 후속 조치를 안내합니다.')],
-  ['gunsan-giso-jiphaeng-yuye-chai', 'iksan-chobeom-giso-yuye', 'gunsan-eommu-banghae-beolgeum-wijaryo'],
+  ['gunsan-giso-jiphaeng-yuye-chai', 'iksan-chobeom-giso-yuye', 'jeonju-giso-yuye-geomsa-panjeon', 'gunsan-eommu-banghae-beolgeum-wijaryo'],
   [('기소유예도 전과인가요?', '재판을 받지 않아 형의 선고가 없으므로 일반적으로 말하는 전과(전과기록)는 남지 않지만, 수사경력 자료에는 일정 기간 남습니다.'),
    ('합의가 안 돼도 기소유예가 나올 수 있나요?', '가능성은 있지만, 피해 회복이 없으면 어려워지는 경우가 많습니다. 공탁 등 다른 방법을 함께 검토합니다.'),
    ('기소유예에 불만이 있으면 다툴 수 있나요?', '혐의가 없다고 다투는 경우 헌법소원 등 별도 절차를 검토할 수 있으나 요건이 엄격합니다.')]),

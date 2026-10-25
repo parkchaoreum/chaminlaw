@@ -1044,4 +1044,14 @@
     <loc>https://www.chaminlaw.com/guide-iksan-giso-yuye.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/jeonju-giso-yuye-geomsa-panjeon.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-jeonju-giso-yuye.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
 </urlset>
