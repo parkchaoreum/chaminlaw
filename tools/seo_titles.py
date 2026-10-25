@@ -3,7 +3,7 @@
 형사 칼럼의 '형사전문변호사'/'경찰출신변호사'는 칼럼마다 고정해 둔다(2026-10-25 대표 지시: 새 글이 끼어들어도 기존 제목은 바뀌지 않게). 새 형사 칼럼은 두 문구 수가 균형을 이루도록, 군산 글은 가능하면 형사전문으로 지정해 M 에 직접 적는다. 다시 돌려도 결과가 같다."""
 import re, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CITY = {'gunsan':'군산','iksan':'익산','jeonju':'전주','buan':'부안','gimje':'김제','seocheon':'서천','nonsan':'논산','boryeong':'보령','namwon':'남원','jeongeup':'정읍'}
+CITY = {'gunsan':'군산','iksan':'익산','jeonju':'전주','buan':'부안','gimje':'김제','seocheon':'서천','nonsan':'논산','boryeong':'보령','gochang':'고창','buyeo':'부여','jeongeup':'정읍'}
 # slug: (키워드들, 분야 키워드)  분야 'CRIM' = 형사전문/경찰출신 교대
 M = {
  '20261016-gunsan-sonhaebaesang': (['손해배상'], '민사전문'),
@@ -35,6 +35,7 @@ M = {
  'gunsan-hyeongsa-hapui-sigi': (['형사합의', '형사합의전문'], '경찰출신'),
  'gunsan-hyeongsa-gongtak': (['형사공탁'], '형사전문'),
  'gunsan-giso-jiphaeng-yuye-chai': (['집행유예', '기소유예'], '경찰출신'),
+ 'iksan-chobeom-giso-yuye': (['기소유예', '기소유예전문'], '형사전문'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], '경찰출신'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),

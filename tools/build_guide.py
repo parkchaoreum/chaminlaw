@@ -235,8 +235,8 @@ def city_of(slug):
     for code, name, *_ in CITIES:
         if s2.startswith(code + '-'): return code
     return None
-hub_title = '지역별 안내 — 군산·익산·전주·김제·부안·서천·논산·보령·남원·정읍 | 법률사무소 차민'
-hub_desc = '군산, 익산, 전주, 부안, 김제, 서천, 논산, 보령, 남원, 정읍 지역의 형사·성범죄·음주운전·이혼·상속·민사·학교폭력·노동 사건 안내와 관할 법원·공소청·경찰서, 관련 칼럼을 모았습니다.'
+hub_title = '지역별 안내 — 군산·익산·전주·김제·부안·서천·논산·보령·고창·부여·정읍 | 법률사무소 차민'
+hub_desc = '군산, 익산, 전주, 부안, 김제, 서천, 논산, 보령, 고창, 부여, 정읍 지역의 형사·성범죄·음주운전·이혼·상속·민사·학교폭력·노동 사건 안내와 관할 법원·공소청·경찰서, 관련 칼럼을 모았습니다.'
 h = head_for(hub_title, hub_desc, SITE + 'guide.html')
 blocks = []
 for code, name, court, police, pros in CITIES:
