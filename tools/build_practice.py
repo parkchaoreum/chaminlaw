@@ -125,7 +125,8 @@ for ar in AREAS:
         <span aria-current="page">{esc(ar['name'])}</span>
       </nav>
       <p class="phero__en">{ar['en']}</p>
-      <h1 class="phero__title">{esc(ar['h1'])}</h1>
+      <h1 class="phero__title">{esc(ar.get('h1kw', ar['h1']))}</h1>
+      <p class="phero__sub">{esc(ar['h1'])}</p>
     </div>
   </section>
 
