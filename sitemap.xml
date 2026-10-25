@@ -1090,4 +1090,10 @@
     <loc>https://www.chaminlaw.com/guide-iksan-yaksik-myeongryeong.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-hangsosim-geomsa-hangso-daebi.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
