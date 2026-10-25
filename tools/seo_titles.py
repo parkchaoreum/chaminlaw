@@ -12,6 +12,8 @@ M = {
  'buan-sanggan-sosong-jeunggeo': (['상간소송'], '이혼전문'),
  'gimje-sanggan-sosong': (['상간소송'], '이혼전문'),
  'gunsan-budang-haego-guje': (['부당해고'], '노동전문'),
+ 'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
+ 'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),
  'gunsan-daepo-tongjang-myeongija-sonhaebaesang': (['대포통장'], '민사전문'),
  'gunsan-dongeop-taltoe-jeongsan': (['동업분쟁'], '민사전문'),
