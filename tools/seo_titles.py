@@ -33,6 +33,7 @@ M = {
  'gunsan-hyeopbak-seongnip-goso': (['협박', '협박전문'], '경찰출신'),
  'jeonju-mugo-seongnip-gijun': (['무고', '무고전문'], '형사전문'),
  'gimje-hyeongsa-hapui-sigi': (['형사합의', '형사합의전문'], '경찰출신'),
+ 'buan-hyeongsa-gongtak': (['형사공탁'], '형사전문'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], '경찰출신'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),
