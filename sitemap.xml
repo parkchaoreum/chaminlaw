@@ -1130,4 +1130,10 @@
     <loc>https://www.chaminlaw.com/guide-gunsan-forensic.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-eommusang-baeim-gyeongyeong-pandan.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
