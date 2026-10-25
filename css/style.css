@@ -2049,3 +2049,14 @@ body.nav-open { overflow: hidden; }
 
 /* column pages: start the article closer to the title so the page never looks empty */
 .sec:has(> .wrap > .article) { padding-top: clamp(1.75rem, 3.5vw, 2.75rem); }
+
+/* ------------------------------------------------------------ keyword guides */
+.ginfo { width: 100%; border-collapse: collapse; margin: 0 0 1.75rem; font-size: .95rem; background: var(--paper); }
+.ginfo th, .ginfo td { border: 1px solid rgba(0,0,0,.12); padding: .8rem 1rem; text-align: left; vertical-align: top; line-height: 1.6; }
+.ginfo th { width: 8.5rem; background: var(--paper-2); font-weight: 600; white-space: nowrap; }
+.ginfo__p { margin: 0 0 1rem; line-height: 1.85; }
+.ghub__h { font-size: 1.15rem; margin: 2.25rem 0 .9rem; }
+.ghub__chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .6rem; }
+.gchip { display: flex; justify-content: space-between; align-items: center; padding: .8rem 1.1rem; border: 1px solid rgba(0,0,0,.14); border-radius: 999px; text-decoration: none; color: inherit; font-size: .95rem; background: var(--paper); transition: border-color .2s, background .2s; }
+.gchip:hover { border-color: var(--gold, #b8935a); background: var(--paper-2); }
+@media (max-width: 520px) { .ginfo th { width: 6rem; white-space: normal; } }
