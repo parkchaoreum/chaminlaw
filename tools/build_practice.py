@@ -97,6 +97,23 @@ for ar in AREAS:
     </div>
   </section>
 '''
+    topic_sec = ''
+    if ar.get('topics'):
+        items = []
+        for t, d, links in ar['topics']:
+            lk = ' '.join(f'<a class="ilink" href="{h}">{esc(l)} →</a>' for h, l in links)
+            items.append(f'        <div class="pitem"><h3 class="pitem__h">{esc(t)}</h3><p class="pitem__d">{esc(d)}</p>' + (f'<p class="pitem__d">{lk}</p>' if lk else '') + '</div>')
+        topic_sec = f'''
+  <section class="sec sec--paper sec--divided">
+    <div class="wrap">
+      <p class="eyebrow">By Offense</p>
+      <h2 class="sec-title">죄명별 안내</h2>
+      <div class="pitems parea__situ">
+{chr(10).join(items)}
+      </div>
+    </div>
+  </section>
+'''
     others = ' '.join(f'<a class="parea__chip" href="{o["slug"]}.html">{esc(o["name"])}</a>' for o in AREAS if o is not ar)
     main = f'''<main id="main">
   <section class="phero">
@@ -123,7 +140,7 @@ for ar in AREAS:
     </div>
   </section>
 
-  <section class="sec sec--paper2">
+{topic_sec}  <section class="sec sec--paper2">
     <div class="wrap">
       <p class="eyebrow">Process</p>
       <h2 class="sec-title">사건은 이렇게 진행됩니다</h2>
