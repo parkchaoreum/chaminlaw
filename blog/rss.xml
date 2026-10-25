@@ -6,7 +6,7 @@
     <atom:link href="https://www.chaminlaw.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>전북 군산 법률사무소 차민의 형사·민사·가사·행정 법률 칼럼</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 25 Oct 2026 19:04:10 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 19:15:04 +0900</lastBuildDate>
     <item>
       <title>군산 사건이 공소청으로 송치되었다면 — 사실관계 확인과 고소인 등 면담, 증거가 안 되는 진술의 의미</title>
       <link>https://www.chaminlaw.com/blog/gunsan-gongsocheong-sasilgwangye-hwagin.html</link>
@@ -1134,6 +1134,38 @@
       <description>익산에서 돌아가신 분의 빚 때문에 상속포기를 하려 한다면. 상속포기의 효과와 3개월 기한, 준비 서류, 1순위가 포기하면 넘어가는 상속 순위, 심판 전후 재산 처분 금지, 포기 사실이 공시되지 않아 소장이 올 수 있는 점과 답변서 대응을 정리했습니다.</description>
       <category>가사 · 상속</category>
       <pubDate>Fri, 10 Apr 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 협의이혼을 하려면 — 네 단계 절차와 많이 하는 실수, 재산분할 합의서와 공증</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-hyeopui-ihon-jeolcha-jueui.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-hyeopui-ihon-jeolcha-jueui.html</guid>
+      <description>군산에서 협의이혼을 준비한다면. 신청부터 이혼 신고까지 네 단계, 숙려기간 1개월·3개월, 대리 출석이 안 되는 이유, 자녀 양육 협의가 없으면 진행되지 않는 점, 법원이 확인하지 않는 위자료·재산분할, 합의서와 공증, 협의이혼이 무산됐을 때 합의서의 효력을 정리했습니다.</description>
+      <category>이혼 · 가사</category>
+      <pubDate>Thu, 09 Apr 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 조정이혼을 한다면 — 신청부터 조정조서까지, 불성립과 재산 확인</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-ihon-jojeong-jeolcha.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-ihon-jojeong-jeolcha.html</guid>
+      <description>군산에서 조정으로 이혼하려 한다면. 협의이혼과의 차이, 조정조서의 효력, 신청 후 기초조사표와 부모교육, 조정위원과 판사의 역할, 가사조사와 상담, 상대방이 나오지 않을 때, 조정 중 재산명시로 상대방 재산을 확인하는 방법을 정리했습니다.</description>
+      <category>이혼 · 가사</category>
+      <pubDate>Wed, 08 Apr 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 잘못한 쪽이 이혼을 원한다면 — 유책배우자 이혼청구의 원칙과 예외</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-yuchaek-baeuja-ihon-cheonggu.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-yuchaek-baeuja-ihon-cheonggu.html</guid>
+      <description>군산에서 외도 등으로 혼인 파탄에 책임이 있는 배우자가 이혼을 원한다면. 재판상 이혼 사유, 유책배우자 이혼청구를 원칙적으로 허용하지 않는 대법원 전원합의체 판결, 예외적으로 허용되는 세 가지 경우, 조정으로 해결하는 방법, 위자료·양육권과의 관계를 정리했습니다.</description>
+      <category>이혼 · 가사</category>
+      <pubDate>Tue, 07 Apr 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 사실혼을 끝낼 때 — 한쪽 의사로 해소되는 사실혼과 재산분할, 사망한 경우의 차이</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-sasilhon-haeso-jaesan-bunhal.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-sasilhon-haeso-jaesan-bunhal.html</guid>
+      <description>군산에서 혼인신고 없이 함께 살다 헤어지게 되었다면. 사실혼이 한쪽의 의사로 해소된다는 대법원 결정, 해소 후 재산분할과 위자료, 상대방이 사망해 사실혼이 끝나면 재산분할도 상속도 받기 어려운 점, 의식불명 상태에서 해소 의사를 밝힌 사례를 정리했습니다.</description>
+      <category>이혼 · 가사</category>
+      <pubDate>Mon, 06 Apr 2026 09:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
