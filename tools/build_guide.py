@@ -251,6 +251,9 @@ hub_desc = '군산, 익산 지역의 형사·성범죄·음주운전·이혼·�
 h = head_for(hub_title, hub_desc, SITE + 'guide.html')
 blocks = []
 # 칼럼이 충분히 쌓이기 전까지 지역별 안내 허브에서 숨기는 지역(대표 지시 2026-10-25). 안내 페이지 자체는 그대로 둔다.
+# 다른 지역 안내 페이지가 군산의 어느 세부카테고리를 대신하는지
+CITY_ALIAS = {'eumju-josa': 'eumju-unjeon', 'hakpokwi': 'hakgyopokryeok', 'gongmuwon-jinggye': 'gongmuwon-gamsa'}
+PRACTICE_TO = {'practice-dui.html': 'eumju-unjeon', 'practice-school.html': 'hakgyopokryeok'}
 HUB_HIDDEN = {'jeonju', 'buan', 'gimje', 'seocheon', 'nonsan', 'boryeong', 'gochang', 'buyeo', 'jeongeup'}
 for code, name, court, police, pros in CITIES:
     if code in HUB_HIDDEN: continue
@@ -265,9 +268,22 @@ for code, name, court, police, pros in CITIES:
         for g in GUIDES:   # 군산 안내 페이지에 연결된 칼럼은 칩으로 따로 띄우지 않는다
             if g.get('city', 'gunsan') == 'gunsan': used |= set(g['cols'])
     else:
-        for g in GUIDES:
-            if g.get('city', 'gunsan') == code:
-                used |= set(g['cols'])
+        # 다른 지역도 군산 세부카테고리 이름·순서를 그대로 쓴다(대표 지시 2026-10-25). 해당 지역 안내 페이지가 있는 칩만 보인다.
+        mine = {g['slug']: g for g in GUIDES if g.get('city', 'gunsan') == code}
+        placed = set()
+        for grp, items in KEYMAP.items():
+            for kw, tgt in items:
+                if not tgt: continue
+                key = PRACTICE_TO.get(tgt) or (tgt[len('guide-gunsan-'):-5] if tgt.startswith('guide-gunsan-') else None)
+                if not key: continue
+                slug = f'guide-{code}-{key}'
+                if slug not in mine: slug = f'guide-{code}-{CITY_ALIAS.get(key, key)}'
+                if slug not in mine: continue
+                groups2.setdefault(grp, []).append((slug + '.html', chip_label(name, kw), True))
+                placed.add(slug)
+        for g in mine.values():
+            used |= set(g['cols'])
+            if g['slug'] not in placed:
                 groups2.setdefault(g['group'], []).append((g['slug'] + '.html', chip_label(name, re.sub(r'\(.*?\)', '', g['kw'])), True))
     for slug, tag in tags.items():
         if city_of(slug) != code or slug in used: continue
@@ -277,7 +293,7 @@ for code, name, court, police, pros in CITIES:
     inner = []
     for grp in (list(KEYMAP) + [x for x in GROUP_ORDER if x not in KEYMAP]):
         if grp not in groups2: continue
-        chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in (groups2[grp] if code == 'gunsan' else sorted(groups2[grp], key=lambda x: (not x[2], x[1]))))
+        chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in (groups2[grp] if code == 'gunsan' else sorted(groups2[grp], key=lambda x: not x[2])))
         glabel = f'{name} 형사·군형사' if grp == '형사' else f'{name} {grp}'
         note = GROUP_NOTE.get(grp, '')
         note = f'\n        <p class="ghub__note" style="margin:.7rem 0 0;font-size:.92rem;line-height:1.6;opacity:.75">{esc(note)}</p>' if note else ''
