@@ -1372,4 +1372,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-gunsan-gaapryu.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-gunsan-jigeup-myeongryeong.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-gunsan-maemae-gyeyak-haeje.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-gunsan-sahaehaengwi-chwiso.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
 </urlset>
