@@ -46,6 +46,14 @@ CITIES = [
 ]
 # 칼럼 → 키워드 이름(도시 이름 없이). 칼럼을 새로 만들면 여기에 한 줄 추가한다(없으면 표지 문구로 대신함).
 LABELS = {
+ 'gunsan-gongmuwon-jinggye-sacheong-jaengjeom':'공무원 징계 소청',
+ 'gunsan-gunin-jinggye-josa-daeeung':'군인 징계 조사',
+ 'gunsan-gyowon-jinggye-gongnip-sarip':'교원 징계 절차',
+ 'gunsan-nodongwiwonhoe-simmun-jeolcha':'노동위원회 절차',
+ 'iksan-jikjang-goerophim-singo-gyeongno':'괴롭힘 신고 경로',
+ 'iksan-toejikgeum-michigeup-hoesu':'퇴직금 미지급',
+ 'iksan-gongmuwon-gamsa-jinggyewiwonhoe':'감사 후 징계위원회',
+ 'iksan-jinggyewiwonhoe-chulseok-jeomgeom':'징계위원회 출석',
  'gunsan-jinggye-jeongdangseong-samdan':'징계 정당성',
  'iksan-imgeum-chebul-sosong':'임금체불 소송',
  'gunsan-gangan-goso-sinbingseong':'강간 고소',

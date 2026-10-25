@@ -1,4 +1,12 @@
 {
+"gunsan-gongmuwon-jinggye-sacheong-jaengjeom": ["징계", "공무원 징계", "소청과 소송"],
+"gunsan-gunin-jinggye-josa-daeeung": ["징계", "군인 징계", "조사와 항고"],
+"gunsan-gyowon-jinggye-gongnip-sarip": ["징계", "교원 징계", "공립·사립 절차"],
+"gunsan-nodongwiwonhoe-simmun-jeolcha": ["노동", "노동위원회", "심문회의"],
+"iksan-jikjang-goerophim-singo-gyeongno": ["노동", "직장 내 괴롭힘", "신고 경로"],
+"iksan-toejikgeum-michigeup-hoesu": ["노동", "퇴직금 미지급", "회수 방법"],
+"iksan-gongmuwon-gamsa-jinggyewiwonhoe": ["징계", "공무원 감사", "징계위원회"],
+"iksan-jinggyewiwonhoe-chulseok-jeomgeom": ["노동", "징계위원회", "출석 전 점검"],
 "gunsan-jinggye-jeongdangseong-samdan": ["노동", "징계 정당성", "세 단계"],
 "iksan-imgeum-chebul-sosong": ["노동", "임금체불", "진정과 소송"],
 "gunsan-gangan-goso-sinbingseong": ["성범죄", "강간 고소", "진술의 신빙성"],
