@@ -74,6 +74,8 @@ AWKWARD = {'경찰조사', '피의자', '공소청조사', '검찰조사', '구�
            '이혼조정', '이혼후재산분할', '과거양육비', '양육비청구', '유언효력', '강제집행정지', '민사조정', '학폭위',
            '학폭행정심판', '학폭행정소송', '학폭집행정지', '학폭생기부', '학폭가해학생', '학폭피해학생', '공무원감사', 'SNS계정정지', '대포통장', '내용증명', '원상회복',
            '임대차갱신', '영장실질심사', '구속영장', '면허취소', '유언장', '친권', '면접교섭'}
+# 지역별 안내 분야 묶음 아래에 붙이는 줄임말 설명(대표 지시 2026-10-25).
+GROUP_NOTE = {'학교폭력': '※ 학폭은 학교폭력, 학폭위는 학교폭력대책심의위원회, 생기부는 학교생활기록부의 줄임말입니다.'}
 def key_words(g):
     """(도시명, 대표 키워드 목록[공백 없는 기본형]) — 군산은 KEYMAP, 다른 지역은 kw 에서."""
     city = g.get('city', 'gunsan')
@@ -273,7 +275,9 @@ for code, name, court, police, pros in CITIES:
         if grp not in groups2: continue
         chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in (groups2[grp] if code == 'gunsan' else sorted(groups2[grp], key=lambda x: (not x[2], x[1]))))
         glabel = f'{name} 형사·군형사' if grp == '형사' else f'{name} {grp}'
-        inner.append(f'        <details class="ghub__grp">\n        <summary><h3 class="ghub__h">{esc(glabel)}</h3><span class="ghub__count">{len(groups2[grp])}</span></summary>\n        <div class="ghub__chips">\n{chips}\n        </div>\n        </details>')
+        note = GROUP_NOTE.get(grp, '')
+        note = f'\n        <p class="ghub__note" style="margin:.7rem 0 0;font-size:.92rem;line-height:1.6;opacity:.75">{esc(note)}</p>' if note else ''
+        inner.append(f'        <details class="ghub__grp">\n        <summary><h3 class="ghub__h">{esc(glabel)}</h3><span class="ghub__count">{len(groups2[grp])}</span></summary>\n        <div class="ghub__chips">\n{chips}\n        </div>{note}\n        </details>')
     if not inner:
         inner.append(f'        <p class="ghub__empty">{esc(name)} 지역 안내 글은 준비 중입니다. {esc(name)} 사건도 상담하실 수 있습니다.</p>')
     blocks.append(f'''      <details class="ghub__city" id="{code}"{" open" if code == "gunsan" else ""}>
