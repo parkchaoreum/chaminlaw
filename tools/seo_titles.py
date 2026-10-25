@@ -26,6 +26,8 @@ M = {
  'gunsan-gosoin-josa-daeeung': (['고소대리'], 'CRIM'),
  'gunsan-gunhyeongsa-yeongnae-pokhaeng': (['군형사', '군인폭행'], None),
  'gunsan-gusok-yeongjang-silji-simsa': (['구속영장', '영장실질심사'], 'CRIM'),
+ 'gunsan-pokhaeng-pihae-hapui': (['폭행', '폭행전문'], 'CRIM'),
+ 'iksan-sanghae-pokhaeng-gubun': (['상해', '폭행'], 'CRIM'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], 'CRIM'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),
