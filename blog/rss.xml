@@ -6,7 +6,7 @@
     <atom:link href="https://www.chaminlaw.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>전북 군산 법률사무소 차민의 형사·민사·가사·행정 법률 칼럼</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 25 Oct 2026 19:21:34 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 19:28:38 +0900</lastBuildDate>
     <item>
       <title>군산 사건이 공소청으로 송치되었다면 — 사실관계 확인과 고소인 등 면담, 증거가 안 되는 진술의 의미</title>
       <link>https://www.chaminlaw.com/blog/gunsan-gongsocheong-sasilgwangye-hwagin.html</link>
@@ -1238,6 +1238,38 @@
       <description>군산에서 양육비를 다 주지 못해 감치 청구를 받았다면. 감치의 요건(이행명령 후 3기 이상, 정당한 이유 없이), 감치는 형사처벌이 아니라는 점, 법원이 보는 자녀의 복리와 지급 의지, 질병·소득 감소를 증명할 자료, 감액 청구를 함께 해야 하는 이유를 정리했습니다.</description>
       <category>이혼 · 가사</category>
       <pubDate>Tue, 24 Mar 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 이혼 후 양육자를 바꾸려면 — 변경이 인정되는 경우와 어려운 경우</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-yangyukja-byeongyeong-gijun.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-yangyukja-byeongyeong-gijun.html</guid>
+      <description>군산에서 이혼할 때 정한 양육자나 친권자를 바꾸고 싶다면. 법원이 양육 상태 변경에 신중한 이유, 소득 증가나 일반적인 고려만으로는 어려운 점, 방임·학대·면접교섭 방해처럼 변경이 인정될 수 있는 사정, 자녀의 의사, 협의와 청구 방법을 정리했습니다.</description>
+      <category>이혼 · 가사</category>
+      <pubDate>Mon, 23 Mar 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 이혼 중 피해자보호명령을 받았다면 — 발령 요건과 방어권, 대법원 2024터2 결정</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-pihaeja-boho-myeongryeong-daeeung.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-pihaeja-boho-myeongryeong-daeeung.html</guid>
+      <description>군산에서 이혼 과정 중 배우자가 피해자보호명령을 청구했다면. 퇴거·접근금지·면접교섭 제한 등 보호명령의 내용, 가정폭력행위가 특정되지 않거나 인정되지 않으면 발령할 수 없다는 대법원 2024. 3. 29.자 2024터2 결정, 행위자의 절차적 권리, 7일 안의 항고, 위반 시 형사처벌, 준비할 증거를 정리했습니다.</description>
+      <category>이혼 · 가사</category>
+      <pubDate>Fri, 20 Mar 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>군산에서 이혼할 때 연금은 어떻게 하나 — 분할연금과 조정에서의 정리 방법</title>
+      <link>https://www.chaminlaw.com/blog/gunsan-bunhal-yeongeum-ihon-jojeong.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/gunsan-bunhal-yeongeum-ihon-jojeong.html</guid>
+      <description>군산에서 이혼하면서 국민연금·공무원연금 등 상대방 연금을 어떻게 할지 고민이라면. 혼인 기간 5년 이상이면 받을 수 있는 분할연금, 국민연금과 공무원연금의 요건 차이, 이혼 소송에서 연금이 따로 정리되는 방식, 조정에서 각자 귀속으로 정할 때 따져 볼 점, 실질적인 혼인 기간을 둘러싼 다툼을 정리했습니다.</description>
+      <category>이혼 · 가사</category>
+      <pubDate>Thu, 19 Mar 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>전주에서 빌려준 돈을 "투자였다"며 안 갚는다면 — 대여와 투자의 구분, 계약 당사자, 사기</title>
+      <link>https://www.chaminlaw.com/blog/jeonju-daeyeogeum-tuja-guboon.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/jeonju-daeyeogeum-tuja-guboon.html</guid>
+      <description>전주에서 지인에게 빌려준 돈을 돌려받지 못하고 있다면. 상대방이 투자였다고 주장할 때 대여를 증명하는 방법, 회사에 송금한 돈을 두고 개인 책임이 없다고 할 때 계약 당사자를 정하는 기준, 처음 몇 번 이자만 주고 잠적한 경우의 사기 여부, 금융거래정보 제출명령, 빌려줄 때 남겨야 할 증거를 정리했습니다.</description>
+      <category>민사</category>
+      <pubDate>Wed, 18 Mar 2026 09:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
