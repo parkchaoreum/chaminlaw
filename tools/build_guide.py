@@ -82,6 +82,8 @@ def key_words(g):
         if not kws: kws = [re.sub(r'[\s·]+|\(.*?\)', '', g['kw'].split(' ', 1)[1])]
         return '군산', kws
     name, rest = g['kw'].split(' ', 1)
+    if '·' in rest and '(' not in rest:
+        return name, [re.sub(r'\s+', '', x) for x in rest.split('·')]
     kws = [re.sub(r'[\s·]+', '', re.sub(r'\(.*?\)', '', rest))]
     m = re.search(r'\((.*?)\)', rest)
     if m: kws.append(m.group(1))
@@ -101,10 +103,7 @@ def seo_title(g):
     city = g.get('city', 'gunsan')
     if city != 'gunsan':
         cname = g['kw'].split(' ', 1)[0]
-        base = re.sub(r'\(.*?\)', '', g['kw'].split(' ', 1)[1])
-        words = [cname + re.sub(r'[\s·]+', '', base) + '변호사']
-        m = re.search(r'\((.*?)\)', g['kw'])
-        if m: words.append(cname + m.group(1) + '변호사')
+        words = [cname + k + '변호사' for k in key_words(g)[1]]
         f = FIELD[g['group']]
         if f == 'CRIM':
             f = '형사전문' if crim_n % 2 == 0 else '경찰출신'; crim_n += 1
