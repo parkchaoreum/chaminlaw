@@ -50,6 +50,8 @@ M = {
  'gunsan-eommusang-baeim-gyeongyeong-pandan': (['배임', '배임전문'], '형사전문'),
  'gunsan-gonggal-goso-daeeung': (['공갈', '공갈전문'], '경찰출신'),
  'gunsan-jangmul-chwideuk-seongnip': (['장물취득', '장물전문'], '형사전문'),
+ 'gunsan-stalking-pihaeja-bohomyeongryeong': (['스토킹', '범죄피해자'], '경찰출신'),
+ 'gunsan-baesang-myeongryeong-sincheong': (['배상명령', '범죄피해자'], '형사전문'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], '경찰출신'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),

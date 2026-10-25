@@ -283,7 +283,7 @@ G('beomjoe-pihaeja', '형사', '범죄피해자', '고소부터 배상명령, �
    ('고소 · 진술', '고소장을 내고 피해자 조사에 대비합니다.'),
    ('절차 대응', '처분 결과에 따라 이의신청·항고를 검토합니다.'),
    ('피해 회복', '합의, 배상명령, 민사소송으로 손해를 회복합니다.')],
-  ['gunsan-gosoin-josa-daeeung', 'gunsan-bulsongchi-iuisincheong', '20261016-gunsan-sonhaebaesang'],
+  ['gunsan-baesang-myeongryeong-sincheong', 'gunsan-stalking-pihaeja-bohomyeongryeong', 'gunsan-gosoin-josa-daeeung', 'gunsan-bulsongchi-iuisincheong', '20261016-gunsan-sonhaebaesang'],
   [('고소하면 가해자 처벌과 배상을 함께 받을 수 있나요?', '처벌은 형사절차에서, 배상은 배상명령이나 민사소송으로 구하는 것이 일반적입니다.'),
    ('경찰이 불송치 결정을 했어요.', '고소인은 이의신청을 할 수 있고, 그러면 사건이 공소청 검사에게 넘어가 다시 검토됩니다.'),
    ('피해자도 변호사를 선임할 수 있나요?', '네. 고소장 작성, 조사 동석, 합의와 배상 청구까지 도울 수 있습니다.')]),
