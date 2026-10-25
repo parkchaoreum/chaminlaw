@@ -840,3 +840,21 @@ G('gyowon-jinggye', '노동·징계', '교원징계', '교원소청 30일과 아
    ('소청 기간을 넘기면 어떻게 되나요?', '처분을 안 날부터 30일이 지나면 소청심사를 청구할 수 없어 기한 관리가 중요합니다.')],
   court='징계위원회 → 교원소청심사위원회 → 행정소송'),
 ]
+
+
+# ---------------------------------------------------------------- 다른 지역용
+from guide_data_cities import CITY_INFO
+
+def GC(city, slug, group, kw, title_tail, desc, law, intro, points, steps, cols, faq, court=None, lawyer=None):
+    """다른 지역(익산·전주 등) 안내 페이지. 관할은 도시별 경찰서·공소청·법원으로 자동 지정."""
+    name, crt, police, pros = CITY_INFO[city]
+    if court is None:
+        court = f'{police} → {pros} → {crt}' if group in ('형사', '성범죄', '음주운전·교통') else crt
+    if lawyer is None:
+        lawyer = LEE if group in ('형사', '성범죄', '음주운전·교통', '노동·징계') else PARK_SCH if group == '학교폭력' else PARK
+    a = AREA[group]
+    return dict(slug=f'guide-{city}-' + slug, city=city, group=group, kw=f'{name} ' + kw,
+        h1=f'{name} {kw} 변호사 상담 안내', title=f'{name} {kw} 변호사 — {title_tail} | 법률사무소 차민', desc=desc,
+        info=[('관할', court), ('관련 법조', law), ('담당 변호사', lawyer),
+              ('관련 분야', f'<a class="ilink" href="practice-{a}.html">{AREA_NAME[group]} 분야 안내 →</a>')],
+        intro=intro, points=points, steps=steps, cols=cols, faq=faq)

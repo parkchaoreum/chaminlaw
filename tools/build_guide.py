@@ -48,7 +48,7 @@ def phero(crumbs, en, h1):
 
 groups = {}
 for g in GUIDES:
-    groups.setdefault(g['group'], []).append(g)
+    groups.setdefault((g.get('city', 'gunsan'), g['group']), []).append(g)
 
 # 검색 결과 제목: 이 페이지를 가리키는 군산 키워드를 '군산○○변호사'로 붙여 앞에 둔다.
 FIELD = {'형사': 'CRIM', '성범죄': '성범죄전문', '음주운전·교통': '교통사고전문', '이혼·상간': '이혼전문',
@@ -61,6 +61,19 @@ for grp, items in KEYMAP.items():
 crim_n = 0
 def seo_title(g):
     global crim_n
+    city = g.get('city', 'gunsan')
+    if city != 'gunsan':
+        cname = g['kw'].split(' ', 1)[0]
+        base = re.sub(r'\(.*?\)', '', g['kw'].split(' ', 1)[1])
+        words = [cname + re.sub(r'[\s·]+', '', base) + '변호사']
+        m = re.search(r'\((.*?)\)', g['kw'])
+        if m: words.append(cname + m.group(1) + '변호사')
+        f = FIELD[g['group']]
+        if f == 'CRIM':
+            f = '형사전문' if crim_n % 2 == 0 else '경찰출신'; crim_n += 1
+        if '음주' in g['kw']: f = '음주운전전문'
+        words.append(cname + f + '변호사')
+        return '·'.join(words) + ' | ' + g['title'].split(' — ', 1)[-1]
     kws = kw_for.get(g['slug'])
     if not kws: return g['title']
     words = ['군산' + re.sub(r'\s+', '', k) + ('' if k.endswith('변호사') else '변호사') for k in kws][:3]
@@ -94,7 +107,7 @@ for g in GUIDES:
           <button class="faq__q" type="button" aria-expanded="false" aria-controls="gf-{i}"><span class="faq__q-mark" aria-hidden="true">Q</span><span>{esc(q)}</span><span class="faq__sign" aria-hidden="true"></span></button>
           <div class="faq__a" id="gf-{i}"><div class="faq__a-inner">{esc(an)}</div></div>
         </div>''' for i, (q, an) in enumerate(g['faq'], 1))
-    sib = ' '.join(f'<a class="parea__chip" href="{o["slug"]}.html">{esc(o["kw"])}</a>' for o in groups[g['group']] if o is not g)
+    sib = ' '.join(f'<a class="parea__chip" href="{o["slug"]}.html">{esc(o["kw"])}</a>' for o in groups[(g.get('city', 'gunsan'), g['group'])] if o is not g)
     col_sec = f'''
   <section class="sec sec--paper2">
     <div class="wrap">
@@ -187,7 +200,8 @@ for code, name, court, police, pros in CITIES:
     else:
         for g in GUIDES:
             if g.get('city', 'gunsan') == code:
-                groups2.setdefault(g['group'], []).append((g['slug'] + '.html', chip_label(name, g['kw']), True))
+                used |= set(g['cols'])
+                groups2.setdefault(g['group'], []).append((g['slug'] + '.html', chip_label(name, re.sub(r'\(.*?\)', '', g['kw'])), True))
     for slug, tag in tags.items():
         if city_of(slug) != code or slug in used: continue
         label = LABELS.get(slug) or ' '.join(cover.get(slug, ['', slug])[1:2])
