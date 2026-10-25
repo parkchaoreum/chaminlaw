@@ -145,7 +145,7 @@ hub_title = '지역별 안내 — 군산·익산·전주·김제·부안·서천
 hub_desc = '군산, 익산, 전주, 부안, 김제, 서천, 논산, 보령, 남원, 정읍 지역의 형사·성범죄·음주운전·이혼·상속·민사·학교폭력·노동 사건 안내와 관할 법원·경찰서, 관련 칼럼을 모았습니다.'
 h = head_for(hub_title, hub_desc, SITE + 'guide.html')
 blocks = []
-for code, name, court, police in CITIES:
+for code, name, court, police, pros in CITIES:
     groups2 = {}
     used = set()
     if code == 'gunsan':
@@ -172,7 +172,7 @@ for code, name, court, police in CITIES:
         inner.append(f'        <p class="ghub__empty">{esc(name)} 지역 안내 글은 준비 중입니다. {esc(name)} 사건도 상담하실 수 있습니다.</p>')
     blocks.append(f'''      <details class="ghub__city" id="{code}"{" open" if code == "gunsan" else ""}>
         <summary><span class="ghub__name">{esc(name)}</span><span class="ghub__count">{n}개 안내</span></summary>
-        <p class="ghub__court">관할 법원 {esc(court)} · 관할 경찰서 {esc(police)}</p>
+        <p class="ghub__court">관할 법원 {esc(court)} · 관할 공소청 {esc(pros)} · 관할 경찰서 {esc(police)}</p>
 {chr(10).join(inner)}
       </details>''')
 main = phero([('홈', 'index.html'), ('지역별 안내', None)], 'Regional Guide', '지역별 안내') + f'''
