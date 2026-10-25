@@ -130,7 +130,7 @@ KEYMAP = {
    ('소년사건변호사', Q('sonyeon'))],
  '성범죄': [('성범죄변호사', P('sexual')), ('성범죄전문변호사', P('sexual')), ('성폭행변호사', P('sexual')),
    ('강제추행변호사', 'guide-gunsan-gangje-chuhaeng.html'), ('준강제추행변호사', Q('jun-gangje-chuhaeng')),
-   ('강간변호사', Q('gangan')), ('준강간변호사', Q('gangan')),
+   ('강간변호사', Q('gangan')), ('준강간변호사', Q('jun-gangan')),
    ('카메라등이용촬영변호사', Q('kamera')), ('카촬변호사', Q('kamera')),
    ('통신매체이용음란변호사', Q('tongmaeeum')), ('통매음변호사', Q('tongmaeeum')),
    ('성범죄피의자변호사', Q('seongbeomjoe-piuija')), ('성범죄피해자변호사', Q('seongbeomjoe-pihaeja')),
