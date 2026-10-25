@@ -2089,3 +2089,9 @@ body.nav-open { overflow: hidden; }
 .ghub__grp[open] > summary::after { transform: rotate(-135deg); }
 .ghub__grp > summary:hover .ghub__h { color: var(--gold, #b8935a); }
 .ghub__grp > .ghub__chips { padding: 0 0 1.1rem; }
+
+/* 분야 페이지 '이런 상황이라면': 번호를 붙이고 넓은 화면에서 3열로 — 칸 안 여백이 한쪽으로 쏠려 보이지 않게 */
+.parea__situ { counter-reset: situ; }
+.parea__situ .pitem { position: relative; padding: 1.6rem 1.6rem 1.6rem 4.1rem; }
+.parea__situ .pitem::before { counter-increment: situ; content: counter(situ, decimal-leading-zero); position: absolute; left: 1.5rem; top: 1.55rem; font-size: .95rem; font-weight: 700; letter-spacing: .04em; color: var(--gold, #b8935a); }
+@media (min-width: 960px) { .parea__situ { grid-template-columns: repeat(3, 1fr); } }
