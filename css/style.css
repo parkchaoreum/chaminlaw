@@ -2106,3 +2106,8 @@ body.nav-open { overflow: hidden; }
 .article__kw p { margin: 0; }
 .article__kw-tags { margin-top: .5rem !important; font-size: .84rem; color: var(--muted); }
 .article__kw-tags span { font-weight: 700; margin-right: .35rem; color: var(--slate); }
+
+/* 분야별 안내 페이지 첫 소개 문단: 데스크톱에서 왼쪽에 몰려 보이지 않도록 폭을 넓힌다 */
+.parea__lead { max-width: 72ch; }
+@media (min-width: 1100px) { .parea__lead { font-size: 1.1rem; } }
+.parea__lead + .parea__lead { margin-top: .9rem; }

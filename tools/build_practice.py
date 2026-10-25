@@ -134,7 +134,7 @@ for ar in AREAS:
     <div class="wrap">
       <p class="eyebrow">Overview</p>
       <h2 class="sec-title">이런 상황이라면 상담이 필요합니다</h2>
-      <p class="sec-lead">{esc(ar['lead'])}</p>
+      {''.join(f'<p class="sec-lead parea__lead">{esc(x)}</p>' for x in ar['lead'].split(chr(10)))}
       <div class="pitems parea__situ">
 {situ}
       </div>
