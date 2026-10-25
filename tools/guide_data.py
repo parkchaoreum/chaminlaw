@@ -27,7 +27,7 @@ GUIDES = [
 ]
 from guide_pages import PAGES
 GUIDES += PAGES
-for _m in ('a', 'b', 'c', 'd', 'e', 'f'):
+for _m in ('a', 'b', 'c', 'd', 'e', 'f', 'g'):
     GUIDES += __import__('guide_pages_' + _m).PAGES
 
 # 지역별 안내 — 도시 순서와 관할
@@ -101,11 +101,12 @@ KEYMAP = {
    ('무혐의변호사', Q('muhyeomui')), ('기소유예변호사', Q('giso-yuye')), ('집행유예변호사', Q('jiphaeng-yuye')),
    ('약식명령변호사', Q('yaksik-myeongryeong')), ('정식재판청구변호사', Q('yaksik-myeongryeong')),
    ('항소심변호사', Q('hangsosim')), ('형사합의변호사', Q('hapui-gongtak')), ('형사공탁변호사', Q('hapui-gongtak')),
-   ('고소대리변호사', Q('goso-daeri')), ('범죄피해자변호사', Q('beomjoe-pihaeja')),
+   ('고소대리변호사', Q('goso-daeri')), ('범죄피해자변호사', Q('beomjoe-pihaeja')), ('피해자변호사', Q('beomjoe-pihaeja')),
    ('불송치이의신청변호사', Q('bulsongchi-iui')),
-   ('폭행변호사', Q('pokhaeng-sanghae')), ('상해변호사', Q('pokhaeng-sanghae')), ('사기변호사', Q('sagi')),
+   ('폭행변호사', Q('pokhaeng-sanghae')), ('상해변호사', Q('pokhaeng-sanghae')), ('사기변호사', Q('sagi')), ('배임변호사', Q('baeim')), ('장물취득변호사', Q('jangmul')),
+   ('공갈변호사', Q('gonggal')), ('협박변호사', Q('hyeopbak')), ('스토킹변호사', Q('stalking')),
    ('보이스피싱변호사', Q('voice-phishing')), ('횡령변호사', Q('hoengnyeong')),
-   ('명예훼손변호사', Q('myeongye-hweson')), ('모욕죄변호사', Q('moyok')),
+   ('명예훼손변호사', Q('myeongye-hweson')), ('모욕변호사', Q('moyok')),
    ('업무방해변호사', Q('eommu-banghae')), ('사문서위조변호사', Q('samunseo-wijo')),
    ('절도변호사', Q('jeoldo')), ('무고변호사', Q('mugo')), ('마약변호사', None),
    ('거짓말탐지기', Q('geojitmal-tamjigi')), ('군형사변호사', Q('gunhyeongsa')),

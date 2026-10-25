@@ -30,7 +30,7 @@ def head_for(title, desc, url):
     h = h.replace('<li><a class="hdr__link" href="blog/">법률 칼럼</a></li>', '<li><a class="hdr__link" href="blog/">법률 칼럼</a></li>\n        <li><a class="hdr__link" href="guide.html" aria-current="page">지역별 안내</a></li>', 1)
     return h
 
-def phero(crumbs, en, h1):
+def phero(crumbs, en, h1, sub=None):
     c = '<span class="crumb__sep" aria-hidden="true">/</span>'.join(
         f'<a href="{u}">{esc(t)}</a>' if u else f'<span aria-current="page">{esc(t)}</span>' for t, u in crumbs)
     return f'''<main id="main">
@@ -41,7 +41,8 @@ def phero(crumbs, en, h1):
         {c}
       </nav>
       <p class="phero__en">{en}</p>
-      <h1 class="phero__title">{esc(h1)}</h1>
+      <h1 class="phero__title">{esc(h1)}</h1>{f'''
+      <p class="phero__sub">{esc(sub)}</p>''' if sub else ''}
     </div>
   </section>
 '''
@@ -58,6 +59,35 @@ for grp, items in KEYMAP.items():
     for kw, tgt in items:
         if tgt and tgt.startswith('guide-'):
             kw_for.setdefault(tgt[:-5], []).append(kw)
+# '○○전문변호사'가 어색한 절차·제도 키워드는 전문 표기를 붙이지 않는다.
+AWKWARD = {'경찰조사', '피의자', '공소청조사', '검찰조사', '구속적부심', '보석', '압수수색', '무혐의', '기소유예',
+           '집행유예', '약식명령', '정식재판청구', '항소심', '형사합의', '형사공탁', '고소대리', '범죄피해자', '피해자',
+           '불송치이의신청', '거짓말탐지기', '성범죄피의자', '성범죄피해자', '성범죄고소', '성범죄무혐의', '성범죄뒤늦은고소',
+           '성범죄구속', '성범죄집행유예', '성범죄항소심', '성범죄무고', '신상정보등록', '음주운전경찰조사', '면허취소행정심판',
+           '이혼조정', '이혼후재산분할', '과거양육비', '양육비청구', '유언효력', '강제집행정지', '민사조정', '학폭위',
+           '학폭행정심판', '학폭가해학생', '학폭피해학생', '공무원감사', 'SNS계정정지', '대포통장', '내용증명', '원상회복',
+           '임대차갱신', '영장실질심사', '구속영장', '면허취소', '유언장', '친권', '면접교섭'}
+def key_words(g):
+    """(도시명, 대표 키워드 목록[공백 없는 기본형]) — 군산은 KEYMAP, 다른 지역은 kw 에서."""
+    city = g.get('city', 'gunsan')
+    if city == 'gunsan':
+        kws = [re.sub(r'\s+', '', k)[:-3] if k.endswith('변호사') else re.sub(r'\s+', '', k) for k in kw_for.get(g['slug'], [])]
+        if not kws: kws = [re.sub(r'[\s·]+|\(.*?\)', '', g['kw'].split(' ', 1)[1])]
+        return '군산', kws
+    name, rest = g['kw'].split(' ', 1)
+    kws = [re.sub(r'[\s·]+', '', re.sub(r'\(.*?\)', '', rest))]
+    m = re.search(r'\((.*?)\)', rest)
+    if m: kws.append(m.group(1))
+    return name, kws
+def pro_word(city, base):
+    return None if base in AWKWARD else city + base + '전문변호사'
+def h1_for(g):
+    city, kws = key_words(g)
+    pw = pro_word(city, kws[0])
+    if pw: return f'{city}{kws[0]}변호사 · {pw}'
+    if len(kws) > 1: return f'{city}{kws[0]}변호사 · {city}{kws[1]}변호사'
+    return f'{city}{kws[0]}변호사'
+
 crim_n = 0
 def seo_title(g):
     global crim_n
@@ -72,6 +102,8 @@ def seo_title(g):
         if f == 'CRIM':
             f = '형사전문' if crim_n % 2 == 0 else '경찰출신'; crim_n += 1
         if '음주' in g['kw']: f = '음주운전전문'
+        pw = pro_word(cname, key_words(g)[1][0])
+        if pw: words.insert(1, pw)
         words.append(cname + f + '변호사')
         return '·'.join(words) + ' | ' + g['title'].split(' — ', 1)[-1]
     kws = kw_for.get(g['slug'])
@@ -81,6 +113,8 @@ def seo_title(g):
     if f == 'CRIM':
         f = '형사전문' if crim_n % 2 == 0 else '경찰출신'; crim_n += 1
     if g['group'] == '음주운전·교통' and any('음주' in k or '면허' in k for k in kws): f = '음주운전전문'
+    pw = pro_word('군산', key_words(g)[1][0])
+    if pw: words.insert(1, pw)
     fw = '군산' + f + '변호사'
     if fw not in words: words.append(fw)
     tail = g['title'].split(' — ', 1)[-1]
@@ -118,7 +152,7 @@ for g in GUIDES:
     </div>
   </section>
 ''' if cols else ''
-    main = phero([('홈', 'index.html'), ('지역별 안내', 'guide.html'), (g['kw'], None)], 'Guide', g['h1']) + f'''
+    main = phero([('홈', 'index.html'), ('지역별 안내', 'guide.html'), (g['kw'], None)], 'Guide', h1_for(g), g['h1']) + f'''
   <section class="sec sec--paper sec--list">
     <div class="wrap parea__narrow">
       <table class="ginfo">
