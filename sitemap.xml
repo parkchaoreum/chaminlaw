@@ -1010,4 +1010,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/jeonju-mugo-seongnip-gijun.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-jeonju-mugo.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
 </urlset>
