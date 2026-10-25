@@ -25,3 +25,59 @@ GUIDES = [
        ('CCTV가 없으면 혐의가 인정되지 않나요?','그렇지 않습니다. 진술의 구체성과 일관성, 메시지, 동석자 진술 같은 정황을 종합해 판단하므로 CCTV가 없어도 혐의가 인정될 수 있고, 반대로 CCTV가 있어도 그것만으로 결론이 나지는 않습니다.'),
        ('경찰이 혐의가 없다고 보면 사건이 바로 끝나나요?','2026. 10. 2.부터 성폭력범죄는 경찰의 판단과 관계없이 공소청으로 송치되므로, 최종 처분은 공소청 검사가 정합니다.')]),
 ]
+
+# 지역별 안내 — 도시 순서와 관할
+CITIES = [
+ ('gunsan','군산','전주지방법원 군산지원','군산경찰서'),
+ ('iksan','익산','전주지방법원 군산지원','익산경찰서'),
+ ('jeonju','전주','전주지방법원','전주완산경찰서·전주덕진경찰서'),
+ ('buan','부안','전주지방법원 정읍지원','부안경찰서'),
+ ('gimje','김제','전주지방법원','김제경찰서'),
+ ('seocheon','서천','대전지방법원 홍성지원','서천경찰서'),
+ ('nonsan','논산','대전지방법원 논산지원','논산경찰서'),
+ ('boryeong','보령','대전지방법원 홍성지원','보령경찰서'),
+ ('namwon','남원','전주지방법원 남원지원','남원경찰서'),
+ ('jeongeup','정읍','전주지방법원 정읍지원','정읍경찰서'),
+]
+# 칼럼 → 키워드 이름(도시 이름 없이). 칼럼을 새로 만들면 여기에 한 줄 추가한다(없으면 표지 문구로 대신함).
+LABELS = {
+ 'gunsan-gyotong-sago-byeonhosa-sigi':'교통사고 변호사 상담 시기','jeonju-eumju-unjeon-chulseok-josa':'음주운전 경찰 출석',
+ 'gunsan-seongbeomjoe-jeongeon-songchi':'성범죄 전건송치','20261016-gunsan-sonhaebaesang':'불법행위 손해배상',
+ 'gunsan-sonyeon-tongmaeeum':'청소년 통매음(통신매체이용음란)','iksan-gangje-chuhaeng-muhyeomui-gijun':'강제추행 고소',
+ 'iksan-sanggan-sosong-baeuja-jeungin':'상간소송 증인','iksan-jeonse-bojeunggeum-banhwan':'전세보증금 반환',
+ 'gunsan-sangsok-jaesan-bunhal-simpan':'상속재산분할 심판','gunsan-gongmuwon-gamsa-josa':'공무원 감사 조사',
+ 'gunsan-budang-haego-guje':'부당해고 구제신청','gunsan-kamera-deung-iyong-chwaryeong':'카메라등이용촬영(카촬)',
+ 'gunsan-jikjangnae-seonghuirong-daeeung':'직장 내 성희롱','gunsan-jikjang-goerophim-sayongja-jochi':'직장 내 괴롭힘',
+ 'iksan-sonyeon-boho-cheobun':'소년보호처분','gunsan-gongyumul-bunhal':'공유물분할소송','gunsan-ihon-gyeolsim-hu-junbi':'이혼 준비',
+ 'gunsan-geojitmal-tamjigi-geomsa':'거짓말탐지기 검사','gunsan-imgeum-toejikgeum-cheburi':'임금·퇴직금 체불',
+ 'buan-sanggan-sosong-jeunggeo':'상간소송 증거','gunsan-imdaecha-wonsang-hoebok':'임대차 원상회복','gunsan-eommusang-hoengnyeong':'업무상횡령',
+ 'gunsan-hakpokwi-yesang-jilmun':'학폭위 심의','gunsan-eommu-banghae-beolgeum-wijaryo':'업무방해','iksan-hakgyopokryeok-jeolcha':'학교폭력 신고 절차',
+ 'gunsan-gangje-jiphaeng-myeontal':'강제집행면탈','gunsan-dongeop-taltoe-jeongsan':'동업 탈퇴·정산','jeonju-sanggan-sosong-ihon-eopsi':'이혼 없는 상간소송',
+ 'gunsan-seongbeomjoe-pihaeja':'성범죄 피해자 고소','jeonju-eumju-unjeon-byeonhosa':'음주운전 벌금','gunsan-samunseo-wijo':'사문서위조',
+ 'gunsan-daepo-tongjang-myeongija-sonhaebaesang':'대포통장 손해배상','seocheon-gunhyeongbeop-hyeongbeop':'군형사(군형법)',
+ 'iksan-moyokjoe-seongnip-yogeon':'모욕죄','gunsan-seongbeomjoe-muhyeomui':'성범죄 무혐의','gunsan-wiheom-unjeon-chisang-gyoteuk':'위험운전치상·교특치상',
+ 'gunsan-jutaek-imdaecha-gaengsin':'전월세 갱신','gunsan-seongbeomjoe-neujeun-goso':'성범죄 뒤늦은 고소','gunsan-sanggan-wijaryo-aeksu':'상간 위자료',
+ 'gunsan-hakpok-haengjeongsimpan-chamga':'학폭 행정심판','jeonju-naeyongjeungmyeong':'내용증명','gunsan-voice-phishing-sugeochaek':'보이스피싱 수거책',
+ 'iksan-imdaecha-wonsanghoebok-tongsang-sonmo':'보증금 원상회복 공제','gunsan-gunhyeongsa-yeongnae-pokhaeng':'군 영내 폭행',
+ 'gunsan-gyeongchal-josa-dongseok':'경찰조사 변호인 동석','iksan-dongeop-hoengnyeong':'동업자 횡령','gunsan-moyokjoe':'모욕죄 고소',
+ 'gunsan-instagram-gyejeong-jeongji':'인스타그램 계정정지','nonsan-ihon-sosong-gigan':'이혼소송 기간','iksan-pigosoin-josa-daeeung':'피고소인 경찰조사',
+ 'gunsan-myeongye-hweson':'명예훼손 고소','jeonju-eogulhan-hakpok-gahaeja':'억울한 학폭 가해자','gunsan-jeoldojoe-cheobeol':'절도죄',
+ 'gunsan-gangje-jiphaeng-jeongji-gongtak':'강제집행정지','gunsan-bulsongchi-iuisincheong':'불송치 이의신청','gunsan-jun-gangje-chuhaeng':'준강제추행',
+ 'gimje-sanggan-sosong':'상간소송','gunsan-gosoin-josa-daeeung':'고소인 조사','gunsan-yeonin-jeungyeo-daeyeo':'연인 간 돈 반환',
+ 'iksan-eumju-unjeon-josa-ihu':'음주운전 조사 이후','gunsan-sangsok-gaesi-hal-il':'상속 기한','iksan-kamera-chwaryeong-forensic':'카메라등이용촬영 포렌식',
+ 'gunsan-imdaecha-bojeunggeum-hoesu':'전세보증금 회수','boryeong-gongmuwon-jinggye':'공무원 징계','gunsan-sonyeon-jaepan-simni':'소년재판 심리',
+ 'gunsan-unjeonja-pokhaeng':'운전자폭행','iksan-daeyeogeum-banhwan':'대여금 반환','gunsan-seongnyeon-hugyeon':'성년후견','gunsan-minsa-jojeong':'민사조정',
+ 'gunsan-eumju-unjeon-gyeongchal-josa':'음주운전 경찰조사','gunsan-yuryubun-banhwan':'유류분 반환','buan-jeonsesagi-daeeung':'전세사기',
+}
+def tag_group(tag):
+    t = tag.strip()
+    if '성범죄' in t: return '성범죄'
+    if '음주' in t or '교통' in t: return '음주운전·교통'
+    if '소년' in t: return '소년사건'
+    if t.startswith('형사'): return '형사'
+    if t.startswith('이혼'): return '이혼·상간'
+    if t.startswith('가사'): return '상속·가사'
+    if t.startswith('민사'): return '민사·부동산'
+    if t.startswith('학교폭력'): return '학교폭력'
+    return '노동·징계'
+GROUP_ORDER = ['형사','성범죄','음주운전·교통','소년사건','이혼·상간','상속·가사','민사·부동산','학교폭력','노동·징계']

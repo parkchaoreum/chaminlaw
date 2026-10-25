@@ -5,7 +5,7 @@
 import re, json, html, pathlib, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
-from guide_data import GUIDES
+from guide_data import GUIDES, CITIES, LABELS, tag_group, GROUP_ORDER
 SITE = 'https://www.chaminlaw.com/'
 esc = lambda s: html.escape(s, quote=True)
 
@@ -26,6 +26,8 @@ def head_for(title, desc, url):
     h = h.replace('https://www.chaminlaw.com/practice.html', url)
     h = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + esc(title), h)
     h = re.sub(r'(<meta property="og:description" content=")[^"]*', lambda m: m.group(1) + esc(desc), h)
+    h = h.replace('<a class="hdr__link" href="practice.html" aria-current="page">업무분야</a>', '<a class="hdr__link" href="practice.html">업무분야</a>')
+    h = h.replace('<li><a class="hdr__link" href="blog/">법률 칼럼</a></li>', '<li><a class="hdr__link" href="blog/">법률 칼럼</a></li>\n        <li><a class="hdr__link" href="guide.html" aria-current="page">지역별 안내</a></li>', 1)
     return h
 
 def phero(crumbs, en, h1):
@@ -80,7 +82,7 @@ for g in GUIDES:
     </div>
   </section>
 ''' if cols else ''
-    main = phero([('홈', 'index.html'), ('키워드별 안내', 'guide.html'), (g['kw'], None)], 'Guide', g['h1']) + f'''
+    main = phero([('홈', 'index.html'), ('지역별 안내', 'guide.html'), (g['kw'], None)], 'Guide', g['h1']) + f'''
   <section class="sec sec--paper sec--list">
     <div class="wrap parea__narrow">
       <table class="ginfo">
@@ -121,7 +123,7 @@ for g in GUIDES:
       </div>
       <div class="parea__others">
         <p class="parea__others-h">{esc(g['group'])} 다른 안내</p>
-        <div class="parea__chips">{sib} <a class="parea__chip" href="guide.html">키워드별 안내 전체</a></div>
+        <div class="parea__chips">{sib} <a class="parea__chip" href="guide.html">지역별 안내 전체</a></div>
       </div>
     </div>
   </section>
@@ -130,22 +132,46 @@ for g in GUIDES:
     (ROOT / f'{g["slug"]}.html').write_text(h + main + foot_tpl, encoding='utf-8')
     built.append(g['slug'])
 
-# 허브
-hub_title = '키워드별 안내 — 군산 형사·성범죄·이혼·상속·민사 | 법률사무소 차민'
-hub_desc = '군산에서 많이 찾는 법률 문제를 키워드별로 모았습니다. 각 안내에서 쟁점, 진행 순서, 관할, 관련 칼럼과 자주 묻는 질문을 확인하실 수 있습니다.'
+# 허브: 지역별 안내 (도시별 아코디언)
+import json as _j
+cover = _j.loads((ROOT / 'tools' / 'cover_text.json').read_text(encoding='utf-8'))
+tags = dict(re.findall(r'<a class="post" href="([^"]+)\.html">.*?post__tag">([^<]*)</span>', idx[a:b] if False else idx[idx.find('POSTS:START'):idx.find('POSTS:END')], re.S))
+def city_of(slug):
+    s2 = re.sub(r'^\d{8}-', '', slug)
+    for code, name, *_ in CITIES:
+        if s2.startswith(code + '-'): return code
+    return None
+hub_title = '지역별 안내 — 군산·익산·전주·김제·부안·서천·논산·보령·남원·정읍 | 법률사무소 차민'
+hub_desc = '군산, 익산, 전주, 부안, 김제, 서천, 논산, 보령, 남원, 정읍 지역의 형사·성범죄·음주운전·이혼·상속·민사·학교폭력·노동 사건 안내와 관할 법원·경찰서, 관련 칼럼을 모았습니다.'
 h = head_for(hub_title, hub_desc, SITE + 'guide.html')
-secs = []
-for grp, items in groups.items():
-    chips = '\n'.join(f'          <a class="gchip" href="{o["slug"]}.html"><span>{esc(o["kw"])}</span><span aria-hidden="true">→</span></a>' for o in items)
-    secs.append(f'''      <h2 class="ghub__h">{esc(grp)}</h2>
-      <div class="ghub__chips">
-{chips}
-      </div>''')
-main = phero([('홈', 'index.html'), ('키워드별 안내', None)], 'Guide', '키워드별 안내') + f'''
+blocks = []
+for code, name, court, police in CITIES:
+    groups2 = {}
+    for g in GUIDES:
+        if g.get('city', 'gunsan') == code:
+            groups2.setdefault(g['group'], []).append((g['slug'] + '.html', g['kw'], True))
+    for slug, tag in tags.items():
+        if city_of(slug) != code: continue
+        label = LABELS.get(slug) or ' '.join(cover.get(slug, ['', slug])[1:2])
+        groups2.setdefault(tag_group(tag), []).append((f'blog/{slug}.html', f'{name} {label}', False))
+    n = sum(len(v) for v in groups2.values())
+    inner = []
+    for grp in GROUP_ORDER:
+        if grp not in groups2: continue
+        chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in sorted(groups2[grp], key=lambda x: (not x[2], x[1])))
+        inner.append(f'        <h3 class="ghub__h">{esc(name)} {esc(grp)}</h3>\n        <div class="ghub__chips">\n{chips}\n        </div>')
+    if not inner:
+        inner.append(f'        <p class="ghub__empty">{esc(name)} 지역 안내 글은 준비 중입니다. {esc(name)} 사건도 상담하실 수 있습니다.</p>')
+    blocks.append(f'''      <details class="ghub__city" id="{code}"{" open" if code == "gunsan" else ""}>
+        <summary><span class="ghub__name">{esc(name)}</span><span class="ghub__count">{n}개 안내</span></summary>
+        <p class="ghub__court">관할 법원 {esc(court)} · 관할 경찰서 {esc(police)}</p>
+{chr(10).join(inner)}
+      </details>''')
+main = phero([('홈', 'index.html'), ('지역별 안내', None)], 'Regional Guide', '지역별 안내') + f'''
   <section class="sec sec--paper sec--list">
     <div class="wrap">
-      <p class="sec-lead">군산에서 많이 찾는 법률 문제를 키워드별로 모았습니다. 각 안내에서 쟁점과 진행 순서, 관할, 관련 칼럼을 확인하실 수 있습니다.</p>
-{chr(10).join(secs)}
+      <p class="sec-lead">법률사무소 차민은 군산에 있지만, 지역과 관계없이 사건을 맡습니다. 지역별로 관할 법원·경찰서와 관련 안내를 모았습니다.</p>
+{chr(10).join(blocks)}
     </div>
   </section>
 

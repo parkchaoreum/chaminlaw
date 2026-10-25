@@ -2060,3 +2060,22 @@ body.nav-open { overflow: hidden; }
 .gchip { display: flex; justify-content: space-between; align-items: center; padding: .8rem 1.1rem; border: 1px solid rgba(0,0,0,.14); border-radius: 999px; text-decoration: none; color: inherit; font-size: .95rem; background: var(--paper); transition: border-color .2s, background .2s; }
 .gchip:hover { border-color: var(--gold, #b8935a); background: var(--paper-2); }
 @media (max-width: 520px) { .ginfo th { width: 6rem; white-space: normal; } }
+.ghub__city { border-top: 1px solid rgba(0,0,0,.12); padding: .2rem 0 1.2rem; }
+.ghub__city:last-of-type { border-bottom: 1px solid rgba(0,0,0,.12); }
+.ghub__city > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: .7rem; padding: 1.1rem 0 .4rem; }
+.ghub__city > summary::-webkit-details-marker { display: none; }
+.ghub__city > summary::after { content: '+'; margin-left: auto; font-size: 1.3rem; color: var(--gold, #b8935a); }
+.ghub__city[open] > summary::after { content: '−'; }
+.ghub__name { font-size: 1.35rem; font-weight: 700; }
+.ghub__count { font-size: .85rem; color: #8a8a8a; }
+.ghub__court { font-size: .9rem; color: #666; margin: 0 0 .4rem; }
+.ghub__empty { color: #666; }
+.ghub__city .ghub__h { font-size: 1rem; margin: 1.4rem 0 .7rem; }
+.gchip--key { border-color: var(--gold, #b8935a); font-weight: 600; }
+
+/* header: keep labels on one line; tighter spacing when the extra '지역별 안내' item is present */
+.hdr__link { white-space: nowrap; }
+@media (min-width: 1061px) {
+  .hdr__list:has(> li:nth-child(8)) { gap: clamp(.75rem, 1.5vw, 1.6rem); }
+  .hdr__list:has(> li:nth-child(8)) .hdr__link { font-size: .9rem; }
+}
