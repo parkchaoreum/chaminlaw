@@ -142,7 +142,7 @@ G('jeonse-bojeunggeum', '민사·부동산', '전세보증금 반환', '임차�
    ('임차권등기명령', '이사해야 한다면 등기를 마친 뒤 이사합니다.'),
    ('지급명령 · 소송 · 가압류', '사건 성격에 맞는 절차로 집행권원을 확보하고 재산을 묶어 둡니다.'),
    ('강제집행', '재산명시·재산조회 후 채권압류나 강제경매로 회수합니다.')],
-  ['gunsan-imdaecha-bojeunggeum-hoesu', 'iksan-jeonse-bojeunggeum-banhwan', 'buan-jeonsesagi-daeeung', 'gunsan-jutaek-imdaecha-gaengsin'],
+  ['gunsan-jeonse-jibjuin-hoesaeng-pasan', 'gunsan-imdaecha-bojeunggeum-hoesu', 'iksan-jeonse-bojeunggeum-banhwan', 'buan-jeonsesagi-daeeung', 'gunsan-jutaek-imdaecha-gaengsin'],
   [('임차권등기명령을 신청하면 바로 이사해도 되나요?', '아닙니다. 신청만으로는 부족하고, 등기사항증명서에 임차권등기가 마쳐진 것을 확인한 뒤 이사하거나 전입을 옮겨야 대항력과 우선변제권이 유지됩니다.'),
    ('임대인에게 재산이 없어 보이는데 소송할 필요가 있나요?', '판결을 받아 두면 나중에 재산이 드러났을 때 바로 강제집행할 수 있고, 판결로 확정된 채권은 소멸시효가 10년이 됩니다. 당장 재산이 보이지 않는다는 이유만으로 포기하는 것은 신중해야 합니다.'),
    ('군산에 있는 집의 보증금 소송은 어느 법원에서 하나요?', '군산의 주택이라면 임차권등기명령, 지급명령, 반환소송, 가압류를 전주지방법원 군산지원에서 진행할 수 있습니다. 청구액이 3,000만 원 이하라면 소액사건 절차가 적용됩니다.')]),

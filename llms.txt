@@ -120,6 +120,13 @@
 - [익산에서 빌려준 돈을 못 받고 있다면 — 대여금 소송에서 증명해야 할 세 가지](https://www.chaminlaw.com/blog/iksan-daeyeogeum-banhwan.html): 대여 약정·지급 사실·변제기 입증, 차용증 없을 때의 증거, 현금 지급과 갚을 날을 정하지 않은 경우까지.
 - [군산에서 민사조정기일 통지를 받았다면 — 조정의 종류, 효력, 이의신청 2주](https://www.chaminlaw.com/blog/gunsan-minsa-jojeong.html): 소송과 조정의 차이, 조정위원회와 수소법원 조정, 조정성립의 효력과 2주 이의신청까지.
 - [부안에서 전세사기를 당했다면 — 민사·형사·피해자 지원, 세 갈래 대응](https://www.chaminlaw.com/blog/buan-jeonsesagi-daeeung.html): 전세사기와 단순 미반환의 차이, 민사·형사·피해자 지원 세 갈래 대응, 임차권등기명령과 부안 관할까지.
+- [군산에서 집주인이 개인회생·파산을 신청했다면 — 전세보증금을 지키기 위해 임차인이 할 세 가지](https://www.chaminlaw.com/blog/gunsan-jeonse-jibjuin-hoesaeng-pasan.html): 집주인이 회생을 신청해도 끝난 것이 아닙니다. 확인, 참여, 비면책 주장의 세 단계로 대응합니다.
+- [군산에서 공사대금을 못 받았다면 — 소송 전에 지급명령, 그리고 발주자 직접 지급 청구](https://www.chaminlaw.com/blog/gunsan-gongsa-daegeum-jigeup-myeongryeong.html): 아무것도 하지 않으면 상대방도 움직이지 않습니다. 금액이 크지 않다면 지급명령부터 검토하세요.
+- [군산에서 명도소송을 준비한다면 — 절차와 강제집행, 그리고 임대인이 자주 하는 실수 세 가지](https://www.chaminlaw.com/blog/gunsan-myeongdo-sosong-silsu.html): 연체액 계산, 해지 통지, 점유이전금지가처분. 이 세 가지를 놓치면 이겨도 내보내지 못할 수 있습니다.
+- [군산에서 받을 돈이 있다면 — 소송 전에 가압류부터 검토해야 하는 이유와 신청 절차](https://www.chaminlaw.com/blog/gunsan-gaapryu-sincheong-jeolcha.html): 이겨도 받을 재산이 없으면 소용없습니다. 가압류는 소송 전후로 재산을 묶어 두는 절차입니다.
+- [군산에서 지급명령을 고민한다면 — 유리한 경우와 오히려 늦어지는 경우](https://www.chaminlaw.com/blog/gunsan-jigeup-myeongryeong-hwalyong.html): 상대방 주소를 알고 다툼이 없다면 지급명령, 처음부터 다툴 게 뻔하다면 소송이 낫습니다.
+- [군산에서 부동산 매매계약을 해제하려 한다면 — 법정해제·약정해제·합의해제, 무엇이 다른가](https://www.chaminlaw.com/blog/gunsan-maemae-gyeyak-haeje-jongnyu.html): 합의해제는 손해배상과 이자를 따로 정하지 않으면 받을 수 없습니다. 해제 방식부터 구분하세요.
+- [군산에서 채무자가 재산을 빼돌렸다면 — 사해행위취소소송의 요건, 상대방, 기간과 효과](https://www.chaminlaw.com/blog/gunsan-sahaehaengwi-chwiso-yogeon.html): 빼돌린 재산도 되돌릴 수 있습니다. 다만 1년·5년 기간을 넘기면 권리를 잃습니다.
 
 ## 법률 칼럼 — 행정
 - [군산에서 공무원이 감사실 출석 요구를 받았다면 — 조사 전·중·후 대응 원칙](https://www.chaminlaw.com/blog/gunsan-gongmuwon-gamsa-josa.html): 감사가 시작되는 경로, 조사 전 자료 정리, 피해야 할 답변, 문답서 확인과 변호인 참여까지.
