@@ -31,9 +31,9 @@ M = {
  'gunsan-sagi-goso-gosojang': (['사기', '사기전문'], '경찰출신'),
  'gunsan-stalking-piuija-daeeung': (['스토킹', '스토킹전문'], '경찰출신'),
  'gunsan-hyeopbak-seongnip-goso': (['협박', '협박전문'], '경찰출신'),
- 'jeonju-mugo-seongnip-gijun': (['무고', '무고전문'], '형사전문'),
- 'gimje-hyeongsa-hapui-sigi': (['형사합의', '형사합의전문'], '경찰출신'),
- 'buan-hyeongsa-gongtak': (['형사공탁'], '형사전문'),
+ 'gunsan-mugo-seongnip-gijun': (['무고', '무고전문'], '형사전문'),
+ 'gunsan-hyeongsa-hapui-sigi': (['형사합의', '형사합의전문'], '경찰출신'),
+ 'gunsan-hyeongsa-gongtak': (['형사공탁'], '형사전문'),
  'gunsan-gyeongchal-josa-dongseok': (['경찰조사'], '경찰출신'),
  'gunsan-gyotong-sago-byeonhosa-sigi': (['교통사고'], '교통사고전문'),
  'gunsan-hakpok-haengjeongsimpan-chamga': (['학폭행정심판'], '학교폭력전문'),
@@ -94,7 +94,9 @@ if __name__ == '__main__':
         m = re.search(r'"datePublished":\s*"(\d{4}-\d\d-\d\d)', s); return m.group(1) if m else ''
     files = []
     for slug in M:
-        p = ROOT / 'blog' / f'{slug}.html'; files.append((date(p.read_text(encoding='utf-8')), slug, p))
+        p = ROOT / 'blog' / f'{slug}.html'
+        if not p.exists(): continue
+        files.append((date(p.read_text(encoding='utf-8')), slug, p))
     crim_i = 0
     for d, slug, p in sorted(files):
         s = p.read_text(encoding='utf-8')

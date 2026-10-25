@@ -18,6 +18,7 @@ NONE_FIELD = {'상간': '이혼전문', '상속': '상속전문', '한정': '상
 n = 0
 for slug, (kws, field) in M.items():
     p = ROOT / 'blog' / f'{slug}.html'
+    if not p.exists(): continue
     s = p.read_text(encoding='utf-8')
     city = CITY[re.sub(r'^\d{8}-', '', slug).split('-')[0]]
     lee = 'attorneys.html#lee' in s
@@ -38,14 +39,14 @@ for slug, (kws, field) in M.items():
     if lee:
         area = '형사' if (field in CRIMF or field is None) else AREA.get(field, '형사')
         who = (f'이 글을 쓴 이민규 대표변호사는 경찰대학을 졸업하고 군산경찰서 수사과에서 근무한 경찰 출신 변호사로, '
-               f'{eul(city)} 비롯한 전북·충남 지역의 {area} 사건을 맡고 있습니다.')
+               f'{eul(city)} 비롯한 전국의 {area} 사건을 맡고 있습니다.')
     elif 'gunhyeongsa' in slug:
-        who = (f'이 글을 쓴 박차오름 대표변호사는 제53보병사단 군사경찰대 지원과장을 지냈으며, {eul(city)} 비롯한 전북·충남 지역의 군형사 사건을 맡고 있습니다.')
+        who = (f'이 글을 쓴 박차오름 대표변호사는 제53보병사단 군사경찰대 지원과장을 지냈으며, {eul(city)} 비롯한 전국의 군형사 사건을 맡고 있습니다.')
     elif field == '학교폭력전문':
-        who = (f'이 글을 쓴 박차오름 대표변호사는 전주교육지원청 학교폭력대책심의위원회 위원으로 활동하며, {eul(city)} 비롯한 전북 지역의 학교폭력 사건을 맡고 있습니다.')
+        who = (f'이 글을 쓴 박차오름 대표변호사는 전주교육지원청 학교폭력대책심의위원회 위원으로 활동하며, {eul(city)} 비롯한 전국의 학교폭력 사건을 맡고 있습니다.')
     else:
         area = AREA.get(field, '민사·가사')
-        who = (f'이 글을 쓴 박차오름 대표변호사는 전주지방법원 민사·가사 조정위원으로 활동하며, {eul(city)} 비롯한 전북 지역의 {area} 사건을 맡고 있습니다.')
+        who = (f'이 글을 쓴 박차오름 대표변호사는 전주지방법원 민사·가사 조정위원으로 활동하며, {eul(city)} 비롯한 전국의 {area} 사건을 맡고 있습니다.')
     block = (f'{S}\n<aside class="article__kw"><p>{who}</p>'
              f'<p class="article__kw-tags"><span>관련 검색어</span> {" · ".join(seen)}</p></aside>\n{E}\n')
     s = re.sub(re.escape(S) + r'.*?' + re.escape(E) + r'\n', '', s, flags=re.S)

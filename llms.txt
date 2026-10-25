@@ -46,11 +46,11 @@
 - [군산에서 업무방해로 고소당했다면 — 벌금은 얼마나, 위자료까지 물어야 하나](https://www.chaminlaw.com/blog/gunsan-eommu-banghae-beolgeum-wijaryo.html): 성립 요건 세 가지, 벌금과 실형을 가르는 사정, 형사와 별개로 청구되는 위자료까지.
 - [군산에서 채무자가 재산을 가족 명의로 돌렸다면 — 강제집행면탈죄가 되는 경우와 아닌 경우](https://www.chaminlaw.com/blog/gunsan-gangje-jiphaeng-myeontal.html): 성립요건 다섯 가지, 허위양도·허위채무 판단 자료, 처분 시점의 의미, 고소·방어에서 확인할 점까지.
 - [군산에서 협박을 당했다면 — 어떤 말이 협박죄가 되는지, 고소 전에 남겨야 할 증거](https://www.chaminlaw.com/blog/gunsan-hyeopbak-seongnip-goso.html): 화가 나서 한 말과 협박의 차이, 촬영물 협박은 1년 이상, 특수협박은 합의해도 처벌. 지우면 안 되는 증거까지.
-- [전주에서 고소했다가 무고로 몰릴까 걱정된다면 — 무고죄가 되는 허위와 되지 않는 경우](https://www.chaminlaw.com/blog/jeonju-mugo-seongnip-gijun.html): 불기소·무죄로 끝났다고 무고가 되지는 않습니다. 허위의 기준, 정황 과장·죄명 착오, 맞고소 무고의 위험까지.
+- [군산에서 고소했다가 무고로 몰릴까 걱정된다면 — 무고죄가 되는 허위와 되지 않는 경우](https://www.chaminlaw.com/blog/gunsan-mugo-seongnip-gijun.html): 불기소·무죄로 끝났다고 무고가 되지는 않습니다. 허위의 기준, 정황 과장·죄명 착오, 맞고소 무고의 위험까지.
 - [군산에서 성범죄 피해를 입었다면 — 고소 전에 알아야 할 것들](https://www.chaminlaw.com/blog/gunsan-seongbeomjoe-pihaeja.html): 물증 없이도 처벌 가능한지, 혼자 조사받을 때의 위험, 피해자 국선변호사, 처벌과 합의 중 선택까지.
-- [김제에서 고소당해 합의를 고민한다면 — 형사합의의 효과, 시기, 합의서에 꼭 넣을 것](https://www.chaminlaw.com/blog/gimje-hyeongsa-hapui-sigi.html): 합의하면 무혐의? 정확하지 않습니다. 범죄별 효과, 수사·재판 단계의 차이, 합의서 문구와 직접 연락 금지까지.
+- [군산에서 고소당해 합의를 고민한다면 — 형사합의의 효과, 시기, 합의서에 꼭 넣을 것](https://www.chaminlaw.com/blog/gunsan-hyeongsa-hapui-sigi.html): 합의하면 무혐의? 정확하지 않습니다. 범죄별 효과, 수사·재판 단계의 차이, 합의서 문구와 직접 연락 금지까지.
 - [전주에서 음주운전으로 단속됐다면 — "벌금이면 끝"이 아닌 세 가지 경우](https://www.chaminlaw.com/blog/jeonju-eumju-unjeon-byeonhosa.html): 수치를 다툴 수 있는 사건, 벌금과 정식재판의 경계, 생계형 운전자의 면허 행정심판까지.
-- [부안에서 합의가 안 된다면 — 형사공탁의 효과와 달라진 제도, 피해자 의견 청취와 회수 제한](https://www.chaminlaw.com/blog/buan-hyeongsa-gongtak.html): 공탁에는 처벌불원 의사가 없습니다. 인적사항 없이 하는 공탁, 선고 전 피해자 의견 청취, 회수 제한까지.
+- [군산에서 합의가 안 된다면 — 형사공탁의 효과와 달라진 제도, 피해자 의견 청취와 회수 제한](https://www.chaminlaw.com/blog/gunsan-hyeongsa-gongtak.html): 공탁에는 처벌불원 의사가 없습니다. 인적사항 없이 하는 공탁, 선고 전 피해자 의견 청취, 회수 제한까지.
 - [군산에서 사문서위조 혐의를 받는다면 — 가족 이름으로 대신 서명해도 범죄가 될까](https://www.chaminlaw.com/blog/gunsan-samunseo-wijo.html): 성립요건, 위조와 행사의 처벌, 자주 생기는 사례, 사기죄 등과 함께 문제되는 경우까지.
 - [서천에서 군 형사사건에 연루되었다면 — 군형법과 형법은 무엇이 다른가](https://www.chaminlaw.com/blog/seocheon-gunhyeongbeop-hyeongbeop.html): 군인등강제추행·폭행·상관모욕으로 보는 군형법과 형법의 차이, 인사상 불이익, 일반 법원과 군사법원 관할까지.
 - [익산에서 모욕죄로 고소당했다면 — 공연성·특정성·모욕성, 세 가지 요건을 하나씩 따져 보기](https://www.chaminlaw.com/blog/iksan-moyokjoe-seongnip-yogeon.html): 일대일 메시지와 전파가능성, 닉네임·집단 표현의 특정성, 맥락에 따른 모욕성 판단까지.
