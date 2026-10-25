@@ -2079,3 +2079,13 @@ body.nav-open { overflow: hidden; }
   .hdr__list:has(> li:nth-child(8)) { gap: clamp(.75rem, 1.5vw, 1.6rem); }
   .hdr__list:has(> li:nth-child(8)) .hdr__link { font-size: .9rem; }
 }
+
+/* 지역별 안내: 분야별 키워드 접기 */
+.ghub__grp { border-top: 1px dashed rgba(0,0,0,.1); }
+.ghub__grp > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: .6rem; padding: .9rem 0; }
+.ghub__grp > summary::-webkit-details-marker { display: none; }
+.ghub__grp > summary .ghub__h { margin: 0; }
+.ghub__grp > summary::after { content: ''; margin-left: auto; width: .55rem; height: .55rem; border-right: 2px solid var(--gold, #b8935a); border-bottom: 2px solid var(--gold, #b8935a); transform: rotate(45deg); transition: transform .2s; margin-right: .3rem; }
+.ghub__grp[open] > summary::after { transform: rotate(-135deg); }
+.ghub__grp > summary:hover .ghub__h { color: var(--gold, #b8935a); }
+.ghub__grp > .ghub__chips { padding: 0 0 1.1rem; }

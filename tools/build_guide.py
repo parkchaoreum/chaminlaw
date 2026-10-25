@@ -61,7 +61,7 @@ for grp, items in KEYMAP.items():
             kw_for.setdefault(tgt[:-5], []).append(kw)
 # '○○전문변호사'가 어색한 절차·제도 키워드는 전문 표기를 붙이지 않는다.
 AWKWARD = {'경찰조사', '피의자', '공소청조사', '검찰조사', '구속적부심', '보석', '압수수색', '무혐의', '기소유예',
-           '집행유예', '약식명령', '정식재판청구', '항소심', '형사합의', '형사공탁', '고소대리', '범죄피해자', '피해자',
+           '집행유예', '약식명령', '정식재판청구', '항소심', '형사항소심', '형사합의', '형사공탁', '고소대리', '범죄피해자', '피해자',
            '불송치이의신청', '거짓말탐지기', '성범죄피의자', '성범죄피해자', '성범죄고소', '성범죄무혐의', '성범죄뒤늦은고소',
            '성범죄구속', '성범죄집행유예', '성범죄항소심', '성범죄무고', '신상정보등록', '음주운전경찰조사', '면허취소행정심판',
            '이혼조정', '이혼후재산분할', '과거양육비', '양육비청구', '유언효력', '강제집행정지', '민사조정', '학폭위',
@@ -245,7 +245,8 @@ for code, name, court, police, pros in CITIES:
     for grp in (list(KEYMAP) + [x for x in GROUP_ORDER if x not in KEYMAP]):
         if grp not in groups2: continue
         chips = '\n'.join(f'          <a class="gchip{" gchip--key" if key else ""}" href="{u}"><span>{esc(t)}</span><span aria-hidden="true">→</span></a>' for u, t, key in (groups2[grp] if code == 'gunsan' else sorted(groups2[grp], key=lambda x: (not x[2], x[1]))))
-        inner.append(f'        <h3 class="ghub__h">{esc(name)} {esc(grp)}</h3>\n        <div class="ghub__chips">\n{chips}\n        </div>')
+        glabel = f'{name}형사·군형사' if grp == '형사' else f'{name} {grp}'
+        inner.append(f'        <details class="ghub__grp">\n        <summary><h3 class="ghub__h">{esc(glabel)}</h3><span class="ghub__count">{len(groups2[grp])}</span></summary>\n        <div class="ghub__chips">\n{chips}\n        </div>\n        </details>')
     if not inner:
         inner.append(f'        <p class="ghub__empty">{esc(name)} 지역 안내 글은 준비 중입니다. {esc(name)} 사건도 상담하실 수 있습니다.</p>')
     blocks.append(f'''      <details class="ghub__city" id="{code}"{" open" if code == "gunsan" else ""}>
