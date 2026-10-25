@@ -118,7 +118,7 @@ KEYMAP = {
    ('무혐의변호사', Q('muhyeomui')), ('무죄변호사', Q('mujoe')), ('기소유예변호사', Q('giso-yuye')), ('집행유예변호사', Q('jiphaeng-yuye')), ('선고유예변호사', Q('jiphaeng-yuye')),
    ('약식명령변호사', Q('yaksik-myeongryeong')), ('정식재판청구변호사', Q('yaksik-myeongryeong')),
    ('형사항소심변호사', Q('hangsosim')), ('형사합의변호사', Q('hapui-gongtak')), ('형사공탁변호사', Q('hapui-gongtak')),
-   ('고소대리변호사', Q('goso-daeri')), ('범죄피해자변호사', Q('beomjoe-pihaeja')), ('피해자변호사', Q('beomjoe-pihaeja')),
+   ('고소대리변호사', Q('goso-daeri')), ('범죄피해자변호사', Q('beomjoe-pihaeja')), ('피해자변호사', Q('beomjoe-pihaeja')), ('배상명령변호사', Q('baesang-myeongryeong')),
    ('불송치이의신청변호사', Q('bulsongchi-iui')),
    ('폭행변호사', Q('pokhaeng-sanghae')), ('상해변호사', Q('pokhaeng-sanghae')), ('사기변호사', Q('sagi')), ('배임변호사', Q('baeim')), ('장물취득변호사', Q('jangmul')),
    ('공갈변호사', Q('gonggal')), ('협박변호사', Q('hyeopbak')), ('스토킹변호사', Q('stalking')),
