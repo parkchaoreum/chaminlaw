@@ -46,6 +46,7 @@ CITIES = [
 ]
 # 칼럼 → 키워드 이름(도시 이름 없이). 칼럼을 새로 만들면 여기에 한 줄 추가한다(없으면 표지 문구로 대신함).
 LABELS = {
+ 'gunsan-jun-gangan-josa-jinsul':'준강간 조사',
  'gunsan-stalking-pihaeja-bohomyeongryeong':'스토킹 피해자보호명령',
  'gunsan-baesang-myeongryeong-sincheong':'배상명령',
  'gunsan-jangmul-chwideuk-seongnip':'장물취득',
