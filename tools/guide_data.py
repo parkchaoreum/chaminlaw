@@ -135,7 +135,7 @@ KEYMAP = {
    ('통신매체이용음란변호사', Q('tongmaeeum')), ('통매음변호사', Q('tongmaeeum')),
    ('성범죄피의자변호사', Q('seongbeomjoe-piuija')), ('성범죄피해자변호사', Q('seongbeomjoe-pihaeja')),
    ('성범죄고소변호사', Q('seongbeomjoe-pihaeja')), ('성범죄무혐의변호사', Q('seongbeomjoe-muhyeomui')),
-   ('성범죄합의변호사', None), ('성범죄뒤늦은고소변호사', Q('seongbeomjoe-piuija')), ('성범죄구속변호사', Q('gusok-yeongjang')), ('성범죄집행유예변호사', Q('jiphaeng-yuye')),
+   ('성범죄합의변호사', None), ('성폭법변호사', Q('seongbeomjoe-piuija')), ('성범죄구속변호사', Q('gusok-yeongjang')), ('성범죄집행유예변호사', Q('jiphaeng-yuye')),
    ('성범죄항소심변호사', Q('hangsosim')), ('성범죄무고변호사', Q('mugo')),
    ('신상정보등록변호사', Q('sinsang-jeongbo')), ('아청법변호사', Q('acheongbeop')), ('성매매변호사', Q('seongmaemae')),
    ('직장내성희롱변호사', Q('seonghuirong'))],
