@@ -213,7 +213,7 @@ GC('iksan', 'sangsok-pogi', '상속·가사', '한정승인', '3개월 기간, �
    ('신고', '가정법원에 한정승인을 신고합니다.'),
    ('공고 · 최고', '수리 후 5일 안에 공고하고 알려진 채권자에게 최고합니다.'),
    ('청산', '신고기간 후 순서대로 변제하고 남은 재산을 정리합니다.')],
-  ['iksan-hanjeong-seungin-cheongsan', 'gunsan-sangsok-gaesi-hal-il', 'gunsan-sangsok-jaesan-johoe-saengjeon-jeungyeo'],
+  ['iksan-sangsok-pogi-jueui', 'iksan-hanjeong-seungin-cheongsan', 'gunsan-sangsok-gaesi-hal-il', 'gunsan-sangsok-jaesan-johoe-saengjeon-jeungyeo'],
   [('한정승인만 신고하면 끝나나요?', '아닙니다. 공고와 청산 절차까지 마쳐야 합니다.'),
    ('3개월이 지났는데 빚을 알게 됐어요.', '중대한 과실 없이 몰랐다면 안 날부터 3개월 안에 특별한정승인을 할 수 있습니다.'),
    ('청산이 너무 복잡하면요?', '회생법원에 상속재산 파산을 신청해 법원 절차로 청산하는 방법도 있습니다.')]),

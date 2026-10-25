@@ -73,6 +73,8 @@ LABELS = {
  'iksan-hanjeong-seungin-cheongsan':'한정승인',
  'gunsan-sangsok-hoebok-cheonggu-gigan':'상속회복청구',
  'gunsan-sangsok-jaesan-johoe-saengjeon-jeungyeo':'상속재산 조회',
+ 'gunsan-teukbyeol-hanjeong-seungin-yogeon':'특별한정승인',
+ 'iksan-sangsok-pogi-jueui':'상속포기',
  'gunsan-jinggye-jeongdangseong-samdan':'징계 정당성',
  'iksan-imgeum-chebul-sosong':'임금체불 소송',
  'gunsan-gangan-goso-sinbingseong':'강간 고소',

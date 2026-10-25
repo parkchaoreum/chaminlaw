@@ -39,6 +39,8 @@ M = {
  'iksan-hanjeong-seungin-cheongsan': (['한정승인'], '상속전문'),
  'gunsan-sangsok-hoebok-cheonggu-gigan': (['상속회복청구'], '상속전문'),
  'gunsan-sangsok-jaesan-johoe-saengjeon-jeungyeo': (['상속재산분할'], '상속전문'),
+ 'gunsan-teukbyeol-hanjeong-seungin-yogeon': (['특별한정승인'], '상속전문'),
+ 'iksan-sangsok-pogi-jueui': (['상속포기'], '상속전문'),
  'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
  'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),
