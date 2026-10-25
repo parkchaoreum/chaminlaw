@@ -46,6 +46,7 @@ CITIES = [
 ]
 # 칼럼 → 키워드 이름(도시 이름 없이). 칼럼을 새로 만들면 여기에 한 줄 추가한다(없으면 표지 문구로 대신함).
 LABELS = {
+ 'gunsan-muhyeomui-mujoe-daeeung':'무혐의·무죄',
  'jeonju-giso-yuye-geomsa-panjeon':'기소유예 판단 기준',
  'gunsan-gyotong-sago-byeonhosa-sigi':'교통사고 변호사 상담 시기','jeonju-eumju-unjeon-chulseok-josa':'음주운전경찰조사',
  'gunsan-seongbeomjoe-jeongeon-songchi':'성범죄 전건송치','20261016-gunsan-sonhaebaesang':'불법행위 손해배상',
@@ -100,7 +101,7 @@ KEYMAP = {
    ('구속영장변호사', Q('gusok-yeongjang')), ('영장실질심사변호사', Q('gusok-yeongjang')),
    ('구속적부심변호사', Q('gusok-jeokbusim-boseok')), ('보석변호사', Q('gusok-jeokbusim-boseok')),
    ('압수수색변호사', Q('apsu-susaek')),
-   ('무혐의변호사', Q('muhyeomui')), ('기소유예변호사', Q('giso-yuye')), ('집행유예변호사', Q('jiphaeng-yuye')), ('선고유예변호사', Q('jiphaeng-yuye')),
+   ('무혐의변호사', Q('muhyeomui')), ('무죄변호사', Q('mujoe')), ('기소유예변호사', Q('giso-yuye')), ('집행유예변호사', Q('jiphaeng-yuye')), ('선고유예변호사', Q('jiphaeng-yuye')),
    ('약식명령변호사', Q('yaksik-myeongryeong')), ('정식재판청구변호사', Q('yaksik-myeongryeong')),
    ('형사항소심변호사', Q('hangsosim')), ('형사합의변호사', Q('hapui-gongtak')), ('형사공탁변호사', Q('hapui-gongtak')),
    ('고소대리변호사', Q('goso-daeri')), ('범죄피해자변호사', Q('beomjoe-pihaeja')), ('피해자변호사', Q('beomjoe-pihaeja')),
@@ -163,7 +164,7 @@ CASEMAP = {
  'guide-gunsan-gusok-yeongjang': ['case-18', 'case-08'], 'guide-gunsan-voice-phishing': ['case-08'],
  'guide-gunsan-gusok-jeokbusim-boseok': ['case-15'],
  'guide-gunsan-myeongye-hweson': ['case-02'], 'guide-gunsan-samunseo-wijo': ['case-03'],
- 'guide-gunsan-eommu-banghae': ['case-04'], 'guide-gunsan-muhyeomui': ['case-01', 'case-09', 'case-02'],
+ 'guide-gunsan-eommu-banghae': ['case-04'], 'guide-gunsan-muhyeomui': ['case-01', 'case-09', 'case-02'], 'guide-gunsan-mujoe': ['case-12', 'case-09'],
  'guide-gunsan-gunhyeongsa': ['case-05'], 'guide-gunsan-giso-yuye': ['case-05'],
  'guide-gunsan-goso-daeri': ['case-06', 'case-07'], 'guide-gunsan-beomjoe-pihaeja': ['case-07', 'case-06'],
  'guide-gunsan-gangje-chuhaeng': ['case-06'], 'guide-gunsan-seongbeomjoe-pihaeja': ['case-06'],
