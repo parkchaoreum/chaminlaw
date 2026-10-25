@@ -50,10 +50,33 @@ groups = {}
 for g in GUIDES:
     groups.setdefault(g['group'], []).append(g)
 
+# 검색 결과 제목: 이 페이지를 가리키는 군산 키워드를 '군산○○변호사'로 붙여 앞에 둔다.
+FIELD = {'형사': 'CRIM', '성범죄': '성범죄전문', '음주운전·교통': '교통사고전문', '이혼·상간': '이혼전문',
+         '상속·가사': '상속전문', '민사·부동산': '민사전문', '학교폭력': '학교폭력전문', '노동·징계': '노동전문'}
+kw_for = {}
+for grp, items in KEYMAP.items():
+    for kw, tgt in items:
+        if tgt and tgt.startswith('guide-'):
+            kw_for.setdefault(tgt[:-5], []).append(kw)
+crim_n = 0
+def seo_title(g):
+    global crim_n
+    kws = kw_for.get(g['slug'])
+    if not kws: return g['title']
+    words = ['군산' + re.sub(r'\s+', '', k) + ('' if k.endswith('변호사') else '변호사') for k in kws][:3]
+    f = FIELD[g['group']]
+    if f == 'CRIM':
+        f = '형사전문' if crim_n % 2 == 0 else '경찰출신'; crim_n += 1
+    if g['group'] == '음주운전·교통' and any('음주' in k or '면허' in k for k in kws): f = '음주운전전문'
+    fw = '군산' + f + '변호사'
+    if fw not in words: words.append(fw)
+    tail = g['title'].split(' — ', 1)[-1]
+    return '·'.join(words) + ' | ' + tail
+
 built = []
 for g in GUIDES:
     url = f'{SITE}{g["slug"]}.html'
-    h = head_for(g['title'], g['desc'], url)
+    h = head_for(seo_title(g), g['desc'], url)
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "홈", "item": SITE},
@@ -159,6 +182,8 @@ for code, name, court, police, pros in CITIES:
                 if not tgt: continue
                 groups2.setdefault(grp, []).append((tgt, chip_label(name, kw), not tgt.startswith('blog/')))
                 if tgt.startswith('blog/'): used.add(tgt[5:-5])
+        for g in GUIDES:   # 군산 안내 페이지에 연결된 칼럼은 칩으로 따로 띄우지 않는다
+            if g.get('city', 'gunsan') == 'gunsan': used |= set(g['cols'])
     else:
         for g in GUIDES:
             if g.get('city', 'gunsan') == code:
