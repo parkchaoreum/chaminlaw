@@ -98,7 +98,7 @@ KEYMAP = {
    ('구속영장변호사', Q('gusok-yeongjang')), ('영장실질심사변호사', Q('gusok-yeongjang')),
    ('구속적부심변호사', Q('gusok-jeokbusim-boseok')), ('보석변호사', Q('gusok-jeokbusim-boseok')),
    ('압수수색변호사', Q('apsu-susaek')),
-   ('무혐의변호사', Q('muhyeomui')), ('기소유예변호사', Q('giso-yuye')), ('집행유예변호사', Q('jiphaeng-yuye')),
+   ('무혐의변호사', Q('muhyeomui')), ('기소유예변호사', Q('giso-yuye')), ('집행유예변호사', Q('jiphaeng-yuye')), ('선고유예변호사', Q('jiphaeng-yuye')),
    ('약식명령변호사', Q('yaksik-myeongryeong')), ('정식재판청구변호사', Q('yaksik-myeongryeong')),
    ('형사항소심변호사', Q('hangsosim')), ('형사합의변호사', Q('hapui-gongtak')), ('형사공탁변호사', Q('hapui-gongtak')),
    ('고소대리변호사', Q('goso-daeri')), ('범죄피해자변호사', Q('beomjoe-pihaeja')), ('피해자변호사', Q('beomjoe-pihaeja')),
