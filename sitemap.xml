@@ -1326,4 +1326,50 @@
     <loc>https://www.chaminlaw.com/guide-gunsan-hakpok-saenggibu.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-hakgyopokryeok-dangye-jueui.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-hakpok-haengjeongsimpan.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-hakpok-gahae-singo-daeeung.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-hakpok-haengjeongsosong-seontaek.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-hakpok-jiphaengjeongji-yogeon.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-hakpok-pihae-singo-jeolcha.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gunsan-hakpok-saenggibu-gijae-sakje.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-hakpok-haengjeongsimpan-cheonggu.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
