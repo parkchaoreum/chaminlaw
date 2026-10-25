@@ -258,9 +258,9 @@ CASEMAP = {
  'guide-gunsan-myeongye-hweson': ['case-02'], 'guide-gunsan-samunseo-wijo': ['case-03'],
  'guide-gunsan-eommu-banghae': ['case-04'], 'guide-gunsan-muhyeomui': ['case-01', 'case-09', 'case-02'], 'guide-gunsan-mujoe': ['case-12', 'case-09'],
  'guide-gunsan-gunhyeongsa': ['case-05'], 'guide-gunsan-giso-yuye': ['case-05'],
- 'guide-gunsan-goso-daeri': ['case-06', 'case-07'], 'guide-gunsan-beomjoe-pihaeja': ['case-07', 'case-06'],
+ 'guide-gunsan-goso-daeri': ['case-19', 'case-06', 'case-07'], 'guide-gunsan-beomjoe-pihaeja': ['case-19', 'case-07', 'case-06'],
  'guide-gunsan-gangje-chuhaeng': ['case-06'], 'guide-gunsan-seongbeomjoe-pihaeja': ['case-06'],
- 'guide-gunsan-sagi': ['case-09', 'case-11', 'case-18', 'case-10'], 'guide-gunsan-gonggal': ['case-10'],
+ 'guide-gunsan-sagi': ['case-19', 'case-09', 'case-11', 'case-18', 'case-10'], 'guide-gunsan-gonggal': ['case-10'],
  'guide-gunsan-gangan': ['case-12'], 'guide-gunsan-seongbeomjoe-muhyeomui': ['case-12'],
  'guide-gunsan-ppaengsoni': ['case-14'], 'guide-gunsan-gyotong-sago': ['case-14', 'case-17'],
  'guide-gunsan-hyeopbak': ['case-15'], 'guide-gunsan-hapui-gongtak': ['case-15'],
@@ -268,5 +268,5 @@ CASEMAP = {
  'guide-gunsan-eumju-jaebeom': ['case-16'], 'guide-gunsan-eumju-josa': ['case-16'],
  'guide-gunsan-wiheom-unjeon': ['case-16', 'case-17'],
  'guide-gunsan-hoengnyeong': ['case-18'], 'guide-iksan-hoengnyeong': ['case-18'], 'guide-gunsan-dongeop': ['case-18'],
- 'guide-gunsan-baeim': ['case-18'], 'guide-gunsan-mugo': ['case-18'], 'guide-gunsan-pokhaeng-sanghae': ['case-18'],
+ 'guide-gunsan-baeim': ['case-18'], 'guide-gunsan-daeyeogeum': ['case-19'], 'guide-iksan-daeyeogeum': ['case-19'], 'guide-jeonju-daeyeogeum': ['case-19'], 'guide-gunsan-mugo': ['case-18'], 'guide-gunsan-pokhaeng-sanghae': ['case-18'],
 }
