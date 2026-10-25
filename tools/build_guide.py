@@ -133,6 +133,11 @@ for g in GUIDES:
     built.append(g['slug'])
 
 # 허브: 지역별 안내 (도시별 아코디언)
+def chip_label(city, kw):
+    k = re.sub(r'\s+', '', kw)
+    if k.startswith(city): k = k[len(city):]
+    return city + k + ('' if k.endswith('변호사') else '변호사')
+
 import json as _j
 cover = _j.loads((ROOT / 'tools' / 'cover_text.json').read_text(encoding='utf-8'))
 tags = dict(re.findall(r'<a class="post" href="([^"]+)\.html">.*?post__tag">([^<]*)</span>', idx[a:b] if False else idx[idx.find('POSTS:START'):idx.find('POSTS:END')], re.S))
@@ -152,16 +157,16 @@ for code, name, court, police, pros in CITIES:
         for grp, items in KEYMAP.items():
             for kw, tgt in items:
                 if not tgt: continue
-                groups2.setdefault(grp, []).append((tgt, f'{name} {kw}', not tgt.startswith('blog/')))
+                groups2.setdefault(grp, []).append((tgt, chip_label(name, kw), not tgt.startswith('blog/')))
                 if tgt.startswith('blog/'): used.add(tgt[5:-5])
     else:
         for g in GUIDES:
             if g.get('city', 'gunsan') == code:
-                groups2.setdefault(g['group'], []).append((g['slug'] + '.html', g['kw'], True))
+                groups2.setdefault(g['group'], []).append((g['slug'] + '.html', chip_label(name, g['kw']), True))
     for slug, tag in tags.items():
         if city_of(slug) != code or slug in used: continue
         label = LABELS.get(slug) or ' '.join(cover.get(slug, ['', slug])[1:2])
-        groups2.setdefault(tag_group(tag), []).append((f'blog/{slug}.html', f'{name} {label}', False))
+        groups2.setdefault(tag_group(tag), []).append((f'blog/{slug}.html', chip_label(name, label), False))
     n = sum(len(v) for v in groups2.values())
     inner = []
     for grp in (list(KEYMAP) + [x for x in GROUP_ORDER if x not in KEYMAP]):
