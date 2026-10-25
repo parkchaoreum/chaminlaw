@@ -2095,3 +2095,7 @@ body.nav-open { overflow: hidden; }
 .parea__situ .pitem { position: relative; padding: 1.6rem 1.6rem 1.6rem 4.1rem; }
 .parea__situ .pitem::before { counter-increment: situ; content: counter(situ, decimal-leading-zero); position: absolute; left: 1.5rem; top: 1.55rem; font-size: .95rem; font-weight: 700; letter-spacing: .04em; color: var(--gold, #b8935a); }
 @media (min-width: 960px) { .parea__situ { grid-template-columns: repeat(3, 1fr); } }
+
+.gcases__note { margin-top: 1rem; font-size: .88rem; color: var(--muted); }
+.sec-title + .cases { margin-top: clamp(1.5rem, 3vw, 2.25rem); }
+@media (min-width: 760px) { .sec-title + .cases { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); } }

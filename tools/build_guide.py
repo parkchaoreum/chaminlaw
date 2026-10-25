@@ -5,7 +5,7 @@
 import re, json, html, pathlib, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
-from guide_data import GUIDES, CITIES, LABELS, tag_group, GROUP_ORDER, KEYMAP
+from guide_data import GUIDES, CITIES, LABELS, tag_group, GROUP_ORDER, KEYMAP, CASEMAP
 SITE = 'https://www.chaminlaw.com/'
 esc = lambda s: html.escape(s, quote=True)
 
@@ -18,6 +18,13 @@ cta = re.search(r'  <section class="cta".*?</section>\n', prac, re.S).group(0)
 idx = (ROOT / 'blog' / 'index.html').read_text(encoding='utf-8')
 a, b = idx.find('POSTS:START'), idx.find('POSTS:END')
 cards = {re.search(r'href="([^"]+)\.html"', c).group(1): c for c in re.findall(r'        <a class="post" href="[^"]+">.*?</a>\n', idx[a:b], re.S)}
+
+res = (ROOT / 'results.html').read_text(encoding='utf-8')
+CASES = {}
+for _a in re.findall(r'<article class="case" id="(case-\d+)"[^>]*>(.*?)</article>', res, re.S):
+    body = _a[1].replace('href="images/', 'href="results.html#' + _a[0] + '" data-x="').replace(' target="_blank" rel="noopener"', '')
+    body = re.sub(r'<h2 class="case__h">', '<h3 class="case__h">', body).replace('</h2>', '</h3>', 1)
+    CASES[_a[0]] = f'        <article class="case">{body}</article>\n'
 
 def head_for(title, desc, url):
     h = head_tpl
@@ -142,6 +149,18 @@ for g in GUIDES:
           <div class="faq__a" id="gf-{i}"><div class="faq__a-inner">{esc(an)}</div></div>
         </div>''' for i, (q, an) in enumerate(g['faq'], 1))
     sib = ' '.join(f'<a class="parea__chip" href="{o["slug"]}.html">{esc(o["kw"])}</a>' for o in groups[(g.get('city', 'gunsan'), g['group'])] if o is not g)
+    cs = ''.join(CASES[c] for c in CASEMAP.get(g['slug'], []) if c in CASES)
+    case_sec = f'''
+  <section class="sec sec--paper sec--divided">
+    <div class="wrap">
+      <p class="eyebrow">Results</p>
+      <h2 class="sec-title">법률사무소 차민이 맡았던 관련 사건</h2>
+      <div class="cases">
+{cs}      </div>
+      <p class="gcases__note">실제 수행한 사건의 결과를 의뢰인이 특정되지 않도록 정리한 것입니다. 사건의 결과는 개별 사실관계와 증거에 따라 달라지며, 과거의 결과가 다른 사건에서도 같은 결과로 이어지는 것은 아닙니다. <a class="ilink" href="results.html">성공사례 전체 보기 →</a></p>
+    </div>
+  </section>
+''' if cs else ''
     col_sec = f'''
   <section class="sec sec--paper2">
     <div class="wrap">
@@ -183,7 +202,7 @@ for g in GUIDES:
       </ol>
     </div>
   </section>
-{col_sec}
+{case_sec}{col_sec}
   <section class="sec sec--paper">
     <div class="wrap parea__narrow">
       <p class="eyebrow">FAQ</p>
