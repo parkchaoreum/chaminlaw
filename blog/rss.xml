@@ -6,7 +6,7 @@
     <atom:link href="https://www.chaminlaw.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>전북 군산 법률사무소 차민의 형사·민사·가사·행정 법률 칼럼</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 26 Oct 2026 18:46:15 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 18:51:51 +0900</lastBuildDate>
     <item>
       <title>군산 사건이 공소청으로 송치되었다면 — 사실관계 확인과 고소인 등 면담, 증거가 안 되는 진술의 의미</title>
       <link>https://www.chaminlaw.com/blog/gunsan-gongsocheong-sasilgwangye-hwagin.html</link>
@@ -1574,6 +1574,46 @@
       <description>익산에서 처음 형사사건에 연루되어 변호사를 선임할지 고민한다면. 경미한 초범 사건, 혐의가 분명하고 피해자가 합의를 거부한 사건처럼 선임 효과가 크지 않을 수 있는 경우와, 다툴 법리·반박 증거·합의 여지가 있어 조력이 필요한 경우를 나누고, 상담으로 먼저 판단해야 하는 이유를 정리했습니다.</description>
       <category>형사</category>
       <pubDate>Wed, 21 Jan 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 준강제추행으로 조사받는다면 — 걸어 다녔다고 동의가 있었던 것은 아닙니다</title>
+      <link>https://www.chaminlaw.com/blog/iksan-jun-gangje-chuhaeng-blackout.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-jun-gangje-chuhaeng-blackout.html</guid>
+      <description>익산에서 술자리 뒤 준강제추행 혐의를 받거나 피해를 입었다면. 심신상실·항거불능의 의미, 기억만 잃는 블랙아웃과 의식을 잃는 패싱아웃의 차이, 대법원 2021. 2. 4. 선고 2018도9781 판결이 본 판단 요소, 숙소까지 함께 갔어도 문제 되는 이유를 정리했습니다.</description>
+      <category>형사 · 성범죄</category>
+      <pubDate>Mon, 19 Jan 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 강간 혐의를 받거나 피해를 입었다면 — 폭행·협박의 정도와 진술의 신빙성</title>
+      <link>https://www.chaminlaw.com/blog/iksan-gangan-pokhaeng-hyeopbak-jeongdo.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-gangan-pokhaeng-hyeopbak-jeongdo.html</guid>
+      <description>익산에서 강간 혐의로 수사를 받거나 피해를 입었다면. 강간죄의 법정형과 폭행·협박의 정도, 2023년 대법원이 기준을 바꾼 강제추행과의 차이, 피해자 진술의 신빙성을 판단하는 요소, 객관적 자료, 혐의를 다툴 때와 인정할 때의 대응, 유죄 시 부수처분을 정리했습니다.</description>
+      <category>형사 · 성범죄</category>
+      <pubDate>Fri, 16 Jan 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 준강간으로 고소당했다면 — 항거불능 상태를 다투는 방법과 조사에서 피할 말</title>
+      <link>https://www.chaminlaw.com/blog/iksan-jun-gangan-hanggeo-bulneung.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-jun-gangan-hanggeo-bulneung.html</guid>
+      <description>익산에서 술자리 뒤 성관계로 준강간 고소를 당했다면. 술에 취했다는 사정만으로 항거불능이 되지는 않는다는 점, 진술만으로 유죄가 되는 경우와 되지 않는 경우, &amp;ldquo;나도 취해 기억이 없다&amp;rdquo;는 진술이 불리할 수 있는 이유, 강제성이 없었음을 보여 주는 자료, 조사에서 피할 말과 태도를 정리했습니다.</description>
+      <category>형사 · 성범죄</category>
+      <pubDate>Thu, 15 Jan 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 성범죄 피의자로 경찰 조사를 받고 왔다면 — 조사 뒤에 해야 할 네 가지</title>
+      <link>https://www.chaminlaw.com/blog/iksan-seongbeomjoe-piuija-josa-ihu.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-seongbeomjoe-piuija-josa-ihu.html</guid>
+      <description>익산에서 성범죄 혐의로 경찰 조사를 마쳤다면. 내 진술이 담긴 조서를 확보해야 하는 이유, 경찰이 요청한 자료를 빠짐없이 내는 방법, 잘못 답한 부분을 의견서로 정정하는 방법, 조사 중 알게 된 고소인 주장과 증거에 대한 반박 자료 준비를 정리했습니다.</description>
+      <category>형사 · 성범죄</category>
+      <pubDate>Wed, 14 Jan 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 성범죄 피해를 입었다면 — 피해자 변호사 제도와 별도 대리인이 필요한 경우</title>
+      <link>https://www.chaminlaw.com/blog/iksan-seongbeomjoe-pihaeja-byeonhosa.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-seongbeomjoe-pihaeja-byeonhosa.html</guid>
+      <description>익산에서 성범죄 피해를 입고 고소를 준비한다면. 피해자 변호사가 할 수 있는 일과 국선변호사 제도, 합의를 원할 때, 가해자가 혐의를 부인할 때, 시간이 지나 고소할 때처럼 진술과 증거 준비가 특히 중요한 경우를 정리했습니다.</description>
+      <category>형사 · 성범죄</category>
+      <pubDate>Tue, 13 Jan 2026 09:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

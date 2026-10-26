@@ -253,7 +253,7 @@ blocks = []
 # 칼럼이 충분히 쌓이기 전까지 지역별 안내 허브에서 숨기는 지역(대표 지시 2026-10-25). 안내 페이지 자체는 그대로 둔다.
 # 다른 지역 안내 페이지가 군산의 어느 세부카테고리를 대신하는지
 CITY_ALIAS = {'eumju-josa': 'eumju-unjeon', 'hakpokwi': 'hakgyopokryeok', 'gongmuwon-jinggye': 'gongmuwon-gamsa'}
-PRACTICE_TO = {'practice-dui.html': 'eumju-unjeon', 'practice-school.html': 'hakgyopokryeok', 'practice-criminal.html': 'hyeongsa'}
+PRACTICE_TO = {'practice-dui.html': 'eumju-unjeon', 'practice-school.html': 'hakgyopokryeok', 'practice-criminal.html': 'hyeongsa', 'practice-sexual.html': 'seongbeomjoe'}
 HUB_HIDDEN = {'jeonju', 'buan', 'gimje', 'seocheon', 'nonsan', 'boryeong', 'gochang', 'buyeo', 'jeongeup'}
 for code, name, court, police, pros in CITIES:
     if code in HUB_HIDDEN: continue
