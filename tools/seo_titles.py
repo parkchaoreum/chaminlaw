@@ -94,6 +94,8 @@ M = {
  'iksan-teuksu-jeoldo-cheongsonyeon': (['절도', '특수절도'], '형사전문'),
  'iksan-geojitmal-tamjigi-pandan': (['거짓말탐지기'], '경찰출신'),
  'iksan-gunhyeongsa-hapui': (['군형사', '군형사합의'], None),
+ 'iksan-hyeongsa-byeonhosa-piryo': (['형사'], '경찰출신'),
+ 'iksan-hyeongsa-jeolcha-daeeung-sijeom': (['형사'], '형사전문'),
  'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
  'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),

@@ -129,6 +129,8 @@ LABELS = {
  'iksan-teuksu-jeoldo-cheongsonyeon':'청소년 특수절도 대응',
  'iksan-geojitmal-tamjigi-pandan':'거짓말탐지기 판단 기준',
  'iksan-gunhyeongsa-hapui':'군형사 합의 방법',
+ 'iksan-hyeongsa-byeonhosa-piryo':'형사사건 변호사 필요성 판단',
+ 'iksan-hyeongsa-jeolcha-daeeung-sijeom':'형사 절차와 단계별 대응',
  'gunsan-jinggye-jeongdangseong-samdan':'징계 정당성',
  'iksan-imgeum-chebul-sosong':'임금체불 소송',
  'gunsan-gangan-goso-sinbingseong':'강간 고소',
