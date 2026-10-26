@@ -103,6 +103,7 @@ LABELS = {
  'gunsan-12dae-junggwasil-sago':'12대 중과실',
  'gunsan-gyotong-sago-hyeongsa-hapui':'교통사고 형사합의',
  'iksan-sanghae-pokhaeng-gubun':'폭행·상해',
+ 'iksan-gongsocheong-gyeongchal-dangye':'공소청 시대 형사절차',
  'gunsan-jinggye-jeongdangseong-samdan':'징계 정당성',
  'iksan-imgeum-chebul-sosong':'임금체불 소송',
  'gunsan-gangan-goso-sinbingseong':'강간 고소',

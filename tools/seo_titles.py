@@ -68,6 +68,7 @@ M = {
  'gunsan-school-zone-sago': (['스쿨존사고'], '교통사고전문'),
  'gunsan-12dae-junggwasil-sago': (['12대중과실'], '교통사고전문'),
  'gunsan-gyotong-sago-hyeongsa-hapui': (['교통사고형사합의'], '교통사고전문'),
+ 'iksan-gongsocheong-gyeongchal-dangye': (['공소청조사', '검찰조사'], '경찰출신'),
  'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
  'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),
