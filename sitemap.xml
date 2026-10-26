@@ -1704,4 +1704,54 @@
     <loc>https://www.chaminlaw.com/guide-iksan-gongsocheong-josa.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-apsu-susaek-hyeonjang.html</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-gusok-yeongjang.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-gusok-jeokbusim-boseok.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-apsu-susaek.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-forensic.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-muhyeomui.html</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-forensic-seonbyeol-chamyeo.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-gajok-cheopo-gusok-jeolcha.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-gusok-jeokbusim-boseok-chai.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-muhyeomui-gyeongchal-yeollak-junbi.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
