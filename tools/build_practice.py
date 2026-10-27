@@ -120,7 +120,7 @@ for ar in AREAS:
     <div class="phero__field" aria-hidden="true"></div>
     <div class="wrap">
       <nav class="crumb" aria-label="현재 위치">
-        <a href="index.html">홈</a><span class="crumb__sep" aria-hidden="true">/</span>
+        <a href="./">홈</a><span class="crumb__sep" aria-hidden="true">/</span>
         <a href="practice.html">업무분야</a><span class="crumb__sep" aria-hidden="true">/</span>
         <span aria-current="page">{esc(ar['name'])}</span>
       </nav>

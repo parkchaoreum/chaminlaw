@@ -182,7 +182,7 @@ for g in GUIDES:
     </div>
   </section>
 ''' if cols else ''
-    main = phero([('홈', 'index.html'), ('지역별 안내', 'guide.html'), (g['kw'], None)], 'Guide', h1_for(g), g['h1']) + f'''
+    main = phero([('홈', './'), ('지역별 안내', 'guide.html'), (g['kw'], None)], 'Guide', h1_for(g), g['h1']) + f'''
   <section class="sec sec--paper sec--list">
     <div class="wrap parea__narrow">
       <table class="ginfo">
@@ -305,7 +305,7 @@ for code, name, court, police, pros in CITIES:
         <p class="ghub__court">관할 법원 {esc(court)} · 관할 공소청 {esc(pros)} · 관할 경찰서 {esc(police)}</p>
 {chr(10).join(inner)}
       </details>''')
-main = phero([('홈', 'index.html'), ('지역별 안내', None)], 'Regional Guide', '지역별 안내') + f'''
+main = phero([('홈', './'), ('지역별 안내', None)], 'Regional Guide', '지역별 안내') + f'''
   <section class="sec sec--paper sec--list">
     <div class="wrap">
       <p class="sec-lead">법률사무소 차민은 군산에 있지만, 지역과 관계없이 사건을 맡습니다. 지역별로 관할 법원·공소청·경찰서와 관련 안내를 모았습니다.</p>
