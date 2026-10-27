@@ -14,18 +14,22 @@ for href, tag, date, title, desc in re.findall(
     page = (ROOT / 'blog' / href)
     full = ''
     if page.exists():
-        m = re.search(r'<meta name="description" content="([^"]*)"', page.read_text(encoding='utf-8'))
+        ptxt = page.read_text(encoding='utf-8')
+        m = re.search(r'<meta name="description" content="([^"]*)"', ptxt)
         full = m.group(1) if m else ''
+        # 피드 날짜는 화면 정렬용 날짜가 아니라 실제 게시·반영일(dateModified)을 쓴다(네이버 수집 우선순위).
+        mm = re.search(r'"dateModified": "([\d-]+)"', ptxt)
+        if mm and mm.group(1) > date: date = mm.group(1)
     d = dt.datetime.fromisoformat(date).replace(hour=9, tzinfo=KST)
     esc = lambda s: html.escape(html.unescape(s), quote=False)
-    items.append(f'''    <item>
+    items.append((date, f'''    <item>
       <title>{esc(title)}</title>
       <link>{BASE}{href}</link>
       <guid isPermaLink="true">{BASE}{href}</guid>
       <description>{esc(full or desc)}</description>
       <category>{esc(tag)}</category>
       <pubDate>{format_datetime(d)}</pubDate>
-    </item>''')
+    </item>'''))
 now = format_datetime(dt.datetime.now(KST).replace(microsecond=0))
 rss = f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -36,7 +40,7 @@ rss = f'''<?xml version="1.0" encoding="UTF-8"?>
     <description>전북 군산 법률사무소 차민의 형사·민사·가사·행정 법률 칼럼</description>
     <language>ko</language>
     <lastBuildDate>{now}</lastBuildDate>
-{chr(10).join(items)}
+{chr(10).join(x for _, x in sorted(items, key=lambda i: i[0], reverse=True))}
   </channel>
 </rss>
 '''
