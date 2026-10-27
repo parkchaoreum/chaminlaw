@@ -2588,4 +2588,30 @@
     <loc>https://www.chaminlaw.com/guide-iksan-sns-gyejeong.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-budongsan-sosong-yogeon-sasil.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-minsa.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-iksan-gangje-jiphaeng-myeontal.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-gangje-jiphaeng-myeontal-goso.html</loc>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/iksan-minsa-sosong-jeolcha-heureum.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

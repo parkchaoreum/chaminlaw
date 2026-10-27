@@ -6,7 +6,7 @@
     <atom:link href="https://www.chaminlaw.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>전북 군산 법률사무소 차민의 형사·민사·가사·행정 법률 칼럼</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 27 Oct 2026 11:05:08 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:14:49 +0900</lastBuildDate>
     <item>
       <title>군산 사건이 공소청으로 송치되었다면 — 사실관계 확인과 고소인 등 면담, 증거가 안 되는 진술의 의미</title>
       <link>https://www.chaminlaw.com/blog/gunsan-gongsocheong-sasilgwangye-hwagin.html</link>
@@ -2062,6 +2062,30 @@
       <description>익산에서 인스타그램이나 스레드 계정, 광고 기능이 갑자기 정지되어 영업에 차질이 생겼다면. 자주 문제 되는 정지 사유(사람·섭식장애·성적 콘텐츠·사기·계정 무결성·지식재산권), 한 기기 여러 계정의 동시 정지, 고객센터 대응의 한계, 사안별로 작성한 내용증명, 비례성 원칙에 따른 주장을 정리했습니다.</description>
       <category>민사</category>
       <pubDate>Thu, 23 Oct 2025 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 민사소송을 시작하거나 소장을 받았다면 — 소장 접수부터 답변서 30일, 변론, 판결, 항소 2주까지의 흐름</title>
+      <link>https://www.chaminlaw.com/blog/iksan-minsa-sosong-jeolcha-heureum.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-minsa-sosong-jeolcha-heureum.html</guid>
+      <description>익산에서 돈 문제로 민사소송을 준비하거나 소장을 받았다면. 종이와 전자소송 접수, 청구취지와 청구원인, 법원의 소장 심사와 보정명령, 송달받은 날부터 30일 안의 답변서와 무변론판결, 변론기일과 입증, 증거 확보 방법, 변론종결과 판결 선고, 판결서 송달 후 2주의 항소기간을 정리했습니다.</description>
+      <category>민사</category>
+      <pubDate>Wed, 22 Oct 2025 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 부동산 소송을 앞두고 있다면 — 형사재판과 다른 민사재판의 원칙, 요건사실과 항변, 소송비용 부담</title>
+      <link>https://www.chaminlaw.com/blog/iksan-budongsan-sosong-yogeon-sasil.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-budongsan-sosong-yogeon-sasil.html</guid>
+      <description>익산에서 부동산 소유권, 등기, 매매대금, 임대차 문제로 소송을 앞두고 있다면. 국가가 증명해야 하는 형사재판과 달리 당사자가 주장하고 증명해야 하는 민사재판의 원칙, 법원이 보는 요건사실, 원고의 청구와 피고의 항변이 맞서는 구조, 진 쪽이 부담하는 소송비용과 변호사보수 산입 범위를 정리했습니다.</description>
+      <category>민사 · 부동산</category>
+      <pubDate>Tue, 21 Oct 2025 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>익산에서 채무자가 재산을 빼돌렸다면 — 강제집행면탈 고소, 사해행위취소, 손해배상을 함께 쓰는 법</title>
+      <link>https://www.chaminlaw.com/blog/iksan-gangje-jiphaeng-myeontal-goso.html</link>
+      <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-gangje-jiphaeng-myeontal-goso.html</guid>
+      <description>익산에서 돈을 갚아야 할 사람이 재산을 숨기거나 가족에게 넘겨 버렸다면. 강제집행면탈죄가 성립하는 행위, 익산경찰서 고소부터 송치·불송치와 이의신청까지의 흐름, 넘어간 재산을 되돌리는 사해행위취소소송, 불법행위 손해배상과 3년·10년 기간, 내용증명만으로는 시효가 오래 멈추지 않는 이유를 정리했습니다.</description>
+      <category>형사 · 민사</category>
+      <pubDate>Mon, 20 Oct 2025 09:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

@@ -106,7 +106,7 @@ G('gangje-jiphaeng-myeontal', '형사', '강제집행면탈', '재산 처분이 
    ('자료 확보', '등기부등본, 매매계약서, 계좌 내역, 소송·가압류 서류를 모읍니다.'),
    ('고소 · 조사 대응', '고소장을 내거나, 고소당했다면 처분의 실질과 이유를 자료로 소명합니다.'),
    ('민사 절차 병행', '넘어간 재산을 되돌리는 사해행위취소소송과 가압류를 함께 검토합니다.')],
-  ['gunsan-sahaehaengwi-chwiso-yogeon', 'gunsan-gangje-jiphaeng-myeontal', 'gunsan-eommusang-hoengnyeong', 'gunsan-gosoin-josa-daeeung', 'iksan-pigosoin-josa-daeeung'],
+  ['iksan-gangje-jiphaeng-myeontal-goso', 'gunsan-sahaehaengwi-chwiso-yogeon', 'gunsan-gangje-jiphaeng-myeontal', 'gunsan-eommusang-hoengnyeong', 'gunsan-gosoin-josa-daeeung', 'iksan-pigosoin-josa-daeeung'],
   [('소송 중에 집을 팔았으면 곧바로 범죄가 되나요?', '아닙니다. 상당한 대가를 받고 실제로 판 진정한 양도이고 합리적인 이유가 있었다면 범죄가 되지 않을 수 있습니다. 대금 지급, 거래가격, 양도 후 사용 관계를 따집니다.'),
    ('나중에 채권자가 돈을 다 받았으면 처벌받지 않나요?', '그렇지 않을 수 있습니다. 행위 당시 채권자를 해할 위험이 있었는지를 기준으로 판단하므로 결과적으로 회수됐다는 사정만으로 성립이 부정되지는 않습니다.'),
    ('고소만 하면 넘어간 재산이 돌아오나요?', '형사고소와 별개로 민사상 사해행위취소소송을 내야 재산을 되돌릴 수 있습니다. 두 절차를 함께 진행하는 경우가 많습니다.')],
