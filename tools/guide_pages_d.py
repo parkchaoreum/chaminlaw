@@ -63,7 +63,7 @@ G('dongeop', '민사·부동산', '동업분쟁', '탈퇴·제명·해산과 지
    ('자료 확보', '사업용 계좌 거래내역, 장부, 재고·설비·채권·채무 현황을 확보합니다.'),
    ('통지 · 협의', '탈퇴 의사표시나 제명 통지를 문서로 남기고 정산 협의를 시도합니다.'),
    ('보전 · 소송 · 고소', '재산 처분 우려가 있으면 가압류 후 정산금 소송을 내고, 자금 유용은 형사고소를 함께 검토합니다.')],
-  ['gunsan-dongeop-taltoe-jeongsan', 'iksan-dongeop-hoengnyeong', 'gunsan-eommusang-hoengnyeong', 'jeonju-naeyongjeungmyeong'],
+  ['iksan-dongeop-taltoe-yeongeopgwon', 'gunsan-dongeop-taltoe-jeongsan', 'iksan-dongeop-hoengnyeong', 'gunsan-eommusang-hoengnyeong', 'jeonju-naeyongjeungmyeong'],
   [('동업자를 일방적으로 내보낼 수 있나요?', '제명은 정당한 사유가 있고 나머지 동업자 전원의 의사가 일치해야 합니다. 계약 위반, 자금 유용, 신뢰관계 파탄 같은 사유를 자료로 정리해 두어야 합니다.'),
    ('동업을 그만두면 투자한 돈을 그대로 돌려받나요?', '출자금을 그대로 돌려받는 것이 아니라 탈퇴 당시 조합 재산 상태를 기준으로 지분을 계산해 정산받습니다. 사업이 손실 상태라면 출자금보다 적을 수 있습니다.'),
    ('투자만 했는데 상대가 투자금을 다 써 버렸어요.', '출자금이 영업자의 재산이 되는 익명조합 구조라면 원칙적으로 횡령으로 보기 어렵습니다. 처음부터 속였다면 사기, 맡은 임무를 어겼다면 배임과 민사상 반환 청구를 검토합니다.')],

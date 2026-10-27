@@ -968,7 +968,7 @@ G('gongsa-daegeum', '민사·부동산', '공사대금', '미지급 공사대금
    ('지급 요구', '내용증명으로 지급을 요구합니다.'),
    ('보전 · 소송', '가압류와 함께 소송을 제기합니다.'),
    ('감정 · 판결', '하자 감정에 대응하고 판결을 받습니다.')],
-  ['gunsan-gongsa-daegeum-jigeup-myeongryeong', 'jeonju-naeyongjeungmyeong', 'gunsan-minsa-jojeong'],
+  ['iksan-gongsa-daegeum-teuksuseong', 'gunsan-gongsa-daegeum-jigeup-myeongryeong', 'jeonju-naeyongjeungmyeong', 'gunsan-minsa-jojeong'],
   [('계약서 없이 공사했는데 받을 수 있나요?', '견적서, 메시지, 공사 사진, 자재 구매 내역 등으로 계약 내용과 공사 사실을 증명할 수 있습니다.'),
    ('하자가 있다며 대금을 안 줘요.', '하자가 있더라도 보수 비용만큼만 다툴 수 있는 경우가 많아, 하자의 범위를 정확히 따지는 것이 중요합니다.'),
    ('공사대금 시효는 얼마인가요?', '민법상 공사에 관한 채권은 3년의 단기소멸시효가 적용됩니다.')]),
