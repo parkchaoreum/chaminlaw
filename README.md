@@ -182,3 +182,13 @@ Netlify·Vercel은 기본 도메인을 `www.chaminlaw.com` 으로 지정하면 �
 - `prefers-reduced-motion` 존중 (애니메이션을 끈 사용자에게는 정지 화면)
 - 자바스크립트가 실행되지 않아도 모든 내용이 보이도록 작성
 - 외부 라이브러리 없음 (jQuery 등 불필요)
+
+## 성공사례 이미지 규칙 (대표 지시 2026-10-27)
+
+성공사례 도장은 반드시 `tools/restamp.py` 로 찍는다. 다른 스크립트·손으로 만든 도장은 쓰지 않는다.
+
+- 서체 휴먼둥근헤드라인(`/home/claude/fonts/HMKMRHD.TTF`), 괄호·기호만 Noto Sans CJK Black
+- 도장 폭 = 이미지 폭의 70%(겹테두리), 두 줄 고정 높이, 기울기 없음, 같은 고무도장 질감
+- 윗줄 = 사건명(길면 자동 축소), 아랫줄 = 결과
+- 원본 이미지(개인정보 가림 끝난 것) → `python3 tools/restamp.py 원본 images/case-NN.webp "윗줄" "아랫줄" images/case-NN-thumb.webp`
+- 원본(900px 폭), 썸네일 1200×900, webp
