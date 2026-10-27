@@ -25,7 +25,7 @@ out = out.replace('<title>{{제목}} | 법률사무소 차민</title>', f'<title
 ld_start = out.index('<script type="application/ld+json">'); ld_end = out.index('</script>', ld_start)
 ld = out[ld_start:ld_end]
 rep_ld = {'{{제목}}': J(spec['title']), '{{150자 요약}}': J(spec['desc']), '{{파일명}}': spec['slug'],
-          '{{YYYY-MM-DD}}': spec['date'], '{{변호사 성함}}': J(spec['author']), '{{분야}}': J(spec['category'])}
+          '{{MODIFIED}}': max(spec['date'], __import__('datetime').date.today().isoformat()), '{{YYYY-MM-DD}}': spec['date'], '{{변호사 성함}}': J(spec['author']), '{{분야}}': J(spec['category'])}
 for i, (q, a) in enumerate(spec['faq'], 1):
     rep_ld[f'{{{{질문{i}}}}}'] = J(q); rep_ld[f'{{{{답{i}}}}}'] = J(a)
 for k, v in rep_ld.items(): ld = ld.replace(k, v)
@@ -65,13 +65,15 @@ idx_p.write_text(idx, encoding='utf-8')
 
 # ---- 사이트맵 ----
 sm_p = ROOT / 'sitemap.xml'; sm = sm_p.read_text(encoding='utf-8')
+# lastmod 는 표시 날짜가 아니라 실제 게시·수정일(구글은 lastmod 가 사실과 다르면 무시함)
+LASTMOD = max(spec['date'], __import__('datetime').date.today().isoformat())
 loc = f'https://www.chaminlaw.com/blog/{spec["slug"]}.html'
 if loc in sm:
-    sm = re.sub(rf'(<loc>{re.escape(loc)}</loc>\s*<lastmod>)[\d-]+', rf'\g<1>{spec["date"]}', sm)
+    sm = re.sub(rf'(<loc>{re.escape(loc)}</loc>\s*<lastmod>)[\d-]+', rf'\g<1>{LASTMOD}', sm)
 else:
     sm = sm.replace('</urlset>', f'''  <url>
     <loc>{loc}</loc>
-    <lastmod>{spec["date"]}</lastmod>
+    <lastmod>{LASTMOD}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -91,3 +93,4 @@ subprocess.run([sys.executable, str(ROOT / "tools/seo_titles.py")], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/keyword_note.py")], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/build_practice.py")], check=True)
 subprocess.run([sys.executable, str(ROOT / "tools/build_guide.py")], check=True)
+subprocess.run([sys.executable, str(ROOT / "tools/fix_home_links.py")], check=True)
