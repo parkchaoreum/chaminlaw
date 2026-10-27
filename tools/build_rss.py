@@ -9,7 +9,7 @@ idx = (ROOT / 'blog/index.html').read_text(encoding='utf-8')
 a = idx.index('<!-- POSTS:START -->'); b = idx.index('<!-- POSTS:END -->')
 items = []
 for href, tag, date, title, desc in re.findall(
-        r'<a class="post" href="([^"]+)">.*?post__tag">([^<]*)</span><time datetime="([\d-]+)".*?post__h">(.*?)</h2>.*?post__d">(.*?)</p>',
+        r'<a class="post" href="([^"]+)">.*?post__tag">([^<]*)</span><span hidden data-d="([\d-]+)".*?post__h">(.*?)</h2>.*?post__d">(.*?)</p>',
         idx[a:b], re.S):
     page = (ROOT / 'blog' / href)
     full = ''

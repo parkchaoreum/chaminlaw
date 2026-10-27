@@ -54,12 +54,12 @@ a, b = idx.index('<!-- POSTS:START -->') + len('<!-- POSTS:START -->'), idx.inde
 cards = re.findall(r'        <a class="post" href="[^"]+">.*?</a>\n', idx[a:b], re.S)
 cards = [c for c in cards if f'href="{spec["slug"]}.html"' not in c]
 cards.append(f'''        <a class="post" href="{spec["slug"]}.html">
-          <div class="post__meta"><span class="post__tag">{spec["category"]}</span><time datetime="{spec["date"]}">{date_k}</time></div>
+          <div class="post__meta"><span class="post__tag">{spec["category"]}</span><span hidden data-d="{spec["date"]}"></span></div>
           <h2 class="post__h">{spec["title"]}</h2>
           <p class="post__d">{spec["card_desc"]}</p>
         </a>
 ''')
-cards.sort(key=lambda c: re.search(r'datetime="([\d-]+)"', c).group(1), reverse=True)
+cards.sort(key=lambda c: re.search(r'data-d="([\d-]+)"', c).group(1), reverse=True)
 idx = idx[:a] + '\n' + ''.join(cards) + idx[b:]
 idx_p.write_text(idx, encoding='utf-8')
 

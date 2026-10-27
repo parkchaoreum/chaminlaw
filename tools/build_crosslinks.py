@@ -13,7 +13,7 @@ idx = (ROOT / 'blog/index.html').read_text(encoding='utf-8')
 a = idx.index('<!-- POSTS:START -->'); b = idx.index('<!-- POSTS:END -->')
 posts = []
 for href, tag, date, title, desc in re.findall(
-        r'<a class="post" href="([^"]+)">.*?post__tag">([^<]*)</span><time datetime="([\d-]+)".*?post__h">(.*?)</h2>.*?post__d">(.*?)</p>',
+        r'<a class="post" href="([^"]+)">.*?post__tag">([^<]*)</span><span hidden data-d="([\d-]+)".*?post__h">(.*?)</h2>.*?post__d">(.*?)</p>',
         idx[a:b], re.S):
     f = ROOT / 'blog' / href
     if not f.exists():
@@ -37,7 +37,7 @@ def related(p):
 def card(q, prefix=''):
     d = q['date']
     return (f'''            <a class="post" href="{prefix}{q['href']}">
-              <div class="post__meta"><span class="post__tag">{q['tag']}</span><time datetime="{d.isoformat()}">{d.year}. {d.month}. {d.day}.</time></div>
+              <div class="post__meta"><span class="post__tag">{q['tag']}</span><span hidden data-d="{d.isoformat()}"></span></div>
               <h3 class="post__h">{q['title']}</h3>
               <p class="post__d">{q['desc']}</p>
             </a>''')
