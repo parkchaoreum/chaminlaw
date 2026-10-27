@@ -313,11 +313,15 @@
       var mk = function (n, label, cls, dis) {
         return '<button type="button" class="pager__b' + (cls ? ' ' + cls : '') + '" data-page="' + n + '"' +
           (dis ? ' disabled' : '') + (n === state.page && !cls ? ' aria-current="page"' : '') +
-          (label !== String(n) ? ' aria-label="' + (cls === 'pager__prev' ? '이전 페이지' : '다음 페이지') + '"' : ' aria-label="' + n + '페이지"') + '>' + label + '</button>';
+          (label !== String(n) ? ' aria-label="' + (cls === 'pager__prev' ? '이전 페이지 묶음' : '다음 페이지 묶음') + '"' : ' aria-label="' + n + '페이지"') + '>' + label + '</button>';
       };
-      ph += mk(state.page - 1, '‹', 'pager__prev', state.page === 1);
-      for (var n = 1; n <= pages; n++) ph += mk(n, String(n), '', false);
-      ph += mk(state.page + 1, '›', 'pager__next', state.page === pages);
+      // 페이지 번호는 묶음(PC 10개, 좁은 화면 5개)으로만 보이고, 화살표로 다음·이전 묶음으로 넘어간다
+      var BLOCK = window.innerWidth < 560 ? 5 : 10;
+      var bStart = Math.floor((state.page - 1) / BLOCK) * BLOCK + 1;
+      var bEnd = Math.min(pages, bStart + BLOCK - 1);
+      ph += mk(bStart - BLOCK, '‹', 'pager__prev', bStart === 1);
+      for (var n = bStart; n <= bEnd; n++) ph += mk(n, String(n), '', false);
+      ph += mk(bEnd + 1, '›', 'pager__next', bEnd === pages);
     }
     pager.innerHTML = ph;
     pager.hidden = pages <= 1;
