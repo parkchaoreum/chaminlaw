@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 2 }
+        with: { fetch-depth: 0 }
       - name: Wait for GitHub Pages deploy
         run: sleep 120
       - name: Submit changed URLs
@@ -19,6 +19,7 @@ jobs:
           KEY: 94075eef052f89fcdeb4756c6cbcb3da
           HOST: www.chaminlaw.com
           EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
         run: |
           python3 - <<'PY'
           import os, re, json, subprocess, urllib.request
@@ -27,7 +28,11 @@ jobs:
           if os.environ['EVENT'] == 'workflow_dispatch':
               urls = re.findall(r'<loc>([^<]+)</loc>', open('sitemap.xml', encoding='utf-8').read())
           else:
-              out = subprocess.run(['git', 'diff', '--name-only', '--diff-filter=AM', 'HEAD~1', 'HEAD'],
+              # 한 번에 여러 커밋이 올라와도 빠짐없이: 푸시 직전 커밋(BEFORE)부터 비교
+              before = os.environ.get('BEFORE') or ''
+              if not before or set(before) == {'0'} or subprocess.run(['git', 'cat-file', '-e', before]).returncode:
+                  before = 'HEAD~1'
+              out = subprocess.run(['git', 'diff', '--name-only', '--diff-filter=AM', before, 'HEAD'],
                                    capture_output=True, text=True).stdout.split()
               urls = []
               for f in out:
