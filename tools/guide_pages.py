@@ -4,10 +4,12 @@
 CRIM = '군산경찰서 → 전주지방공소청 군산지청 → 전주지방법원 군산지원'
 FAMC = '전주지방법원 군산지원 (군산·익산 가사사건)'
 CIVC = '전주지방법원 군산지원 (청구액·사건에 따라 단독·합의부)'
-LEE = '이민규 대표변호사 (경찰대 졸업, 군산경찰서 수사과 근무)'
+LEE = '이민규 대표변호사 (경찰대학 졸업, 前 군산경찰서 수사과, 전주지방공소청 피해자국선변호사)'
+LEE_LAB = '이민규 대표변호사 (경찰대학 졸업, 前 경찰청 경무국·군산경찰서 수사과, 군산대학교 인권센터 조사위원)'
+LEE_VIC = '이민규 대표변호사 (전주지방공소청 피해자국선변호사, 경찰대학 졸업, 前 군산경찰서 수사과)'
 PARK = '박차오름 대표변호사 (전주지방법원 민사·가사 조정위원)'
 PARK_MIL = '박차오름 대표변호사 (제53보병사단 군사경찰대 지원과장 출신)'
-PARK_SCH = '박차오름 대표변호사 (전주교육지원청 학교폭력대책심의위원회 위원)'
+PARK_SCH = '박차오름 대표변호사 (전주교육지원청 학교폭력대책심의위원회·교권보호심의위원회 위원)'
 AREA = {'형사': 'criminal', '성범죄': 'sexual', '음주운전·교통': 'dui', '이혼·상간': 'divorce',
         '상속·가사': 'family', '민사·부동산': 'civil', '학교폭력': 'school', '노동·징계': 'discipline'}
 AREA_NAME = {'형사': '일반형사·군형사', '성범죄': '성범죄', '음주운전·교통': '음주운전·교통', '이혼·상간': '이혼·상간',
@@ -17,7 +19,7 @@ def G(slug, group, kw, title_tail, desc, law, intro, points, steps, cols, faq, c
     if court is None:
         court = CRIM if group in ('형사', '성범죄', '음주운전·교통') else FAMC if group in ('이혼·상간', '상속·가사') else CIVC
     if lawyer is None:
-        lawyer = LEE if group in ('형사', '성범죄', '음주운전·교통', '노동·징계') else PARK_SCH if group == '학교폭력' else PARK
+        lawyer = LEE_LAB if group == '노동·징계' else LEE_VIC if any(k in slug for k in ('pihaeja', 'goso-daeri', 'baesang-myeongryeong', 'bulsongchi')) else LEE if group in ('형사', '성범죄', '음주운전·교통') else PARK_SCH if group == '학교폭력' else PARK
     a = AREA[group]
     return dict(slug='guide-gunsan-' + slug, group=group, kw='군산 ' + kw,
         h1=f'군산 {kw} 변호사 상담 안내', title=f'군산 {kw} 변호사 — {title_tail} | 법률사무소 차민', desc=desc,
@@ -1111,7 +1113,7 @@ def GC(city, slug, group, kw, title_tail, desc, law, intro, points, steps, cols,
     if court is None:
         court = f'{police} → {pros} → {crt}' if group in ('형사', '성범죄', '음주운전·교통') else crt
     if lawyer is None:
-        lawyer = LEE if group in ('형사', '성범죄', '음주운전·교통', '노동·징계') else PARK_SCH if group == '학교폭력' else PARK
+        lawyer = LEE_LAB if group == '노동·징계' else LEE_VIC if any(k in slug for k in ('pihaeja', 'goso-daeri', 'baesang-myeongryeong', 'bulsongchi')) else LEE if group in ('형사', '성범죄', '음주운전·교통') else PARK_SCH if group == '학교폭력' else PARK
     a = AREA[group]
     return dict(slug=f'guide-{city}-' + slug, city=city, group=group, kw=f'{name} ' + kw,
         h1=f'{name} {kw} 변호사 상담 안내', title=f'{name} {kw} 변호사 — {title_tail} | 법률사무소 차민', desc=desc,
