@@ -958,6 +958,10 @@ body.nav-open { overflow: hidden; }
   }
   .cv__list--2col li { break-inside: avoid; margin-bottom: .7rem; }
 }
+/* 항목마다 한 줄: 넓은 화면에서는 한 열로 펼치고 줄바꿈하지 않는다 */
+@media (min-width: 620px) {
+  .cv__list--1line li { white-space: nowrap; }
+}
 .cv__list li {
   position: relative;
   padding-left: 1.05rem;
