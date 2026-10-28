@@ -196,5 +196,5 @@ Netlify·Vercel은 기본 도메인을 `www.chaminlaw.com` 으로 지정하면 �
 ## 칼럼 GEO 규칙 (대표 지시 2026-10-28)
 
 - 칼럼 맨 위 '핵심 답변' 상자 = spec 의 `card_desc`. 목차형("~까지.")이 아니라 질문에 대한 결론 1~2문장으로 쓴다.
-- 본문 끝 '이 글을 쓴 변호사' 한 줄과 JSON-LD author.description 은 `tools/eeat_boxes.py` 가 작성 변호사·분야로 자동 선택(‘전문’ 표기 없이 실제 위촉·경력만).
+- 본문 끝 '이 글을 쓴 변호사' 한 줄과 JSON-LD author.description 은 `tools/eeat_boxes.py` 가 작성 변호사·분야로 자동 선택(실제 위촉·경력만. '전문' 표기는 가능, '대한변호사협회 인증·등록' 표현은 쓰지 않음).
 - 지역 안내 페이지 '담당 변호사' 경력 문구는 `tools/guide_pages.py` 의 LEE / LEE_LAB / LEE_VIC / PARK / PARK_SCH / PARK_MIL.
