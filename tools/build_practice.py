@@ -62,7 +62,7 @@ for ar in AREAS:
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": an}} for q, an in ar['faq']]}]}
     h = h.replace('</head>', '<script type="application/ld+json">\n' + json.dumps(ld, ensure_ascii=False, indent=1) + '\n</script>\n</head>', 1)
 
-    my_cases = sorted([c for c in cases if case_area(c) == slug], key=lambda c: '구속영장 기각' not in c)[:3]  # 구속영장 기각 사례를 앞에
+    my_cases = sorted([c for c in cases if case_area(c) == slug], key=lambda c: not ('파기환송' in c or '구속영장 기각' in c))[:3]  # 대법원 파기환송·구속영장 기각 사례를 앞에
     my_cols = [c.replace('href="', 'href="blog/', 1) for c, hr, tg in cards if slug in col_areas(hr, tg)][:4]
     situ = '\n'.join(f'        <div class="pitem"><p class="pitem__h">{esc(t)}</p><p class="pitem__d">{esc(d)}</p></div>' for t, d in ar['situ'])
     steps = '\n'.join(f'        <li class="step"><p class="step__no">{i+1:02d}</p><h3 class="step__h">{esc(t)}</h3><p class="step__d">{esc(d)}</p></li>' for i, (t, d) in enumerate(ar['steps']))
