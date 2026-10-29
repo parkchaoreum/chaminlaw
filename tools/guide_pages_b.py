@@ -181,7 +181,7 @@ G('gyotong-sago', '음주운전·교통', '교통사고', '가해자·피해자�
    ('사건 분류', '가해자는 예외 사유·중상해 해당 여부를, 피해자는 진단과 장해 전망을 확인합니다.'),
    ('조사 · 협상', '가해자는 첫 조사 전 경위와 합의 방향을 정리하고, 피해자는 보험사 합의 전 배상액을 검토합니다.'),
    ('처분 · 소송', '형사는 공소청 처분과 재판에, 민사는 손해배상 소송에 대응합니다.')],
-  ['iksan-gyotong-sago-pihaeja-hapui', 'gunsan-12dae-junggwasil-sago', 'gunsan-gyotong-sago-byeonhosa-sigi', 'gunsan-wiheom-unjeon-chisang-gyoteuk', 'gunsan-eumju-unjeon-gyeongchal-josa'],
+  ['seocheon-gyotong-sago-boheomsa-hapui', 'iksan-gyotong-sago-pihaeja-hapui', 'gunsan-12dae-junggwasil-sago', 'gunsan-gyotong-sago-byeonhosa-sigi', 'gunsan-wiheom-unjeon-chisang-gyoteuk', 'gunsan-eumju-unjeon-gyeongchal-josa'],
   [('종합보험이 있으면 가해자는 처벌받지 않나요?', '원칙적으로 공소를 제기할 수 없지만, 12개 예외 사유, 도주나 음주측정 거부, 피해자의 중상해, 사망사고에서는 형사처벌 대상이 될 수 있습니다.'),
    ('피해자인데 언제 상담하는 게 좋나요?', '진단과 후유장해의 윤곽이 어느 정도 잡힌 뒤, 그리고 보험사 합의서에 서명하기 전에 검토하는 것이 일반적입니다.'),
    ('군산에서 난 사고의 손해배상 소송은 어디에 내나요?', '사고 장소나 피고 주소지 등을 관할하는 법원에 낼 수 있어, 군산에서 난 사고라면 전주지방법원 군산지원에서 진행할 수 있습니다.')],
