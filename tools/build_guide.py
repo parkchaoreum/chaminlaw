@@ -254,7 +254,7 @@ blocks = []
 # 다른 지역 안내 페이지가 군산의 어느 세부카테고리를 대신하는지
 CITY_ALIAS = {'eumju-josa': 'eumju-unjeon', 'hakpokwi': 'hakgyopokryeok', 'gongmuwon-jinggye': 'gongmuwon-gamsa'}
 PRACTICE_TO = {'practice-dui.html': 'eumju-unjeon', 'practice-school.html': 'hakgyopokryeok', 'practice-criminal.html': 'hyeongsa', 'practice-sexual.html': 'seongbeomjoe', 'practice-civil.html': 'minsa', 'practice-divorce.html': 'ihon', 'practice-family.html': 'sangsok', 'practice-discipline.html': 'nodong-jinggye'}
-HUB_HIDDEN = {'jeonju', 'buan', 'gimje', 'nonsan', 'boryeong', 'gochang', 'buyeo', 'jeongeup'}
+HUB_HIDDEN = {'jeonju', 'buan', 'nonsan', 'boryeong', 'gochang', 'buyeo', 'jeongeup'}
 for code, name, court, police, pros in CITIES:
     if code in HUB_HIDDEN: continue
     groups2 = {}
