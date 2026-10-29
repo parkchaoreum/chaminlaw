@@ -353,18 +353,19 @@ KEYMAP = {
 
 # 안내 페이지에 붙일 성공사례 (results.html 의 case-xx). 결과를 과장하지 않도록 사례 원문 그대로 옮긴다.
 CASEMAP = {
+ 'guide-iksan-sagi': ['case-21', 'case-19'], 'guide-iksan-mujoe': ['case-21'], 'guide-iksan-hangsosim': ['case-21'],
  'guide-gunsan-gusok-yeongjang': ['case-18', 'case-08'], 'guide-gunsan-voice-phishing': ['case-08'],
  'guide-gunsan-gusok-jeokbusim-boseok': ['case-15'],
  'guide-gunsan-myeongye-hweson': ['case-02'], 'guide-gunsan-samunseo-wijo': ['case-03'],
- 'guide-gunsan-eommu-banghae': ['case-04'], 'guide-gunsan-muhyeomui': ['case-01', 'case-09', 'case-02'], 'guide-gunsan-mujoe': ['case-12', 'case-09'],
+ 'guide-gunsan-eommu-banghae': ['case-04'], 'guide-gunsan-muhyeomui': ['case-01', 'case-09', 'case-02'], 'guide-gunsan-mujoe': ['case-21', 'case-12', 'case-09'],
  'guide-gunsan-gunhyeongsa': ['case-05'], 'guide-gunsan-giso-yuye': ['case-05'],
  'guide-gunsan-goso-daeri': ['case-19', 'case-06', 'case-07'], 'guide-gunsan-beomjoe-pihaeja': ['case-19', 'case-07', 'case-06'],
  'guide-gunsan-gangje-chuhaeng': ['case-06'], 'guide-gunsan-seongbeomjoe-pihaeja': ['case-06'],
- 'guide-gunsan-sagi': ['case-19', 'case-09', 'case-11', 'case-18', 'case-10'], 'guide-gunsan-gonggal': ['case-10'],
+ 'guide-gunsan-sagi': ['case-21', 'case-19', 'case-09', 'case-11', 'case-18', 'case-10'], 'guide-gunsan-gonggal': ['case-10'],
  'guide-gunsan-gangan': ['case-12'], 'guide-gunsan-seongbeomjoe-muhyeomui': ['case-12'],
  'guide-gunsan-ppaengsoni': ['case-14'], 'guide-gunsan-gyotong-sago': ['case-14', 'case-17'],
  'guide-gunsan-hyeopbak': ['case-15'], 'guide-gunsan-hapui-gongtak': ['case-15'],
- 'guide-gunsan-jiphaeng-yuye': ['case-15', 'case-13', 'case-17'], 'guide-gunsan-hangsosim': ['case-16'],
+ 'guide-gunsan-jiphaeng-yuye': ['case-15', 'case-13', 'case-17'], 'guide-gunsan-hangsosim': ['case-21', 'case-16'],
  'guide-gunsan-eumju-jaebeom': ['case-16'], 'guide-gunsan-eumju-josa': ['case-16'],
  'guide-gunsan-wiheom-unjeon': ['case-16', 'case-17'],
  'guide-gunsan-hoengnyeong': ['case-18'], 'guide-iksan-hoengnyeong': ['case-18'], 'guide-gunsan-dongeop': ['case-18'],
