@@ -314,7 +314,7 @@ G('budang-haego', '노동·징계', '부당해고', '해고인지 확인하고 3
    ('절차 선택', '구제신청과 해고무효확인 소송 가운데 무엇을 할지, 함께 할지 정합니다.'),
    ('구제신청 · 심문', '전북지방노동위원회에 신청하고 이유서와 증거를 제출한 뒤 심문회의에 출석합니다.'),
    ('판정 이후', '불복 시 중앙노동위원회 재심과 행정소송으로, 임금을 받지 못하면 민사소송을 검토합니다.')],
-  ['gunsan-nodongwiwonhoe-simmun-jeolcha', 'iksan-jinggyewiwonhoe-chulseok-jeomgeom', 'gunsan-budang-haego-guje','gunsan-jinggye-jeongdangseong-samdan',  'gunsan-imgeum-toejikgeum-cheburi', 'gunsan-jikjang-goerophim-sayongja-jochi'],
+  ['seocheon-budang-haego-jinggye-jeolcha', 'gunsan-nodongwiwonhoe-simmun-jeolcha', 'iksan-jinggyewiwonhoe-chulseok-jeomgeom', 'gunsan-budang-haego-guje','gunsan-jinggye-jeongdangseong-samdan',  'gunsan-imgeum-toejikgeum-cheburi', 'gunsan-jikjang-goerophim-sayongja-jochi'],
   [('구제신청에서 이기면 무엇을 받나요?', '원직복직과 해고 기간에 받았을 임금 상당액을 받고, 복직을 원하지 않으면 금전보상을 신청할 수 있습니다. 그 사이 다른 곳에서 번 돈이 있어도 판례상 평균임금의 70%까지는 공제되지 않습니다.'),
    ('회사가 구제명령을 따르지 않으면요?', '이행강제금이 부과될 수 있고, 확정된 구제명령을 이행하지 않으면 형사처벌 대상이 됩니다. 다만 구제명령만으로 강제집행은 할 수 없어 임금은 별도 민사소송이 필요할 수 있습니다.'),
    ('3개월이 지났으면 방법이 없나요?', '구제신청은 할 수 없지만 법원에 해고무효확인과 임금 청구 소송을 낼 수 있습니다. 다만 시간이 늦어질수록 불리할 수 있습니다.')],
