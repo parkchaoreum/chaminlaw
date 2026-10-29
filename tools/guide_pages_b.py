@@ -98,7 +98,7 @@ G('seongbeomjoe-pihaeja', '성범죄', '성범죄 피해자·고소', '증거 �
    ('고소 준비', '사건 경위를 시간순으로 정리하고 고소장과 증거 목록을 준비합니다.'),
    ('피해자 조사', '조사 일정을 조율하고 변호사나 신뢰관계인과 함께 출석합니다.'),
    ('처분 · 재판 · 배상', '엄벌 의사나 합의 여부를 정리해 전달하고, 필요하면 민사상 손해배상(위자료) 청구도 검토합니다.')],
-  ['iksan-seongbeomjoe-pihaeja-byeonhosa', 'gunsan-seongbeomjoe-pihaeja', 'gunsan-gosoin-josa-daeeung', 'gunsan-seongbeomjoe-jeongeon-songchi'],
+  ['gimje-seongbeomjoe-pihaeja-goso-jinsul', 'iksan-seongbeomjoe-pihaeja-byeonhosa', 'gunsan-seongbeomjoe-pihaeja', 'gunsan-gosoin-josa-daeeung', 'gunsan-seongbeomjoe-jeongeon-songchi'],
   [('증거가 제 진술밖에 없어도 고소할 수 있나요?', '가능합니다. 성범죄는 직접 증거가 없는 경우가 많아 진술의 일관성과 구체성, 사건 전후 정황, 메시지·진료 기록 같은 간접 증거를 종합해 판단합니다.'),
    ('가해자 측이 무고죄로 고소하겠다고 합니다.', '있었던 사실대로 고소한 경우에는 무고죄가 성립하지 않습니다. 이런 압박을 받은 메시지나 통화도 보존해 두고, 진술과 증거를 정리해 고소를 진행하면 됩니다.'),
    ('합의하면 가해자가 처벌받지 않나요?', '대부분의 성범죄는 친고죄가 아니어서 합의해도 처벌이 면제되지는 않지만, 형량에는 큰 영향을 줍니다. 그래서 가해자 측이 합의를 서두르는 경우가 많으므로, 증거 관계와 사건 전망을 검토한 뒤 시점과 조건을 정하는 것이 좋습니다.')]),

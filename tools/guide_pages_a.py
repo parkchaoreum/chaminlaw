@@ -18,7 +18,7 @@ G('gyeongchal-josa', '형사', '경찰조사', '피의자 출석 요구를 받�
    ('기록 확인 · 입장 정리', '고소장 내용을 확인하고 예상 질문, 인정·부인할 부분, 제출할 자료를 정리합니다.'),
    ('조사 동석', '변호인이 신문에 참여해 부당한 신문 방법에 이의를 제기하고, 신문 후 의견을 진술합니다.'),
    ('조서 확인 · 보완', '조서를 끝까지 확인해 수정을 요청하고, 조사 후 필요한 내용은 의견서와 추가 자료로 보완합니다.')],
-  ['seocheon-gyeongchal-josa-dongseok-pandan', 'gunsan-gyeongchal-josa-dongseok', 'iksan-pigosoin-josa-daeeung', 'gunsan-geojitmal-tamjigi-geomsa', 'gunsan-eumju-unjeon-gyeongchal-josa'],
+  ['gimje-hyeongsa-jeolcha-2026-gaejeong', 'seocheon-gyeongchal-josa-dongseok-pandan', 'gunsan-gyeongchal-josa-dongseok', 'iksan-pigosoin-josa-daeeung', 'gunsan-geojitmal-tamjigi-geomsa', 'gunsan-eumju-unjeon-gyeongchal-josa'],
   [('피의자 조사에 변호인이 꼭 필요한가요?', '단순한 사실 확인이나 쟁점이 거의 없는 경미한 사건은 혼자 받아도 되는 경우가 있습니다. 반면 혐의를 부인하는 사건, 구속이나 무거운 처벌이 예상되는 사건, 증거관계가 복잡한 사건은 첫 진술이 사건의 방향을 정하는 경우가 많아 변호인 동석을 검토하는 것이 좋습니다.'),
    ('기억나지 않는 질문에는 어떻게 답해야 하나요?', '추측해서 단정하기보다 “정확히 기억나지 않습니다”라고 답하는 것이 낫습니다. 불확실하게 단정한 내용이 나중에 객관적 증거와 어긋나면 진술 전체의 신빙성이 떨어질 수 있습니다.'),
    ('조서에 서명한 뒤에 내용을 바꿀 수 있나요?', '서명한 조서를 나중에 다투기는 매우 어렵습니다. 서명 전에 끝까지 읽고 다르게 적힌 부분은 수정을 요청하며, 받아들여지지 않으면 이의가 있다는 취지를 조서에 남겨 달라고 요청할 수 있습니다.')]),

@@ -29,6 +29,8 @@
 - [법률 칼럼](https://www.chaminlaw.com/blog/) (RSS: https://www.chaminlaw.com/blog/rss.xml)
 
 ## 법률 칼럼 — 형사
+- [김제에서 성범죄 피해를 입었다면 — 112 신고와 고소장, 첫 진술, 조사 과정에서 피해자가 요청할 수 있는 것](https://www.chaminlaw.com/blog/gimje-seongbeomjoe-pihaeja-goso-jinsul.html): 성범죄는 목격자나 CCTV가 없는 경우가 많아 피해자의 첫 진술이 사건의 중심이 됩니다. 신고 방식을 정하고, 기억을 시간순으로 정리해 첫 조사에 나가고, 진술조서는 서명 전에 끝까지 확인하세요.
+- [김제에서 경찰 출석 요구를 받았다면 — 수사관 전화부터 송치·불송치, 공소청 처분까지, 2026년 10월부터 달라진 기한](https://www.chaminlaw.com/blog/gimje-hyeongsa-jeolcha-2026-gaejeong.html): 수사관 전화를 받았다면 날짜부터 잡지 말고 혐의와 고소 내용을 먼저 확인하세요. 2026. 10. 2.부터는 고소사건 송치 여부를 원칙적으로 3개월 안에 정하고, 불송치 이의신청도 통지받은 날부터 3개월 안에 해야 합니다.
 - [군산 사건이 공소청으로 송치되었다면 — 사실관계 확인과 고소인 등 면담, 증거가 안 되는 진술의 의미](https://www.chaminlaw.com/blog/gunsan-gongsocheong-sasilgwangye-hwagin.html): 검찰조사 대신 사실관계 확인과 고소인 등 면담. 재판 증거는 안 되지만 기소 판단에는 영향을 줍니다.
 - [익산에서 상해로 조사받는다면 — 진단서가 있어도 상해가 아닐 수 있는 경우](https://www.chaminlaw.com/blog/iksan-sanghae-pokhaeng-gubun.html): 합의로 끝나는 폭행, 합의해도 처벌되는 상해. 진단서가 있어도 상해가 부정되는 기준과 다툴 때 볼 자료.
 - [군산에서 폭행을 당했다면 — 폭행과 상해의 경계, 처벌불원서를 내기 전에 확인할 것](https://www.chaminlaw.com/blog/gunsan-pokhaeng-pihae-hapui.html): 멍만 들어도 진단서를 받아 둘 이유, 한 번 내면 되돌릴 수 없는 처벌불원서, 합의가 안 될 때 배상받는 방법까지.

@@ -202,6 +202,8 @@ M = {
  'seocheon-jaesan-bunhal-hyeopui-juui': (['재산분할'], '이혼전문'),
  'seocheon-gyotong-sago-boheomsa-hapui': (['교통사고'], '교통사고전문'),
  'seocheon-gusok-yeongjang-silji-simsa-junbi': (['구속영장'], 'CRIM'),
+ 'gimje-hyeongsa-jeolcha-2026-gaejeong': (['형사'], 'CRIM'),
+ 'gimje-seongbeomjoe-pihaeja-goso-jinsul': (['성범죄', '성범죄피해자'], '성범죄전문'),
  'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
  'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),

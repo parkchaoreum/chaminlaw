@@ -3014,4 +3014,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gimje-hyeongsa-jeolcha-2026-gaejeong.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-gimje-hyeongsa.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/guide-gimje-seongbeomjoe.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.chaminlaw.com/blog/gimje-seongbeomjoe-pihaeja-goso-jinsul.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

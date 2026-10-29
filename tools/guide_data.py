@@ -237,6 +237,8 @@ LABELS = {
  'seocheon-jaesan-bunhal-hyeopui-juui':'서천 소송 없는 재산분할 합의',
  'seocheon-gyotong-sago-boheomsa-hapui':'서천 교통사고 보험사 합의',
  'seocheon-gusok-yeongjang-silji-simsa-junbi':'서천 구속영장 실질심사 준비',
+ 'gimje-hyeongsa-jeolcha-2026-gaejeong':'김제 형사절차와 달라진 기한',
+ 'gimje-seongbeomjoe-pihaeja-goso-jinsul':'김제 성범죄 피해자 고소와 첫 진술',
  'gunsan-jinggye-jeongdangseong-samdan':'징계 정당성',
  'iksan-imgeum-chebul-sosong':'임금체불 소송',
  'gunsan-gangan-goso-sinbingseong':'강간 고소',
