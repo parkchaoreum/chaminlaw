@@ -203,6 +203,8 @@ LABELS = {
  'iksan-nodong-bunjaeng-saeopju-daeeung':'사업주의 노동 분쟁 대응',
  'iksan-jinggyewiwonhoe-byeonhosa-dongseok':'징계위원회 변호사 동석',
  'seocheon-hyeongsa-jeolcha-dangye':'서천 형사절차 단계별 대응',
+ 'seocheon-seongbeomjoe-chogi-daeeung':'서천 성범죄 초기 대응',
+ 'seocheon-eumju-unjeon-seonim-gijun':'서천 음주운전 초범·재범·사고',
  'gunsan-jinggye-jeongdangseong-samdan':'징계 정당성',
  'iksan-imgeum-chebul-sosong':'임금체불 소송',
  'gunsan-gangan-goso-sinbingseong':'강간 고소',

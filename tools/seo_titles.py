@@ -168,6 +168,8 @@ M = {
  'iksan-nodong-bunjaeng-saeopju-daeeung': (['노동'], '노동전문'),
  'iksan-jinggyewiwonhoe-byeonhosa-dongseok': (['징계'], '징계전문'),
  'seocheon-hyeongsa-jeolcha-dangye': (['형사'], 'CRIM'),
+ 'seocheon-seongbeomjoe-chogi-daeeung': (['성범죄', '성폭행'], '성범죄전문'),
+ 'seocheon-eumju-unjeon-seonim-gijun': (['음주운전'], '음주운전전문'),
  'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
  'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),
