@@ -950,7 +950,7 @@ G('daeyeogeum', '민사·부동산', '대여금', '빌려준 돈을 받기 위�
    ('내용증명 · 독촉', '지급을 요구하고 기록을 남깁니다.'),
    ('지급명령 · 소송', '사건에 맞는 절차를 선택합니다.'),
    ('집행', '판결 후 재산조회와 강제집행을 진행합니다.')],
-  ['seocheon-daeyeogeum-sosong-ipjeung', 'jeonju-daeyeogeum-tuja-guboon', 'iksan-daeyeogeum-banhwan', 'gunsan-yeonin-jeungyeo-daeyeo', 'jeonju-naeyongjeungmyeong'],
+  ['gimje-daeyeogeum-jigeup-myeongryeong-sojang', 'seocheon-daeyeogeum-sosong-ipjeung', 'jeonju-daeyeogeum-tuja-guboon', 'iksan-daeyeogeum-banhwan', 'gunsan-yeonin-jeungyeo-daeyeo', 'jeonju-naeyongjeungmyeong'],
   [('차용증이 없으면 못 받나요?', '차용증이 없어도 계좌이체 내역, 메시지, 녹음 등으로 대여 사실을 증명할 수 있습니다.'),
    ('상대가 증여였다고 주장해요.', '돈을 준 경위, 반환 약속, 이후 독촉 내역 등으로 대여였다는 점을 보여 줘야 합니다.'),
    ('판결을 받아도 상대가 돈이 없으면요?', '재산명시·재산조회로 재산을 찾고, 미리 가압류를 해 두는 것이 회수 가능성을 높입니다.')]),

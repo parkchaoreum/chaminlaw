@@ -263,7 +263,7 @@ G('sonhae-baesang', '민사·부동산', '손해배상', '책임의 성립과 �
    ('손해 항목화 · 증거 수집', '재산상 손해와 위자료를 나누고 진단서·영수증·사진·메시지·캡처를 모읍니다.'),
    ('기한 · 관할 확인', '3년·10년 기한과 피고 주소지·불법행위지 기준 관할을 확인합니다.'),
    ('조정 · 소송', '책임은 다투지 않고 금액만 문제라면 조정을, 다툼이 크면 소송을 진행합니다.')],
-  ['seocheon-sonhae-baesang-somyeol-siho', 'iksan-sonhae-baesang-cheonggu-wonin', '20261016-gunsan-sonhaebaesang', 'gunsan-myeongye-hweson', 'gunsan-gyotong-sago-byeonhosa-sigi', 'gunsan-minsa-jojeong'],
+  ['gimje-sonhae-baesang-beomwi-hyeongsa-ihu', 'seocheon-sonhae-baesang-somyeol-siho', 'iksan-sonhae-baesang-cheonggu-wonin', '20261016-gunsan-sonhaebaesang', 'gunsan-myeongye-hweson', 'gunsan-gyotong-sago-byeonhosa-sigi', 'gunsan-minsa-jojeong'],
   [('돈으로 손해 본 것은 없는데 위자료만 청구할 수 있나요?', '가능합니다. 민법 제751조는 정신적 고통에 대한 배상을 따로 인정합니다. 다만 상대방의 행위가 불법행위에 해당하고 그로 인해 고통을 입었다는 점은 갖추어야 합니다.'),
    ('사건이 생긴 지 2년이 넘었는데 청구할 수 있나요?', '손해와 가해자를 안 날부터 3년, 불법행위가 있었던 날부터 10년 안이면 청구할 수 있습니다. 미성년자가 성적 침해를 당한 경우처럼 예외 규정도 있어 날짜와 함께 확인해야 합니다.'),
    ('군산에서 손해배상 소송은 어느 법원에 내나요?', '피고 주소지나 불법행위가 일어난 곳의 법원에 낼 수 있어, 둘 중 하나가 군산이라면 전주지방법원 군산지원에서 진행할 수 있습니다. 3,000만 원 이하는 소액사건 절차로 진행됩니다.')]),
