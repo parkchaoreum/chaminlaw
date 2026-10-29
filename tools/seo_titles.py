@@ -167,6 +167,7 @@ M = {
  'iksan-sangsok-sosong-biyong-gujo': (['상속'], '상속전문'),
  'iksan-nodong-bunjaeng-saeopju-daeeung': (['노동'], '노동전문'),
  'iksan-jinggyewiwonhoe-byeonhosa-dongseok': (['징계'], '징계전문'),
+ 'seocheon-hyeongsa-jeolcha-dangye': (['형사'], 'CRIM'),
  'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
  'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),
