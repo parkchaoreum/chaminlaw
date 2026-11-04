@@ -42,7 +42,7 @@ G('minsa-jojeong', '민사·부동산', '민사조정', '조정기일 전에 정
    ('기준선 설정', '예상 판결, 양보할 수 있는 최소·최대 범위, 금액 외 조건을 정리합니다.'),
    ('조정기일 출석', '재판부나 조정위원이 중요하게 보는 쟁점을 확인하며 조정안을 협의합니다.'),
    ('성립 · 결정 · 불성립', '조서 문구를 확인하고, 결정을 받으면 2주 안에 이의 여부를 정하며, 불성립이면 소송으로 돌아갑니다.')],
-  ['buan-minsa-sojang-badasseul-ttae', 'gimje-minsa-sosong-hwahae-seongo', 'iksan-minsa-jojeong-gijun', 'gunsan-minsa-jojeong', 'gunsan-gangje-jiphaeng-jeongji-gongtak', 'iksan-daeyeogeum-banhwan', 'gunsan-yeonin-jeungyeo-daeyeo'],
+  ['jeonju-minsa-sojang-jechul-jeon-gyeoljeong', 'buan-minsa-sojang-badasseul-ttae', 'gimje-minsa-sosong-hwahae-seongo', 'iksan-minsa-jojeong-gijun', 'gunsan-minsa-jojeong', 'gunsan-gangje-jiphaeng-jeongji-gongtak', 'iksan-daeyeogeum-banhwan', 'gunsan-yeonin-jeungyeo-daeyeo'],
   [('조정에 꼭 나가야 하나요?', '조정기일에 출석하지 않으면 조정이 불성립되거나 법원이 조정을 갈음하는 결정을 내릴 수 있습니다. 내 입장을 반영하려면 출석해 의견을 밝히는 것이 좋습니다.'),
    ('조정에서 합의한 뒤 마음이 바뀌면요?', '성립된 조정조서는 확정판결과 같은 효력이 있어 원칙적으로 다시 다툴 수 없습니다. 서명 전에 조서 문구를 꼼꼼히 확인해야 합니다.'),
    ('조정을 갈음하는 결정을 받았는데 동의할 수 없어요.', '결정조서 정본을 송달받은 날부터 2주 안에 이의신청을 하면 결정은 효력을 잃고 소송이 다시 진행됩니다. 2주는 불변기간이라 하루라도 늦으면 결정이 확정됩니다.')],
