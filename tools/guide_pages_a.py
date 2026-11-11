@@ -78,7 +78,7 @@ G('voice-phishing', '형사', '보이스피싱', '수거책 혐의 대응과 피
    ('대응 방향 결정', '고의를 다툴 사건인지, 인정하고 피해 회복에 집중할 사건인지 정합니다.'),
    ('조사 동석 · 피해 회복', '조사에 함께 출석하고, 필요하면 피해자와의 합의나 공탁을 진행합니다.'),
    ('재판 대응', '기소되면 일반 재판과 국민참여재판 중 어느 쪽이 나은지 비교해 선택합니다.')],
-  ['jeonju-voice-phishing-sugeochaek-minsa-chaegim', 'iksan-voice-phishing-hapui', 'gunsan-voice-phishing-sugeochaek', 'gunsan-daepo-tongjang-myeongija-sonhaebaesang', 'gunsan-gyeongchal-josa-dongseok', '20261016-gunsan-sonhaebaesang'],
+  ['buyeo-voice-phishing-pihae-jikhu-sunseo', 'jeonju-voice-phishing-sugeochaek-minsa-chaegim', 'iksan-voice-phishing-hapui', 'gunsan-voice-phishing-sugeochaek', 'gunsan-daepo-tongjang-myeongija-sonhaebaesang', 'gunsan-gyeongchal-josa-dongseok', '20261016-gunsan-sonhaebaesang'],
   [('정말 아르바이트인 줄 알았다면 처벌받지 않나요?', '확실히 몰랐더라도 이상하다고 의심하면서 계속했다면 미필적 고의로 유죄가 될 수 있습니다. 채용 경위, 보수 수준, 업무 지시 내용 같은 객관적 사정으로 판단하므로 당시 대화와 자료를 그대로 보존해 두어야 합니다.'),
    ('군산에서 수거책 혐의를 받으면 어디서 조사받나요?', '대개 군산경찰서에서 조사하지만, 피해자가 다른 지역에 있으면 다른 경찰서로 사건이 넘어가거나 여러 사건이 병합되기도 합니다. 피해 금액이 크면 구속영장이 청구되는 경우도 있습니다.'),
    ('피해자인데 대포통장 명의자에게 배상을 받을 수 있나요?', '민사에서는 과실로 범행을 쉽게 만든 경우에도 책임이 인정될 수 있습니다. 대가를 받았는지, 비밀번호·OTP까지 넘겼는지 등 제공 경위가 기준이 되고, 책임이 인정돼도 피해자 과실 등을 고려해 배상액이 제한될 수 있습니다.')]),
