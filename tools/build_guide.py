@@ -6,6 +6,8 @@ import re, json, html, pathlib, sys, os
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
 from guide_data import GUIDES, CITIES, LABELS, tag_group, GROUP_ORDER, KEYMAP, CASEMAP
+from city_pages import CITY_PAGES
+CITY_NAME = {c[0]: c[1] for c in CITIES}
 SITE = 'https://www.chaminlaw.com/'
 esc = lambda s: html.escape(s, quote=True)
 
@@ -145,8 +147,9 @@ for g in GUIDES:
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "홈", "item": SITE},
-            {"@type": "ListItem", "position": 2, "name": "키워드별 안내", "item": SITE + "guide.html"},
-            {"@type": "ListItem", "position": 3, "name": g['kw'], "item": url}]},
+            {"@type": "ListItem", "position": 2, "name": "키워드별 안내", "item": SITE + "guide.html"}] + ([
+            {"@type": "ListItem", "position": 3, "name": CITY_NAME[_c] + "변호사", "item": f"{SITE}guide-{_c}.html"}] if (_c := g.get('city', 'gunsan')) in CITY_PAGES else []) + [
+            {"@type": "ListItem", "position": 4 if _c in CITY_PAGES else 3, "name": g['kw'], "item": url}]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": an}} for q, an in g['faq']]}]}
     h = h.replace('</head>', '<script type="application/ld+json">\n' + json.dumps(ld, ensure_ascii=False, indent=1) + '\n</script>\n</head>', 1)
 
@@ -182,7 +185,8 @@ for g in GUIDES:
     </div>
   </section>
 ''' if cols else ''
-    main = phero([('홈', './'), ('지역별 안내', 'guide.html'), (g['kw'], None)], 'Guide', h1_for(g), g['h1']) + f'''
+    _cc = [(CITY_NAME[_c] + '변호사', f'guide-{_c}.html')] if _c in CITY_PAGES else []
+    main = phero([('홈', './'), ('지역별 안내', 'guide.html')] + _cc + [(g['kw'], None)], 'Guide', h1_for(g), g['h1']) + f'''
   <section class="sec sec--paper sec--list">
     <div class="wrap parea__narrow">
       <table class="ginfo">
@@ -255,6 +259,7 @@ blocks = []
 CITY_ALIAS = {'eumju-josa': 'eumju-unjeon', 'hakpokwi': 'hakgyopokryeok', 'gongmuwon-jinggye': 'gongmuwon-gamsa'}
 PRACTICE_TO = {'practice-dui.html': 'eumju-unjeon', 'practice-school.html': 'hakgyopokryeok', 'practice-criminal.html': 'hyeongsa', 'practice-sexual.html': 'seongbeomjoe', 'practice-civil.html': 'minsa', 'practice-divorce.html': 'ihon', 'practice-family.html': 'sangsok', 'practice-discipline.html': 'nodong-jinggye'}
 HUB_HIDDEN = {'nonsan', 'boryeong', 'gochang', 'jeongeup'}
+city_inner = {}
 for code, name, court, police, pros in CITIES:
     if code in HUB_HIDDEN: continue
     groups2 = {}
@@ -300,9 +305,11 @@ for code, name, court, police, pros in CITIES:
         inner.append(f'        <details class="ghub__grp">\n        <summary><h3 class="ghub__h">{esc(glabel)}</h3><span class="ghub__count">{len(groups2[grp])}</span></summary>\n        <div class="ghub__chips">\n{chips}\n        </div>{note}\n        </details>')
     if not inner:
         inner.append(f'        <p class="ghub__empty">{esc(name)} 지역 안내 글은 준비 중입니다. {esc(name)} 사건도 상담하실 수 있습니다.</p>')
+    city_inner[code] = (inner, n, sum(1 for g in GUIDES if g.get('city', 'gunsan') == code))
+    _cl = f' <a class="ilink" href="guide-{code}.html">{esc(name)}변호사 안내 전체 보기 →</a>' if code in CITY_PAGES else ''
     blocks.append(f'''      <details class="ghub__city" id="{code}"{" open" if code == "gunsan" else ""}>
         <summary><span class="ghub__name">{esc(name)}</span><span class="ghub__count">{n}개 안내</span></summary>
-        <p class="ghub__court">관할 법원 {esc(court)} · 관할 공소청 {esc(pros)} · 관할 경찰서 {esc(police)}</p>
+        <p class="ghub__court">관할 법원 {esc(court)} · 관할 공소청 {esc(pros)} · 관할 경찰서 {esc(police)}{_cl}</p>
 {chr(10).join(inner)}
       </details>''')
 main = phero([('홈', './'), ('지역별 안내', None)], 'Regional Guide', '지역별 안내') + f'''
@@ -315,6 +322,78 @@ main = phero([('홈', './'), ('지역별 안내', None)], 'Regional Guide', '지
 
 {cta}'''
 (ROOT / 'guide.html').write_text(h + main + foot_tpl, encoding='utf-8')
+
+# 도시별 대표 안내(군산변호사 등) — 2026-11-11 대표 지시
+for code, name, court, police, pros in CITIES:
+    if code in HUB_HIDDEN or code not in CITY_PAGES: continue
+    cp = CITY_PAGES[code]; inner, n, ng = city_inner[code]
+    slug = f'guide-{code}'; url = f'{SITE}{slug}.html'
+    title = f'{name}변호사 — {name} 형사·이혼·상속·민사 사건 관할과 분야별 안내 | 법률사무소 차민'
+    h = head_for(title, cp['desc'], url)
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "홈", "item": SITE},
+            {"@type": "ListItem", "position": 2, "name": "지역별 안내", "item": SITE + "guide.html"},
+            {"@type": "ListItem", "position": 3, "name": name + "변호사", "item": url}]},
+        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": an}} for q, an in cp['faq']]}]}
+    h = h.replace('</head>', '<script type="application/ld+json">\n' + json.dumps(ld, ensure_ascii=False, indent=1) + '\n</script>\n</head>', 1)
+    rows = '\n'.join(f'          <tr><th scope="row">{esc(k)}</th><td>{esc(v)}</td></tr>' for k, v in cp['rows'])
+    intro = '\n'.join(f'      <p class="ginfo__p">{esc(p.format(n=ng))}</p>' for p in cp['intro'])
+    recent = [sl for sl in cards if city_of(sl) == code][:6]
+    cols = ''.join(cards[c].replace('href="', 'href="blog/', 1) for c in recent)
+    faq = '\n'.join(f'''        <div class="faq__item" data-faq>
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="cf-{i}"><span class="faq__q-mark" aria-hidden="true">Q</span><span>{esc(q)}</span><span class="faq__sign" aria-hidden="true"></span></button>
+          <div class="faq__a" id="cf-{i}"><div class="faq__a-inner">{esc(an)}</div></div>
+        </div>''' for i, (q, an) in enumerate(cp['faq'], 1))
+    others = ' '.join(f'<a class="parea__chip" href="guide-{c2}.html">{esc(n2)}변호사</a>' for c2, n2, *_ in CITIES if c2 != code and c2 not in HUB_HIDDEN and c2 in CITY_PAGES)
+    main = phero([('홈', './'), ('지역별 안내', 'guide.html'), (name + '변호사', None)], 'Regional Guide', name + '변호사', cp['sub']) + f'''
+  <section class="sec sec--paper sec--list">
+    <div class="wrap parea__narrow">
+      <table class="ginfo">
+        <tbody>
+{rows}
+        </tbody>
+      </table>
+{intro}
+    </div>
+  </section>
+
+  <section class="sec sec--paper2">
+    <div class="wrap">
+      <p class="eyebrow">By Field</p>
+      <h2 class="sec-title">{esc(name)} 분야별 안내</h2>
+      <div class="ghub__city ghub__city--page">
+{chr(10).join(inner)}
+      </div>
+    </div>
+  </section>
+''' + (f'''
+  <section class="sec sec--paper">
+    <div class="wrap">
+      <p class="eyebrow">Columns</p>
+      <h2 class="sec-title">{esc(name)} 최근 법률 칼럼</h2>
+      <div class="posts parea__posts">
+{cols}      </div>
+    </div>
+  </section>
+''' if cols else '') + f'''
+  <section class="sec sec--paper2">
+    <div class="wrap parea__narrow">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="sec-title">{esc(name)} 사건 자주 묻는 질문</h2>
+      <div class="faq parea__faq">
+{faq}
+      </div>
+      <div class="parea__others">
+        <p class="parea__others-h">다른 지역 안내</p>
+        <div class="parea__chips">{others} <a class="parea__chip" href="guide.html">지역별 안내 전체</a></div>
+      </div>
+    </div>
+  </section>
+
+{cta}'''
+    (ROOT / f'{slug}.html').write_text(h + main + foot_tpl, encoding='utf-8')
+    built.append(slug)
 
 # sitemap
 sm_p = ROOT / 'sitemap.xml'
