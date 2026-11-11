@@ -38,7 +38,7 @@ G('goso-daeri', '형사', '고소대리', '고소장 작성부터 고소인 조�
    ('고소장 · 범죄일람표 작성', '구성요건에 맞춰 범죄사실을 정리하고 증거 목록과 함께 제출합니다.'),
    ('고소인 조사 대응', '일정을 조율하고, 조사에 함께 출석해 핵심 사실이 빠짐없이 조사되는지 확인합니다.'),
    ('보완 · 결과 대응', '빠진 부분은 의견서와 추가 자료로 보충하고, 불송치 결정이 나면 이의신청을 검토합니다.')],
-  ['jeonju-goso-ihu-seokdal-gosoin', 'buan-gosojang-hangmok-jakseong', 'gimje-goso-jeunggeo-junbi', 'seocheon-gosojang-jakseong-gosodaeri', 'iksan-goso-daeri-chai', 'gunsan-gosoin-josa-daeeung', 'gunsan-bulsongchi-iuisincheong', 'gunsan-myeongye-hweson', 'gunsan-seongbeomjoe-pihaeja'],
+  ['buyeo-gosojang-guseongyogeon-seonbyeol', 'jeonju-goso-ihu-seokdal-gosoin', 'buan-gosojang-hangmok-jakseong', 'gimje-goso-jeunggeo-junbi', 'seocheon-gosojang-jakseong-gosodaeri', 'iksan-goso-daeri-chai', 'gunsan-gosoin-josa-daeeung', 'gunsan-bulsongchi-iuisincheong', 'gunsan-myeongye-hweson', 'gunsan-seongbeomjoe-pihaeja'],
   [('고소인 조사 날짜를 수사관이 정했는데 꼭 그날 가야 하나요?', '반드시 그렇지는 않습니다. 담당 수사관과 일정을 협의할 수 있으므로, 고소장과 증거를 다시 검토하고 진술할 내용을 정리할 시간을 확보한 뒤 출석하는 것이 좋습니다.'),
    ('고소인 조사에도 변호사가 함께 갈 수 있나요?', '네. 법률적 쟁점이 많은 사건이라면 변호사가 함께 출석해 고소 취지가 제대로 전달되는지, 중요한 범죄사실이 빠지지 않는지 확인할 수 있습니다.'),
    ('조사 때 말하지 못한 내용은 어떻게 하나요?', '추가 의견서, 증거자료, 범죄일람표를 제출해 보충할 수 있습니다. 여러 범죄사실 가운데 일부만 조사된 것 같다면 결론이 나기 전에 빠진 부분을 특정해 서둘러 보완해야 합니다.')]),
