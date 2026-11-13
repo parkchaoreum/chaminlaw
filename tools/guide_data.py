@@ -388,6 +388,7 @@ LABELS = {
  'boryeong-jeonse-bojeunggeum-imchain-yeoreo-baedang':'보령 보증금 세입자 여럿·배당 순서',
  'boryeong-imgeum-chebul-jinjeong-chulseok-josa':'보령 임금체불 진정 출석조사·합의',
  'boryeong-jeonse-sagi-deunggibu-bakk-wiheom':'보령 등기부 밖 전세 위험 확인',
+ 'boryeong-sukbak-yeyak-ilbang-chwiso-baesang':'보령 숙소 일방 취소 배상',
  'gunsan-jinggye-jeongdangseong-samdan':'징계 정당성',
  'iksan-imgeum-chebul-sosong':'임금체불 소송',
  'gunsan-gangan-goso-sinbingseong':'강간 고소',

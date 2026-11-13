@@ -353,6 +353,7 @@ M = {
  'boryeong-jeonse-bojeunggeum-imchain-yeoreo-baedang': (['전세보증금'], '부동산전문'),
  'boryeong-imgeum-chebul-jinjeong-chulseok-josa': (['임금체불', '노동'], '노동전문'),
  'boryeong-jeonse-sagi-deunggibu-bakk-wiheom': (['전세사기'], '부동산전문'),
+ 'boryeong-sukbak-yeyak-ilbang-chwiso-baesang': (['손해배상'], '민사전문'),
  'gunsan-jinggye-jeongdangseong-samdan': (['징계', '부당해고'], '노동전문'),
  'iksan-imgeum-chebul-sosong': (['임금체불', '노동'], '노동전문'),
  'gunsan-bulsongchi-iuisincheong': (['불송치이의신청'], '경찰출신'),
