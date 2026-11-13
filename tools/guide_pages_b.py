@@ -78,7 +78,7 @@ G('seongbeomjoe-piuija', '성범죄', '성범죄 피의자', '고소당한 뒤 �
    ('자료 정리', '사건 전후 동선과 연락을 객관 자료로 복원하고 인정할 부분과 다툴 부분을 나눕니다.'),
    ('경찰 조사', '정리한 내용과 어긋나지 않게 진술하고 조서를 끝까지 확인합니다.'),
    ('송치 이후', '공소청 검사에게 의견서와 새 자료를 내고, 필요하면 보완수사를 통해 고소인 진술을 검증하도록 의견을 냅니다.')],
-  ['buyeo-gangje-chuhaeng-gisup-sinsang-deungnok', 'jeonju-gangje-chuhaeng-gongsocheong-cheobun-jeon', 'jeonju-seongbeomjoe-hapuigeum-yogu-daeeung', 'buan-gangje-chuhaeng-susa-heureum', 'buan-seongbeomjoe-yanghyeong-jaryo', 'gimje-gangje-chuhaeng-gieok-eopseul-ttae', 'iksan-seongbeomjoe-piuija-josa-ihu', 'gunsan-seongbeomjoe-jeongeon-songchi', 'gunsan-seongbeomjoe-neujeun-goso', 'gunsan-seongbeomjoe-muhyeomui', 'iksan-pigosoin-josa-daeeung'],
+  ['boryeong-seongbeomjoe-heowi-goso-chodong', 'boryeong-gangje-chuhaeng-pokhaeng-chuhaeng-bunri', 'buyeo-gangje-chuhaeng-gisup-sinsang-deungnok', 'jeonju-gangje-chuhaeng-gongsocheong-cheobun-jeon', 'jeonju-seongbeomjoe-hapuigeum-yogu-daeeung', 'buan-gangje-chuhaeng-susa-heureum', 'buan-seongbeomjoe-yanghyeong-jaryo', 'gimje-gangje-chuhaeng-gieok-eopseul-ttae', 'iksan-seongbeomjoe-piuija-josa-ihu', 'gunsan-seongbeomjoe-jeongeon-songchi', 'gunsan-seongbeomjoe-neujeun-goso', 'gunsan-seongbeomjoe-muhyeomui', 'iksan-pigosoin-josa-daeeung'],
   [('송치됐다는 통지를 받았는데 혐의가 인정된 건가요?', '2026. 10. 2.부터 성폭력범죄는 혐의 판단과 관계없이 송치되므로 송치 사실만으로 단정할 수 없습니다. 통지서 내용이나 담당 수사관을 통해 경찰 의견을 확인해 보시기 바랍니다.'),
    ('출석 요구를 받으면 바로 가야 하나요?', '정당한 이유 없이 계속 피하는 것은 바람직하지 않지만, 담당 수사관과 일정을 조율해 자료를 정리할 시간을 확보한 뒤 출석할 수 있습니다.'),
    ('몇 달 지난 고소면 고소인 말을 덜 믿나요?', '시간이 지났다는 것만으로 신빙성이 부정되지는 않습니다. 다만 객관적 자료와 고소인 진술이 어긋나는 부분이 있으면 중요한 다툼거리가 됩니다.')]),

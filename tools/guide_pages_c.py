@@ -120,7 +120,7 @@ G('sangsok-jaesan-bunhal', '상속·가사', '상속재산분할', '분할협의
    ('심판청구', '상속인 전원을 상대로 재산 목록, 원하는 분할 방법, 기여분·특별수익 주장을 적어 청구합니다.'),
    ('조정 · 재산 조사', '조정에 회부되는 경우가 많고, 사실조회와 감정으로 재산과 생전 증여를 확인합니다.'),
    ('심판 · 등기', '심판이 확정되면 그 내용대로 등기와 예금 정리를 진행합니다.')],
-  ['buyeo-bunhal-hyeopui-geobu-simpan', 'buyeo-sangsok-galdeung-chogi-daeeung', 'jeonju-sangsok-bunhal-hyeopui-jeon-yueon-segeum', 'buan-sangsok-hyeopuiseo-dojang-jeon', 'gimje-sangsok-jaesan-bunhal-guche-sangsokbun', 'seocheon-sangsok-jaesan-bunhal-simpan-heureum', 'iksan-sangsok-jaesan-bunhal-hyeopui', 'gunsan-sangsok-jaesan-johoe-saengjeon-jeungyeo', 'gunsan-giyeobun-injeong-jaryo', 'gunsan-sangsok-jaesan-bunhal-simpan', 'gunsan-yuryubun-banhwan', 'gunsan-sangsok-gaesi-hal-il', 'gunsan-gongyumul-bunhal'],
+  ['boryeong-sangsokgwon-sangsil-baeujja-jani', 'buyeo-bunhal-hyeopui-geobu-simpan', 'buyeo-sangsok-galdeung-chogi-daeeung', 'jeonju-sangsok-bunhal-hyeopui-jeon-yueon-segeum', 'buan-sangsok-hyeopuiseo-dojang-jeon', 'gimje-sangsok-jaesan-bunhal-guche-sangsokbun', 'seocheon-sangsok-jaesan-bunhal-simpan-heureum', 'iksan-sangsok-jaesan-bunhal-hyeopui', 'gunsan-sangsok-jaesan-johoe-saengjeon-jeungyeo', 'gunsan-giyeobun-injeong-jaryo', 'gunsan-sangsok-jaesan-bunhal-simpan', 'gunsan-yuryubun-banhwan', 'gunsan-sangsok-gaesi-hal-il', 'gunsan-gongyumul-bunhal'],
   [('상속재산분할 심판은 어느 법원에 내나요?', '원칙적으로 상대방 상속인 중 한 사람의 주소지 법원에 청구합니다. 상대방 중 군산에 사는 상속인이 있다면 전주지방법원 군산지원에서 진행할 수 있습니다.'),
    ('부모님을 모신 기간이 길면 더 받을 수 있나요?', '통상의 부양 범위를 넘는 특별한 부양이나 재산 형성에 대한 기여가 증명되면 기여분으로 반영될 수 있습니다. 간병 기록, 생활비 송금 내역 같은 자료가 중요합니다.'),
    ('상속 부동산을 공유물분할소송으로 나눌 수 있나요?', '상속인들 사이에서 아직 분할하지 않은 상속재산은 상속재산분할 절차로 나누어야 합니다. 지분대로 나누기로 협의를 마친 뒤라면 일반 공유가 되어 공유물분할소송을 할 수 있습니다.')]),
