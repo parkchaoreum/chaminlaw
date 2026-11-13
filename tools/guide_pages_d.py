@@ -335,7 +335,7 @@ G('imgeum-chebul', '노동·징계', '임금체불', '노동청 진정과 고소
    ('노동청 접수', '군산지청에 진정이나 고소를 접수하며, 진정은 온라인으로도 할 수 있습니다.'),
    ('근로감독관 조사', '출석해 체불 사실과 금액을 소명하고 체불 확인서를 받아 둡니다.'),
    ('지급 · 민사 회수', '지급되지 않으면 지급명령·민사소송으로 집행권원을 받고 대지급금 신청을 검토합니다.')],
-  ['buyeo-imgeum-chebul-jiyeon-ija-baesang', 'jeonju-imgeum-chebul-jinjeong-chwiha', 'buan-imgeum-chebul-daejigeup-bujeongsugeup', 'gimje-imgeum-chebul-jinjeong-minsa-seontaek', 'iksan-toejikgeum-michigeup-hoesu', 'gunsan-imgeum-toejikgeum-cheburi','iksan-imgeum-chebul-sosong',  'gunsan-budang-haego-guje', 'jeonju-naeyongjeungmyeong'],
+  ['boryeong-imgeum-chebul-jinjeong-chulseok-josa', 'buyeo-imgeum-chebul-jiyeon-ija-baesang', 'jeonju-imgeum-chebul-jinjeong-chwiha', 'buan-imgeum-chebul-daejigeup-bujeongsugeup', 'gimje-imgeum-chebul-jinjeong-minsa-seontaek', 'iksan-toejikgeum-michigeup-hoesu', 'gunsan-imgeum-toejikgeum-cheburi','iksan-imgeum-chebul-sosong',  'gunsan-budang-haego-guje', 'jeonju-naeyongjeungmyeong'],
   [('진정과 고소 중 무엇이 나은가요?', '금액이 분명하고 다툼이 적으면 진정으로도 충분할 수 있습니다. 근로자성, 금액, 퇴직금 산정 기준처럼 판단이 갈리는 쟁점이 있다면 행정 종결 위험을 줄이기 위해 고소를 검토할 만합니다.'),
    ('사장이 처벌받으면 체불 임금도 자동으로 받나요?', '처벌과 지급은 별개입니다. 끝내 지급하지 않으면 민사소송이나 지급명령으로 집행권원을 받아야 하고, 체불 확인서는 대지급금 신청에 활용할 수 있습니다.'),
    ('민사소송은 어디에 내나요?', '군산 사업장 사건은 전주지방법원 군산지원에 낼 수 있고, 청구 금액이 3,000만 원 이하이면 소액사건 절차로 진행됩니다.')],

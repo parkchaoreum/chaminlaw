@@ -161,7 +161,7 @@ G('eumju-josa', '음주운전·교통', '음주운전 경찰조사', '조사 당
    ('조사 전 점검', '재범·사고·높은 수치 등 무거운 처분이 예상되면 진술 방향과 양형 자료를 미리 정리합니다.'),
    ('조사 당일', '질문에 사실대로 답하고, 마지막 진술은 짧게 하며, 조서를 확인한 뒤 서명합니다.'),
    ('조사 이후', '임시운전증명서 기간을 확인하고, 면허 불복과 공소청 처분 전 반성문·양형 자료 제출을 준비합니다.')],
-  ['buyeo-eumju-jeokbal-hu-jeolcha-uigyeonseo', 'buan-eumju-beolgeum-ihu', 'gimje-eumju-unjeon-cheobeol-gijun', 'gunsan-eumju-unjeon-gyeongchal-josa', 'jeonju-eumju-unjeon-chulseok-josa', 'iksan-eumju-unjeon-josa-ihu', 'jeonju-eumju-unjeon-byeonhosa'],
+  ['boryeong-eumju-josa-haru', 'buyeo-eumju-jeokbal-hu-jeolcha-uigyeonseo', 'buan-eumju-beolgeum-ihu', 'gimje-eumju-unjeon-cheobeol-gijun', 'gunsan-eumju-unjeon-gyeongchal-josa', 'jeonju-eumju-unjeon-chulseok-josa', 'iksan-eumju-unjeon-josa-ihu', 'jeonju-eumju-unjeon-byeonhosa'],
   [('조사가 끝나면 바로 운전을 못 하나요?', '면허 정지·취소 대상이면 임시운전증명서를 받아 40일 이내의 유효기간 동안 운전할 수 있고, 경찰서장이 필요하다고 인정하면 1회에 한해 20일 범위에서 연장될 수 있습니다. 그 뒤에는 처분의 효력이 생깁니다.'),
    ('반성문은 조사 때 꼭 가져가야 하나요?', '처분과 형을 정하는 것은 공소청 검사와 법원이므로 조사 이후 처분 전에 제출해도 늦지 않습니다. 다만 재범이나 사고가 있는 사건이라면 양형 자료 전반을 조사 전부터 준비하는 것이 좋습니다.'),
    ('묻지 않은 사정도 다 말해야 하나요?', '거짓말은 하지 않되, 질문받은 내용에 사실대로 답하는 것으로 충분합니다. 질문과 관계없는 불리한 내용까지 길게 설명하면 그대로 조서에 남을 수 있습니다.')]),
