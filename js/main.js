@@ -106,33 +106,62 @@
     });
   });
 
-  /* ------------------------------------------- 성공사례 분야 거르기 */
+  /* ------------------------------------------- 성공사례 분야 거르기 + 12개씩 페이지 */
   var filters = document.querySelectorAll('[data-filter]');
-  if (filters.length) {
-    var cases = document.querySelectorAll('.case');
+  if (filters.length || document.querySelector('[data-case-pager]')) {
+    var cases = Array.prototype.slice.call(document.querySelectorAll('.cases .case'));
     var empty = document.querySelector('.cases-empty');
+    var cpager = document.querySelector('[data-case-pager]');
+    var CPER = 12, cpick = 'all', cpage = 1;
+
+    var renderCases = function (scroll) {
+      var hits = cases.filter(function (c) { return cpick === 'all' || c.getAttribute('data-cat') === cpick; });
+      var pages = Math.max(1, Math.ceil(hits.length / CPER));
+      if (cpage > pages) cpage = pages;
+      cases.forEach(function (c) { c.hidden = true; });
+      hits.forEach(function (c, i) { if (Math.floor(i / CPER) + 1 === cpage) c.hidden = false; });
+      if (empty) empty.hidden = cases.length > 0 && hits.length > 0;
+      if (cpager) {
+        var h = '';
+        if (pages > 1) {
+          h += '<button type="button" class="pager__b pager__prev" data-cpage="' + (cpage - 1) + '" aria-label="이전 페이지"' + (cpage === 1 ? ' disabled' : '') + '>‹</button>';
+          for (var n = 1; n <= pages; n++) {
+            h += '<button type="button" class="pager__b" data-cpage="' + n + '" aria-label="' + n + '페이지"' + (n === cpage ? ' aria-current="page"' : '') + '>' + n + '</button>';
+          }
+          h += '<button type="button" class="pager__b pager__next" data-cpage="' + (cpage + 1) + '" aria-label="다음 페이지"' + (cpage === pages ? ' disabled' : '') + '>›</button>';
+        }
+        cpager.innerHTML = h;
+        cpager.hidden = pages <= 1;
+      }
+      if (scroll) {
+        var top = (filters.length && filters[0].closest('.filters')) || document.querySelector('.cases');
+        if (top) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
 
     Array.prototype.forEach.call(filters, function (btn) {
       btn.addEventListener('click', function () {
-        var pick = btn.getAttribute('data-filter');
-        var shown = 0;
-
+        cpick = btn.getAttribute('data-filter'); cpage = 1;
         Array.prototype.forEach.call(filters, function (b) {
           b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
         });
-        Array.prototype.forEach.call(cases, function (c) {
-          var hit = pick === 'all' || c.getAttribute('data-cat') === pick;
-          c.hidden = !hit;
-          if (hit) shown++;
-        });
-
-        // the empty state doubles as "no cases in this category yet"
-        if (empty) empty.hidden = cases.length > 0 && shown > 0;
+        renderCases(false);
       });
     });
+    if (cpager) cpager.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-cpage]');
+      if (!b || b.disabled) return;
+      cpage = parseInt(b.getAttribute('data-cpage'), 10) || 1;
+      renderCases(true);
+    });
+    // 주소에 #case-NN 이 있으면 그 사례가 있는 페이지를 연다
+    var hashCase = location.hash && document.getElementById(location.hash.slice(1));
+    if (hashCase && cases.indexOf(hashCase) >= 0) cpage = Math.floor(cases.indexOf(hashCase) / CPER) + 1;
+    renderCases(false);
+    if (hashCase && cases.indexOf(hashCase) >= 0) hashCase.scrollIntoView();
 
     // nothing published yet — the filter row would only lead to blank screens
-    if (!cases.length) {
+    if (!cases.length && filters.length) {
       var row = filters[0].closest('.filters');
       if (row) row.hidden = true;
     }
