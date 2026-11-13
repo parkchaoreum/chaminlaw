@@ -6,7 +6,7 @@
     <atom:link href="https://www.chaminlaw.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>전북 군산 법률사무소 차민의 형사·민사·가사·행정 법률 칼럼</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 13 Nov 2026 15:20:30 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 15:39:26 +0900</lastBuildDate>
     <item>
       <title>보령에서 공무원 징계를 앞두고 있다면 — 형사처벌과 징계, 소청까지</title>
       <link>https://www.chaminlaw.com/blog/boryeong-gongmuwon-jinggye.html</link>
@@ -52,7 +52,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-bunhal-hyeopuiseo-segeum-deunggi.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-bunhal-hyeopuiseo-segeum-deunggi.html</guid>
       <description>보령에서 다른 상속인이 상속세·취득세 신고나 상속등기 때문에 상속재산분할협의서에 빨리 도장을 찍어 달라고 한다면. 협의가 끝나면 혼자서는 되돌리기 어려운 이유, 생전 증여를 알면서 협의하면 유류분 다툼에서 불리해질 수 있는 점, 협의 전에도 법정상속분으로 할 수 있는 상속세·취득세 신고와 상속등기, 근저당 채무가 있을 때 법정상속등기 뒤 경정하는 방법, 대전가정법원 홍성지원 관할을 정리했습니다.</description>
-      <category>상속</category>
+      <category>가사 · 상속</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -60,7 +60,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-sanggan-pigo-sojang-jikhu.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-sanggan-pigo-sojang-jikhu.html</guid>
       <description>보령에서 상간소송 피고로 소장을 받았다면. 앞으로 서류가 오는 곳을 정리하는 이유, 사실을 부인할지는 원고의 증거에 따라 달라지는 점, 원고가 찾아와 받아 간 각서가 유일한 증거가 되는 경우, 성급한 사직이 오히려 손해가 되는 이유, 원고의 과도한 요구를 미리 수락하지 말아야 할 이유, 주변에 알리는 원고에 대한 명예훼손 검토, 부진정연대채무와 구상권을 정리했습니다.</description>
-      <category>상간소송</category>
+      <category>이혼 · 상간</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -68,7 +68,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-yangyukbi-sanghwangbyeol-sudan.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-yangyukbi-sanghwangbyeol-sudan.html</guid>
       <description>보령에서 이혼 뒤 정해진 양육비를 받지 못하고 있다면. 매달 일부만 보내는 경우의 급여 압류와 직접지급명령, 직장을 자주 옮기거나 그만둔 경우의 재산명시·재산조회와 담보제공·일시금 지급명령, 재산을 숨긴 경우의 이행명령·감치, 2024년 개정으로 이행명령 불이행만으로 가능해진 운전면허 정지·출국금지·명단 공개, 감치 후 1년 미지급의 형사처벌, 채무불이행자명부, 양육비 선지급을 정리했습니다.</description>
-      <category>양육비</category>
+      <category>이혼 · 가사</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -76,7 +76,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-ihon-sojang-batasseul-ttae.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-ihon-sojang-batasseul-ttae.html</guid>
       <description>보령에서 법원 봉투로 이혼 소장을 받았다면. 30일 답변서 기한을 넘기면 어떻게 되는지와 이혼소송에서 자백간주가 적용되지 않는 이유, 이혼을 원하지 않을 때 상대 주장을 사실과 자료로 반박하는 법, 이혼을 원할 때 반소로 위자료·재산분할을 청구하는 법, 미성년 자녀의 양육 현상 유지, 재산분할 자료 정리, 대전가정법원 홍성지원 관할을 정리했습니다.</description>
-      <category>이혼</category>
+      <category>이혼 · 가사</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -140,7 +140,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-kamera-forensic-chamyeo-dangil.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-kamera-forensic-chamyeo-dangil.html</guid>
       <description>보령에서 카메라등이용촬영 혐의로 휴대전화를 압수당하거나 제출했다면. 포렌식 일정을 통보받은 뒤 확인할 영장의 범위, 참여 당일 날짜·폴더로 먼저 좁히고 미리보기 없이 선별을 요청하는 방법, 혐의와 무관한 자료가 보일 때 탐색 중단과 새 영장을 요구하는 근거, 압수목록 대조와 참여 직후 기록을 정리했습니다.</description>
-      <category>성범죄</category>
+      <category>형사 · 성범죄</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -148,7 +148,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-seongbeomjoe-heowi-goso-chodong.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-seongbeomjoe-heowi-goso-chodong.html</guid>
       <description>보령에서 합의한 관계였는데 성범죄로 고소됐다는 연락을 받았다면. 고소장 열람으로 혐의를 특정하는 방법, 휴대전화 자료를 지우면 증거인멸로 비칠 수 있는 이유와 복구, 두 사람의 관계와 그날의 동선을 보여 줄 영수증·CCTV, 예상 질문 정리, 고소인에게 연락하거나 사과 문자를 보내면 안 되는 이유, 무고 맞고소를 신중히 판단해야 하는 이유를 정리했습니다.</description>
-      <category>성범죄</category>
+      <category>형사 · 성범죄</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -180,7 +180,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-sangsokgwon-sangsil-baeujja-jani.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-sangsokgwon-sangsil-baeujja-jani.html</guid>
       <description>보령에서 부모님 사망 뒤 가족관계증명서를 떼어 보니 재혼 배우자나 연락이 끊긴 다른 자녀가 상속인으로 나왔다면. 2026년 개정 민법 제1004조의2로 배우자와 자녀도 상속권 상실 대상이 될 수 있다는 점, 배우자의 1차 부양의무와 성년 자녀의 2차 부양의무를 나눠 입증해야 하는 이유, 연락 단절만으로는 부족한 점, 6개월 청구 기간, 선고 전 상속재산 보전 처분을 정리했습니다.</description>
-      <category>상속</category>
+      <category>가사 · 상속</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -188,7 +188,7 @@
       <link>https://www.chaminlaw.com/blog/boryeong-gangje-chuhaeng-pokhaeng-chuhaeng-bunri.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/boryeong-gangje-chuhaeng-pokhaeng-chuhaeng-bunri.html</guid>
       <description>보령에서 옷만 잠깐 만졌거나 접촉이 아주 짧았는데 강제추행으로 고소됐다면. 강제추행의 두 요건인 폭행·협박과 추행을 각각 따로 검토해야 하는 이유, 기습추행으로 넓어진 폭행의 범위, 추행을 피해자의 감정이 아니라 객관적 사정으로 판단하는 기준, 경위를 설명할 자료, 벌금형이라도 확정되면 신상정보 등록 대상이 되는 점을 정리했습니다.</description>
-      <category>성범죄</category>
+      <category>형사 · 성범죄</category>
       <pubDate>Fri, 13 Nov 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
@@ -3480,7 +3480,7 @@
       <pubDate>Sun, 18 Oct 2026 09:00:00 +0900</pubDate>
     </item>
     <item>
-      <title>익산에서 음주운전 조사를 마쳤다면 — 검찰 처분, 양형자료, 면허취소 불복까지</title>
+      <title>익산에서 음주운전 조사를 마쳤다면 — 공소청 처분, 양형자료, 면허취소 불복까지</title>
       <link>https://www.chaminlaw.com/blog/iksan-eumju-unjeon-josa-ihu.html</link>
       <guid isPermaLink="true">https://www.chaminlaw.com/blog/iksan-eumju-unjeon-josa-ihu.html</guid>
       <description>음주운전은 경찰 조사로 끝나지 않습니다. 조사 전 준비할 자료, 구약식·구공판·기소유예의 차이, 양형자료, 면허 정지·취소와 임시운전증명서, 이의신청·행정심판과 익산 관할을 정리했습니다.</description>
